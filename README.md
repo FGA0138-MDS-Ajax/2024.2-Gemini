@@ -83,8 +83,74 @@ git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
 
 <div align="center">
   <h2> Colaboradores </h2>
-</div> 
-<!-- Foto dos participantes do grupo -->
+</div>   
+<center>
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+        <td align="center">
+            <a href="https://github.com/eduardoferre">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/67663168?v=4" width="150px;"/>
+                <h5 href = "https://github.com/andre-maia51" class="text-center">Eduardo Ferreira</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Edzada">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/122990164?v=4" width="150px;"/>
+                <h5 class="text-center">Esdras de Sousa</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/felipeacampelo">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/169858938?v=4" width="150px;"/>
+                <h5 class="text-center">Felipe Campelo</h5>
+            </a>
+        </td>
+        </td>
+        <td align="center">
+            <a href="https://github.com/jv-ibiapina">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/151571305?v=4" width="150px;"/>
+                <h5 class="text-center">João Vitor Sales</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/luizfaria1989">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90045018?v=4" width="150px;"/>
+                <h5 class="text-center">Luiz Guilherme</h5>
+            </a>
+        </td>
+          <td align="center">
+            <a href="https://github.com/iBizu">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/108238526?v=4" width="150px;"/>
+                <h5 class="text-center">Matheus Menezes</h5>
+            </a>
+        </td>
+          <td align="center">
+            <a href="https://github.com/miguelpiresgomes25">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/119467483?v=4" width="150px;"/>
+                <h5 class="text-center">Miguel Pires</h5>
+            </a>
+        </td>
+         <td align="center">
+            <a href="https://github.com/pedrorocharfl">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/144711802?v=4" width="150px;"/>
+                <h5 class="text-center">Pedro Rocha</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/audittmega">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/143733162?v=4" width="150px;"/>
+                <h5 class="text-center">Thiago Tonin</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/uires2023">
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/88348553?v=4" width="150px;"/>
+                <h5 class="text-center">Uires Carlos</h5>
+            </a>
+        </td>
+    
+</table>
+</center>
 <table>
   <tr>
 
