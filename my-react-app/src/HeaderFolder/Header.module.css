@@ -1,0 +1,41 @@
+header{
+    background-color: #000000;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    margin: 0;
+
+}
+
+.ItensDoMenu{
+    display: flex;
+    flex-direction: row;
+}
+
+.Logo{
+    width: 161px;
+    height: 58px;
+    padding-right: 38px;
+}
+
+.ClicaveisDaHeader{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #04DD2D;
+    justify-content: space-around;
+}
+
+.TitulosDoMenu{
+    font-size: 24px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: "Bebas Neue";
+    display: flex;
+}
+
+.Icones{
+    padding-left: 20px;
+    font-size: 35px;
+}
+
