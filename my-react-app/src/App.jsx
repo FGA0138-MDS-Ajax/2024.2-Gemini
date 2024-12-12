@@ -3,38 +3,49 @@ import Header from './HeaderFolder/Header.jsx'
 import styles from './App.module.css'
 import CardCamiseta from './FolderCardCamiseta/CardCamiseta.jsx'
 import Footer from './FolderFooter/Footer.jsx'
+import Carrossel from './FolderCarrossel/Carrossel.jsx'
 
 function App() {
 
+  const LinksDasImagens = [
+    {src: 'src/assets/banner/bannerLegends.png', link: '', alt: 'Descricao'},
+    {src: 'src/assets/banner/Banner2.png', link: '', alt: 'Descricao'},
+    {src: 'src/assets/banner/bannerLegends.png', link: '', alt: 'Descricao'},
+    {src: 'src/assets/banner/Banner2.png', link: '', alt: 'Descricao'}
+  ];
+
   return(
+
     <>
       <Header/>
-      <img src='src/assets/bannerLegends.png' alt="" className={styles.banner}/>
+
+     <Carrossel LinksDasImagens={LinksDasImagens}/>
+
       <div className={styles.CamisetasEmDestaque}>
             <CardCamiseta
-                imgSrc='src/assets/CamisetaMCLaren.png'
+                imgSrc='src/assets/camisetas/CamisetaMCLaren.png'
                 nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                 preco= "R$ 59,99"
                 prestacoes = "2x de r$ 29,99"
-              ></CardCamiseta>
+              />
               <CardCamiseta
-                imgSrc='src/assets/CamisetaRedbull.png'
+                imgSrc='src/assets/camisetas/CamisetaRedbull.png'
                 nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                 preco= "R$ 59,99"
                 prestacoes = "2x de r$ 29,99"
-              ></CardCamiseta>
+              />
               <CardCamiseta
-                imgSrc='src/assets/CamisetaMCLaren.png'
+                imgSrc='src/assets/camisetas/CamisetaMCLaren.png'
                 nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                 preco= "R$ 59,99"
                 prestacoes = "2x de r$ 29,99"
-              ></CardCamiseta>
+              />
               <CardCamiseta
-                imgSrc='src/assets/CamisetaRedbull.png'
+                imgSrc='src/assets/camisetas/CamisetaRedbull.png'
                 nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                 preco= "R$ 59,99"
                 prestacoes = "2x de r$ 29,99"
-              ></CardCamiseta>
+              />
       </div>
       <div className={styles.SecaoProjeto}>
                 <h1 className={styles.TituloProjeto}>Projeto</h1>
@@ -45,9 +56,9 @@ function App() {
                 <h1 className={styles.TituloCompeticao}>Competição</h1>
                 <p className={styles.ParagrafoCompeticao}>A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática os conhecimentos adquiridos em sala de aula, por meio do desenvolvimento de um projeto completo: um veículo do tipo Fórmula. Por um período de três dias, ocorrem testes estáticos e dinâmicos com os carros, com o objetivo de avaliar o desempenho de cada projeto na pista. Além disso, as equipes apresentam suas propostas técnicas, incluindo detalhes sobre o projeto, custos e também uma apresentação de marketing.</p>
                 </div>
-                <img src='src/assets/ImagemCompeticao.png' className={styles.ImagemCompeticao}></img>
+                <img src='src/assets/ImagemCompeticao.png' className={styles.ImagemCompeticao}/>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </>
   )
 }

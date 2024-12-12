@@ -5,25 +5,25 @@
     background: #E5E5E5;
 }
 
+.CardCamiseta:hover{
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
 .ImgCamiseta{
     width: 231px;
     height: 220px;
     border-radius: 15px;
-    border-top: 15px;
-    border-left: 5px;
-    border-right: 5px;
+    border: 15px 5px 5px 0;
     padding-top: 5px;
 }
 
 .InfoCard{
     width: 233px;
-    flex-shrink: 0;
     color: #000;
     font-family: "Bebas Neue";
     font-size: 15px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .NomeCamiseta{

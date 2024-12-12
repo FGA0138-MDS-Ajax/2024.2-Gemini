@@ -5,7 +5,7 @@ function CardCamiseta({imgSrc, nome, preco, prestacoes}){
     return(
 
         <div className={styles.CardCamiseta}>
-            <img className={styles.ImgCamiseta} src={imgSrc}></img>
+            <img className={styles.ImgCamiseta} src={imgSrc}/>
            <div className={styles.InfoCard}>
                 <h3 className={styles.NomeCamiseta}>{nome}</h3>
                 <div className={styles.Valores}>

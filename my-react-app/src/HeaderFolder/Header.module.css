@@ -1,6 +1,5 @@
 header{
     background-color: #000000;
-    top: 0;
     width: 100%;
     z-index: 1000;
     position: fixed;
@@ -24,18 +23,35 @@ header{
     flex-direction: row;
     border-bottom: 2px solid #04DD2D;
     justify-content: space-around;
+    padding-top: 12.5px;
 }
 
 .TitulosDoMenu{
     font-size: 24px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0 60px 0 60px;
     font-family: "Bebas Neue";
+    display: flex;
+}
+
+.TitulosDoMenu:hover{
+    font-size: 25px;
+    display: flex;
+    color: #04DD2D;
+    transition: 0.3s;
+}
+
+.IconesDaHeader{
+    list-style: none;
     display: flex;
 }
 
 .Icones{
     padding-left: 20px;
     font-size: 35px;
+}
+
+.Icones:hover{
+    font-size: 36px;
+    color: #04DD2D;;
 }
 
