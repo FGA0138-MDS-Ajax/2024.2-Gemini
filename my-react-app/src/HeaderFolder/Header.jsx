@@ -1,6 +1,4 @@
 import styles from './Header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 function Header(){
 
