@@ -5,11 +5,18 @@ header{
     position: fixed;
     margin: 0;
     top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .ItensDoMenu{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .Logo{

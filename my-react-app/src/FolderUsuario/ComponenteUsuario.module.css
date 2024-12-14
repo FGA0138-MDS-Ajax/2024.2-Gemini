@@ -1,0 +1,80 @@
+.Usuario{
+    margin: 200px 0 100px 0;
+    border: 5px solid rgba(4, 221, 45, 0.50);
+    width: 600px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+h1,
+.CampoDeTexto,
+.Label,
+.BotaoCancelar,
+.BotaoAlternarDados{
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1,
+.Label,
+.BotaoAlternarDados,
+.BotaoCancelar{
+    color: #FFF;
+}
+
+h1{
+    font-size: 42px;
+    margin: 20px 0 20px 0;
+}
+
+.Divisoria{
+    width: 500px;
+    height: 2px;
+    background-color: rgba(7, 232, 49, 0.50);
+    position: relative;
+    margin: 20px 0;
+}
+
+.Divisoria::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: rgba(7, 232, 49, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.ContaDeLogin{
+    padding-right: 35px;
+}
+
+.CampoDeTexto{
+    border: 4px solid rgba(4, 221, 45, 0.65);
+    width: 483px;
+    height: 53px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    margin-bottom: 15px;
+
+}
+
+Label{
+    font-size: 20px;
+}
+
+.BotaoCancelar, 
+.BotaoAlternarDados{
+    width: 195px;
+    height: 54px;
+    flex-shrink: 0;
+    background-color: rgba(7, 232, 49, 0.50);
+    font-size: 24px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

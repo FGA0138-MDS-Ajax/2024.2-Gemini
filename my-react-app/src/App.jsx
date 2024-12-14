@@ -8,6 +8,7 @@ import Carrossel from './FolderCarrossel/Carrossel.jsx'
 
 import PaginaCamiseta1 from './PaginaCamisetas/PaginaCamiseta1.jsx'
 import PaginaCamiseta2 from './PaginaCamisetas/PaginaCamiseta2.jsx'
+import PaginaUsuario from './PaginaUsuario/PaginaUsuario.jsx'
 
 function App() {
 
@@ -87,6 +88,9 @@ function App() {
       
       {/* Pagina Camiseta 2*/}
       <Route path='/pagina-camiseta-2' element={<PaginaCamiseta2/>} />
+
+      {/* Pagina Usuario*/}
+      <Route path='/pagina-usuario' element={<PaginaUsuario/>} />
 
       </Routes>
 

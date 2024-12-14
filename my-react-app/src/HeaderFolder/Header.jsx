@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header(){
@@ -15,7 +16,9 @@ function Header(){
                             <a><img src='src/assets/icones/ShoppingCart.svg' className={styles.Icones} /></a>
                         </li>
                         <li>
-                            <a><img src='src/assets/icones/User.svg' className={styles.Icones}/></a>
+                            <Link to='/pagina-usuario'>
+                                <a><img src='src/assets/icones/User.svg' className={styles.Icones}/></a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
