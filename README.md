@@ -76,10 +76,29 @@ git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
 • -
 
 • -  
-
+  <h3>Configurações do Back-end</h3>
+</div>
+<ul>
+    <li>Certifique-se de ter o Python 3.12 instalado.</li>
+    <li>Estabeleça um ambiente virtual dentro do diretório do projeto:
+        <ul>
+            <li><strong>Linux/MacOS:</strong> <code>virtualenv -p python3 venv</code></li>
+            <li><strong>Windows:</strong> <code>python -m virtualenv venv</code></li>
+        </ul>
+    </li>
+    <li>Ative o ambiente virtual:
+        <ul>
+            <li><strong>Linux/MacOS:</strong> <code>source venv/bin/activate</code></li>
+            <li><strong>Windows:</strong> <code>venv/Scripts/activate</code></li>
+        </ul>
+    </li>
+    <li>Instale o Django: <code>pip install django</code></li>
+</ul>
 <!--- 
 • É necessário ter o Node.js e o NPM instalados para usar o React. 
 ---> 
+
+
 
 <div align="center">
   <h2> Colaboradores </h2>
