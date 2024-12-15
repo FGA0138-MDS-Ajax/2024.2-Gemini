@@ -1,0 +1,39 @@
+.PaginaProdutos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 200px;
+}
+
+.Titulos{
+    color: #FFF;
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin-bottom: 50px;
+}
+
+.TituloProdutos{
+    margin: 0;
+    font-size: 36px;
+}
+
+.TituloFiltrar{
+    margin: 0;
+    font-size: 24px;
+}
+
+.ProdutosGrid{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+}

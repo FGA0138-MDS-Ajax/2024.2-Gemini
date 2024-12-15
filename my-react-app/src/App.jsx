@@ -9,6 +9,7 @@ import Carrossel from './FolderCarrossel/Carrossel.jsx'
 import PaginaCamiseta1 from './PaginaCamisetas/PaginaCamiseta1.jsx'
 import PaginaCamiseta2 from './PaginaCamisetas/PaginaCamiseta2.jsx'
 import PaginaUsuario from './PaginaUsuario/PaginaUsuario.jsx'
+import PaginaProdutos from './PaginaProdutos/PaginaProdutos.jsx'
 
 function App() {
 
@@ -92,6 +93,9 @@ function App() {
       {/* Pagina Usuario*/}
       <Route path='/pagina-usuario' element={<PaginaUsuario/>} />
 
+      {/* Pagina Produtos*/}
+      <Route path='/pagina-produtos' element={<PaginaProdutos/>} />
+
       </Routes>
 
     </Router>
@@ -100,3 +104,4 @@ function App() {
 }
 
 export default App
+
