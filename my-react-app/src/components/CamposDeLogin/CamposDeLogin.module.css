@@ -1,0 +1,95 @@
+.CamposDeLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Logo{
+    width: 235px;
+    height: 81px;
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.CampoDeTexto{
+    width: 483px;
+    height: 40px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #04DD2D;
+    background-color: transparent;
+    color: #a8a4a4;
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.BotaoEsqueciSenha{
+    font-family: "Bebas Neue";
+    all: unset;
+    padding-left: 10px;
+    color: #cfd3d0
+}
+
+.BotaoEntrar{
+    width: 227px;
+    height: 43.319px;
+    flex-shrink: 0;
+    border-radius: 4.138px;
+    background: rgba(4, 221, 45, 0.42);
+}
+
+.NaoTemConta{
+    display: flex;
+    font-family: "Bebas Neue";
+}
+
+.BotaoRegistrar{
+    all: unset;
+    padding-left: 10px;
+    color: #04DD2D
+}
+
+.BotaoEntrarComContaGoogle,
+.BotaoEntrarComContaFacebook {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border: 1px solid #ccc; 
+    border-radius: 4.138px;
+    color: #ffffff;
+    cursor: pointer;
+    width: 227px;
+    height: 45px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.BotaoEntrarComContaFacebook{
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.BotaoEntrarComContaGoogle{
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.LogoConta{
+    width: 24px;
+    height: 24px; 
+    margin-right: 10px;
+}
+
+.TextoEntarCom {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+}

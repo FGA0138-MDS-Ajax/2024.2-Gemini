@@ -8,7 +8,7 @@ function Header(){
             <ul className={styles.ItensDoMenu}>
                 <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
                 <div className={styles.ClicaveisDaHeader}>
-                    <Link to='/pagina-produtos'>
+                    <Link to='/Produtos'>
                         <h1 className={styles.TitulosDoMenu}> PRODUTOS </h1>
                     </Link>
                     <h1 className={styles.TitulosDoMenu}> QUEM SOMOS / APRESENTAÇÃO </h1>
@@ -18,7 +18,7 @@ function Header(){
                             <a><img src='src/assets/icones/ShoppingCart.svg' className={styles.Icones} /></a>
                         </li>
                         <li>
-                            <Link to='/pagina-usuario'>
+                            <Link to='/Usuario'>
                                 <a><img src='src/assets/icones/User.svg' className={styles.Icones}/></a>
                             </Link>
                         </li>
@@ -31,3 +31,4 @@ function Header(){
 }
 
 export default Header
+

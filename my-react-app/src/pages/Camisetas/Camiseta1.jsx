@@ -1,8 +1,5 @@
-import Header from '../HeaderFolder/Header.jsx';
-import Footer from '../FolderFooter/Footer.jsx';
-import MenuCamiseta from '../FolderMenuCamiseta/MenuCamiseta.jsx';
-
-import styles from './PaginaCamiseta.module.css'
+import { Header, Footer, MenuCamiseta } from '../../components/index.js';
+import styles from './Camiseta.module.css'
 
 function PaginaCamiseta1() {
 

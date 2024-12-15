@@ -1,9 +1,5 @@
-import {Link} from 'react-router-dom';
-import styles from './PaginaProdutos.module.css';
-
-import Header from '../HeaderFolder/Header.jsx';
-import Footer from '../FolderFooter/Footer.jsx';
-import CardCamiseta from '../FolderCardCamiseta/CardCamiseta.jsx';
+import { Header, Footer, CardCamiseta } from '../../components/index.js';
+import styles from './Produtos.module.css';
 
 function PaginaProdutos(){
 

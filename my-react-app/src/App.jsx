@@ -1,15 +1,9 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css'
-import Header from './HeaderFolder/Header.jsx'
-import styles from './App.module.css'
-import CardCamiseta from './FolderCardCamiseta/CardCamiseta.jsx'
-import Footer from './FolderFooter/Footer.jsx'
-import Carrossel from './FolderCarrossel/Carrossel.jsx'
 
-import PaginaCamiseta1 from './PaginaCamisetas/PaginaCamiseta1.jsx'
-import PaginaCamiseta2 from './PaginaCamisetas/PaginaCamiseta2.jsx'
-import PaginaUsuario from './PaginaUsuario/PaginaUsuario.jsx'
-import PaginaProdutos from './PaginaProdutos/PaginaProdutos.jsx'
+import { Header, CardCamiseta, Footer, Carrossel } from './components/index.js';
+import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario } from './pages/index.jsx';
+import styles from './App.module.css';
 
 function App() {
 
@@ -23,41 +17,42 @@ function App() {
   return(
 
     <Router>
-      <Header/>
 
       <Routes>
         {/* Pagina Inicial */}
         <Route
-          path="/"
+          path="/Home"
           element={
             <>
+
+        <Header/>
 
         <Carrossel LinksDasImagens={LinksDasImagens}/>
 
         <div className={styles.CamisetasEmDestaque}>
           <CardCamiseta
-            linkPaginaCamiseta= "/pagina-camiseta-1"
+            linkPaginaCamiseta= "/Camiseta1"
             imgSrc='/assets/camisetas/CamisetaMCLaren.png'
             nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
             preco= "R$ 59,99"
             prestacoes = "2x de r$ 29,99"
           />
           <CardCamiseta
-            linkPaginaCamiseta= "/pagina-camiseta-2"
+            linkPaginaCamiseta= "/Camiseta2"
             imgSrc='/assets/camisetas/CamisetaRedbull.png'
             nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
             preco= "R$ 59,99"
             prestacoes = "2x de r$ 29,99"
           />
           <CardCamiseta
-            linkPaginaCamiseta= "/pagina-camiseta-1"
+            linkPaginaCamiseta= "/Camiseta1"
             imgSrc='/assets/camisetas/CamisetaMCLaren.png'
             nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
             preco= "R$ 59,99"
             prestacoes = "2x de r$ 29,99"
           />
           <CardCamiseta
-            linkPaginaCamiseta= "/pagina-camiseta-2"
+            linkPaginaCamiseta= "/Camiseta2"
             imgSrc='/assets/camisetas/CamisetaRedbull.png'
             nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
             preco= "R$ 59,99"
@@ -84,17 +79,23 @@ function App() {
       />
 
       {/* Pagina Camiseta 1*/}
-      <Route path='/pagina-camiseta-1' element={<PaginaCamiseta1/>} />
+      <Route path='/Camiseta1' element={<Camiseta1/>} />
 
       
       {/* Pagina Camiseta 2*/}
-      <Route path='/pagina-camiseta-2' element={<PaginaCamiseta2/>} />
+      <Route path='/Camiseta2' element={<Camiseta2/>} />
 
       {/* Pagina Usuario*/}
-      <Route path='/pagina-usuario' element={<PaginaUsuario/>} />
+      <Route path='/Usuario' element={<Usuario/>} />
 
       {/* Pagina Produtos*/}
-      <Route path='/pagina-produtos' element={<PaginaProdutos/>} />
+      <Route path='/Produtos' element={<Produtos/>} />
+
+      {/* Pagina Cadastro*/}
+      <Route path='/Cadastro' element={<Cadastro/>} />
+
+      {/* Pagina Login*/}
+      <Route path='/Login' element={<Login/>} />
 
       </Routes>
 
