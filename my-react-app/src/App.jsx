@@ -1,8 +1,8 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css'
 
-import { Header, CardCamiseta, Footer, Carrossel } from './components/index.js';
-import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario } from './pages/index.jsx';
+import { Header, CardCamiseta, Footer, Carrossel} from './components/index.js';
+import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout} from './pages/index.jsx';
 import styles from './App.module.css';
 
 function App() {
@@ -71,6 +71,7 @@ function App() {
           <img src='src/assets/ImagemCompeticao.png' className={styles.ImagemCompeticao}/>
         </div>
 
+
         <Footer/>
 
         </>
@@ -96,6 +97,12 @@ function App() {
 
       {/* Pagina Login*/}
       <Route path='/Login' element={<Login/>} />
+
+      {/* Pagina Carrinho*/}
+      <Route path='/Carrinho' element={<Carrinho/>} />
+
+      {/* Pagina Checkout*/}
+      <Route path='/Checkout' element={<Checkout/>} />
 
       </Routes>
 

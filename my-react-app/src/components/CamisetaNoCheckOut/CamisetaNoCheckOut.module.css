@@ -1,0 +1,23 @@
+.CamisetaNoCheckOut{
+    display: flex;
+    width: 480px;
+    height: 142px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.ImgCamiseta{
+    width: 142px;
+    height: 152px;
+}
+
+.InformacoesCamiseta{
+    color: #FFF;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+}

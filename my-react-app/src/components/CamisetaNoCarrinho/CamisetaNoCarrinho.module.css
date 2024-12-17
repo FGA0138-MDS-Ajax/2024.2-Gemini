@@ -1,0 +1,41 @@
+.CamisetaNoCarrinho{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-family: "Bebas Neue";
+    justify-content: space-around;
+    width: 900px;
+    margin: 60px 0;
+}
+
+.ImgCamiseta{
+    width: 139px;
+    height: 142px;
+    flex-shrink: 0;
+}
+
+.NomeCamiseta{
+    color: #FFF;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.BotoesDeQtd{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    width: 115px;
+}
+
+.BotaoDeQtd{
+    all: unset;
+}
+
+.BotaoLixeira{
+    all: unset;
+}

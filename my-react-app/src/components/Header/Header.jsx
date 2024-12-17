@@ -15,7 +15,9 @@ function Header(){
                     <h1 className={styles.TitulosDoMenu}> PATROCINADORES </h1>
                     <ul className={styles.IconesDaHeader}>
                         <li>
-                            <a><img src='src/assets/icones/ShoppingCart.svg' className={styles.Icones} /></a>
+                            <Link to='/Carrinho'>
+                                <a><img src='src/assets/icones/ShoppingCart.svg' className={styles.Icones} /></a>
+                            </Link>
                         </li>
                         <li>
                             <Link to='/Usuario'>
