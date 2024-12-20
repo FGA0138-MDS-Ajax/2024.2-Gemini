@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css'
 
 import { Header, CardCamiseta, Footer, Carrossel} from './components/index.js';
-import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout, Historia, Patrocinadores} from './pages/index.jsx';
+import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout, Historia, Patrocinadores, PosVenda} from './pages/index.jsx';
 import styles from './App.module.css';
 
 function App() {
@@ -109,6 +109,9 @@ function App() {
 
       {/* Pagina Patrocinadores*/}
       <Route path='/Patrocinadores' element={<Patrocinadores/>} />
+
+      {/* Pagina Pos-venda*/}
+      <Route path='/Pos-venda' element={<PosVenda/>} />
 
       </Routes>
 

@@ -35,3 +35,17 @@ form label {
     display: block;
     margin-bottom: 10px; /* Espaçamento entre as opções */
 }
+
+.BotoesCheckout{
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+.BotaoCheckout{
+    margin-left: 10px;
+    font-size: 24px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgba(7, 232, 49, 0.50);
+}
+

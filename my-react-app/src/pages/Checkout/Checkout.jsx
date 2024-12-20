@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { Header, Footer, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao } from '../../components/index.js';
 import styles from './Checkout.module.css'
 
@@ -69,6 +69,17 @@ function Checkout() {
                 </form>
 
             </div>
+
+        </div>
+
+        <div className={styles.BotoesCheckout}>
+
+            <Link to='/Produtos'>
+                <button className={styles.BotaoCheckout}>Continuar Comprando</button>
+            </Link>
+            <Link to='/Pos-venda'>
+                <button className={styles.BotaoCheckout}>Finalizar Compra</button>
+            </Link>
 
         </div>
         

@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import { Header, Footer, CamisetaNoCarrinho } from '../../components/index.js';
 import styles from './Carrinho.module.css'
 
@@ -34,8 +35,12 @@ function Carrinho() {
         </div>
 
         <div className={styles.BotoesDeCompra}>
-            <button className={styles.BotaoDeCompra}>Prosseguir</button>
-            <button className={styles.BotaoDeCompra}>Continuar Comprando</button>
+            <Link to='/Checkout'>
+                <button className={styles.BotaoDeCompra}>Prosseguir</button>
+            </Link>
+            <Link to='/Produtos'>
+                <button className={styles.BotaoDeCompra}>Continuar Comprando</button>
+            </Link>
         </div>
   
         <Footer/>
