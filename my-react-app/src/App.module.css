@@ -2,22 +2,15 @@
     display: flex;
     justify-content: space-between;
     margin: 50px;
+    width: 1200px;
 }
 
 .SecaoProjeto{
     background-image: url('src/assets/ImagemProjeto.png');
-    width: 1280px;
     height: 437px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    font-family: "Bebas Neue";
-}
-
-.TituloProjeto{
-    color: #FFF;
-    font-size: 86px;
-    font-weight: 400;
 }
 
 .ParagrafoProjeto{
@@ -36,34 +29,11 @@
 
 .SecaoCompeticao{
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0;
     justify-content: space-around;
-    font-family: "Bebas Neue";
 }
 
 .ImagemCompeticao{
     width: 636px;
     height: 359px;
-}
-
-.TextosCompeticao{
-    margin-top: 0;
-}
-
-.TituloCompeticao{
-    color: #FFF;
-    font-size: 80px;
-    font-weight: 400;
-}
-
-.ParagrafoCompeticao{
-    width: 340px;
-    height: 286px;  
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.9px;
-    text-align: left;
 }

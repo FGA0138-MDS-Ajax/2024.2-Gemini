@@ -1,25 +1,7 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 110px auto 0 auto;
   text-align: center;
+  font-family: "Bebas Neue";
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-
-.read-the-docs {
-  color: #888;
-}

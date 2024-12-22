@@ -1,8 +1,11 @@
+.CamisetaNoCarrinho,
+.NomeCamiseta{
+    text-align: center;
+}
+
 .CamisetaNoCarrinho{
     display: flex;
-    text-align: center;
     align-items: center;
-    font-family: "Bebas Neue";
     justify-content: space-around;
     width: 900px;
     margin: 60px 0;
@@ -14,11 +17,13 @@
     flex-shrink: 0;
 }
 
+.NomeCamiseta,
+.BotoesDeQtd{
+    font-size: 20px;
+}
+
 .NomeCamiseta{
     color: #FFF;
-    text-align: center;
-    font-family: "Bebas Neue";
-    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -27,15 +32,30 @@
 .BotoesDeQtd{
     display: flex;
     justify-content: space-around;
-    font-family: "Bebas Neue";
-    font-size: 20px;
     width: 115px;
 }
 
-.BotaoDeQtd{
+.BotaoDeQtd,
+.BotaoLixeira{
     all: unset;
 }
 
-.BotaoLixeira{
-    all: unset;
+.Divisoria{
+    width: 800px;
+    height: 2px;
+    background-color: rgba(7, 232, 49, 0.50);
+    position: relative;
+    margin: 20px 0;
+}
+
+.Divisoria::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: rgba(7, 232, 49, 1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
 }

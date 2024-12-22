@@ -21,8 +21,10 @@ function Footer(){
                 </li>
             </ul>
             <img className={styles.LogoUnb} src='src/assets/LogoUnb.png'/>
-            <h4>2024 por FGR UNB</h4>
-            <p>Desenvolvido por Grupo Gemini - MDS 2024.2</p>
+            <div className={styles.DesenvolvidoPor}>
+                <p>2024 por FGR UNB</p>
+                <p>Desenvolvido por Grupo Gemini - MDS 2024.2</p>
+            </div>
         </footer>
     );
 

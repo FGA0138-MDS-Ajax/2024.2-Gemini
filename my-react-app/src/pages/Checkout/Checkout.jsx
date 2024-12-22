@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { Header, Footer, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao } from '../../components/index.js';
+import { Header, FooterDeVendas, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao, BotaoVerdePadrao } from '../../components/index.js';
 import styles from './Checkout.module.css'
 
 function Checkout() {
@@ -75,15 +75,15 @@ function Checkout() {
         <div className={styles.BotoesCheckout}>
 
             <Link to='/Produtos'>
-                <button className={styles.BotaoCheckout}>Continuar Comprando</button>
+                <BotaoVerdePadrao label="Continuar Comprando"/>
             </Link>
             <Link to='/Pos-venda'>
-                <button className={styles.BotaoCheckout}>Finalizar Compra</button>
+                <BotaoVerdePadrao label="Finalizar Compra"/>
             </Link>
 
         </div>
         
-        <Footer/>
+        <FooterDeVendas/>
 
     </div>
   )

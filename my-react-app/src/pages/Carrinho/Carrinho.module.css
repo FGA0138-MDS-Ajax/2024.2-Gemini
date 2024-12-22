@@ -1,7 +1,10 @@
-.PaginaCarrinho{
+.Carrinho{
+    max-width: 1280px;
+    margin: 0 auto;
     text-align: center;
     justify-content: center;
-    margin-top: 150px;
+    justify-items: center;
+    align-items: center;
 }
 
 .Nomes{
@@ -13,7 +16,6 @@
     flex-shrink: 0;
     color: #FFF;
     text-align: center;
-    font-family: "Bebas Neue";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -27,7 +29,6 @@
     display: flex;
     color: #FFF;
     text-align: center;
-    font-family: "Bebas Neue";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -44,12 +45,3 @@
     padding-left: 20px;
 }
 
-.BotaoDeCompra{
-    height: 43px;
-    flex-shrink: 0;
-    background-color: rgba(7, 232, 49, 0.50);
-    font-size: 18px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    font-family: "Bebas Neue";
-}

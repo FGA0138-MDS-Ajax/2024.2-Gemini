@@ -1,9 +1,12 @@
 .PosVenda{
-    margin-top: 150px;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
 }
+
 
 .SecoesDeTexto{
     display: flex;
@@ -27,23 +30,10 @@
     transform: translate(-50%, -50%); 
 }
 
-.TextoObrigado,
-.TextoCodigo,
 .PixCopia{
     color: #FFF;
     text-align: center;
-    font-family: "Bebas Neue";
     font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.CodigoRetirada{
-    color: #FFF;
-    text-align: center;
-    font-family: "Bebas Neue";
-    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -53,6 +43,7 @@
     display: flex;
     width: 1100PX;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .SecaoProdutos{
@@ -80,7 +71,6 @@
 
 form label {
     display: block;
-    margin-bottom: 10px; /* Espaçamento entre as opções */
+    margin-bottom: 10px;
 }
-
 

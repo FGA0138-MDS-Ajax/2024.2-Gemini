@@ -3,8 +3,7 @@
     justify-content: space-around;
     width: 1280px;
     height: 366px;
-    font-family: "Bebas Neue";
-    margin: 150px 0 150px 0;
+    margin-bottom: 150px;
 }
 
 .ImgCamiseta{
@@ -13,23 +12,11 @@
     flex-shrink: 0;
 }
 
-.NomeCamiseta,
-.PrecoCamiseta,
 .TextoTamanho{
     color: #FFF;
     font-weight: 400;
     font-style: normal;
     line-height: normal;
-}
-
-.NomeCamiseta{
-    text-align: center;
-    font-size: 48px;
-}
-
-.PrecoCamiseta{
-    text-align: right;
-    font-size: 48px;
 }
 
 .TextoTamanho{
@@ -38,34 +25,14 @@
     margin: 15px 0 15px 0;
 }
 
-.BotaoDeTamanho,
-.BotaoGuiaDeTamanho,
-.BotaoAdicionarAoCarrinho{
+.BotaoGuiaDeTamanho{
     align-items: center;
     font-size: 24px;
     height: 60px;
     border-radius: 15px;
-}
-
-.BotaoDeTamanho,
-.BotaoGuiaDeTamanho{
     background-color: transparent;
     border: 1.2px solid #FFF;
-}
-
-.BotaoDeTamanho{
-    width: 60px;
-    margin: 0 10px 0 10px;
-    padding: 0;
-}
-
-.BotaoGuiaDeTamanho{
     border: 1.2px solid #FFF;
     margin: 0 10px 0 10px;
     background-color: transparent;
-}
-
-.BotaoAdicionarAoCarrinho{
-    margin-top: 15px;
-    background-color: rgba(7, 232, 49, 0.50);
 }

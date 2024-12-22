@@ -1,16 +1,16 @@
-import { Header, Footer } from '../../components/index.js';
+import { Header, Footer, Titulo } from '../../components/index.js';
 import styles from './Patrocinadores.module.css'
 
 function Patrocinadores() {
 
   return(
 
-    <div className={styles.PaginaPatrocinadores}>
+    <section className={styles.Patrocinadores}>
         <Header/>
 
         <div className={styles.SecaoPatrocinadores}>
 
-            <h1 className={styles.TituloPatrocinadores}>Nossos Patrocinadores</h1>
+            <Titulo texto="Nossos Patrocinadores" tamanho="86px" gradiente={false}/>
 
             <div className={styles.Divisoria}/>
 
@@ -24,7 +24,7 @@ function Patrocinadores() {
   
         <Footer/>
 
-    </div>
+    </section>
   )
 }
 

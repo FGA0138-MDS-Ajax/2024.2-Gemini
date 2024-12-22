@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import { CampoDeTexto } from '../../components';
 import styles from './CamposDeLogin.module.css';
 
 function CamposDeLogin(){
@@ -9,16 +10,20 @@ function CamposDeLogin(){
 
             <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
 
-            <input type="text" className={styles.CampoDeTexto} value="Usuário ou e-mail"/>
-            <input type="text" className={styles.CampoDeTexto} value="Senha"/>
+            <CampoDeTexto label="Usuário ou e-mail"/>
+            <CampoDeTexto label="Senha"/>
 
             <button className={styles.BotaoEsqueciSenha}>Esqueci a senha</button>
 
-            <button className={styles.BotaoEntrar}>Entrar</button>
+            <Link to="/Home">
+                <button className={styles.BotaoEntrar}>Entrar</button>
+            </Link>
 
             <div className={styles.NaoTemConta}>
                 <p className={styles.TextoNaoTemConta}>Não tem conta?</p>
-                <button className={styles.BotaoRegistrar}>Registrar</button>
+                <Link to="/Cadastro">
+                    <button className={styles.BotaoRegistrar}>Registrar</button>
+                </Link>
             </div>
 
             <button className={styles.BotaoEntrarComContaGoogle}>

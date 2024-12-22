@@ -5,7 +5,7 @@ function PaginaLogin(){
 
     return(
 
-        <div className={styles.Cadastro}>
+        <div className={styles.Login}>
 
             <CamposDeLogin/>
 

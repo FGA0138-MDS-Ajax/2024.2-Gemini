@@ -1,9 +1,8 @@
 .FooterResumido{
-    margin-top: 100px;
-    font-family: "Bebas Neue";
+    margin-top: 80px;
     border-top: 3px solid rgba(4, 221, 45, 0.65);
     padding-top: 30px;
-    width: 1150px;
+    width: 1280px;
     display: flex;
     justify-content: space-around;
 }

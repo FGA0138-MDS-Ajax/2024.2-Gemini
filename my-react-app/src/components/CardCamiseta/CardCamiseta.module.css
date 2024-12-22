@@ -3,6 +3,8 @@
     height: 290px;
     border-radius: 15px;
     background: #E5E5E5;
+    position: relative;
+    overflow: hidden;
 }
 
 .CardCamiseta:hover{
@@ -21,7 +23,6 @@
 .InfoCard{
     width: 233px;
     color: #000;
-    font-family: "Bebas Neue";
     font-size: 15px;
     font-weight: 400;
 }
@@ -34,4 +35,10 @@
     display: flex;
     justify-content: space-around;
     margin-top: 5px;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }

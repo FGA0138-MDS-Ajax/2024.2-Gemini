@@ -1,3 +1,4 @@
+import { BotaoVerdePadrao, Titulo, BotaoDeTamanho } from '../../components';
 import styles from './MenuCamiseta.module.css';
 
 function MenuCamiseta({imgSrc, nome, preco}){
@@ -6,18 +7,18 @@ function MenuCamiseta({imgSrc, nome, preco}){
         <div className={styles.MenuCamiseta}>
             <img className={styles.ImgCamiseta} src={imgSrc}/>
             <div className={styles.ConteudoEscrito}>
-                <h1 className={styles.NomeCamiseta}>{nome}</h1>
-                <h1 className={styles.PrecoCamiseta}>{preco}</h1>
+                <Titulo texto={nome} tamanho="64px" gradiente={true}/>
+                <Titulo texto={preco} tamanho="64px" gradiente={true}/>
                 <h5 className={styles.TextoTamanho}>Tamanho</h5>
                 <div className={styles.BotoesDeTamanho}>
-                    <button className={styles.BotaoDeTamanho}>P</button>
-                    <button className={styles.BotaoDeTamanho}>M</button>
-                    <button className={styles.BotaoDeTamanho}>G</button>
-                    <button className={styles.BotaoDeTamanho}>XG</button>
-                    <button className={styles.BotaoDeTamanho}>XXG</button>
+                    <BotaoDeTamanho label="P"/>
+                    <BotaoDeTamanho label="M"/>
+                    <BotaoDeTamanho label="G"/>
+                    <BotaoDeTamanho label="XG"/>
+                    <BotaoDeTamanho label="XXG"/>
                 </div>
                 <button className={styles.BotaoGuiaDeTamanho}>Guia de Tamanho</button>
-                <button className={styles.BotaoAdicionarAoCarrinho}>Adicionar ao carrinho</button>
+                <BotaoVerdePadrao label="Adicionar ao carrinho"/>
             </div>
         </div>
     );

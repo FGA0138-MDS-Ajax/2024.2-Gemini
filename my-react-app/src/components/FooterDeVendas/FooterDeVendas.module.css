@@ -1,0 +1,38 @@
+footer{
+    border-top: 3px solid rgba(4, 221, 45, 0.65);
+    padding-top: 30px;
+    width: 1280px;
+    margin: 100px auto 0;
+}
+
+.VoltarAoTopo{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ConteudoPrincipal{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.RedesSociais{
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+.IconeRedeSocial:hover{
+    transform: scale(1.1);
+    transition: 0.3 ease;
+}
+
+.LogoUnb{
+    width: 424px;
+    height: 47px;
+    flex-shrink: 0;
+}
+

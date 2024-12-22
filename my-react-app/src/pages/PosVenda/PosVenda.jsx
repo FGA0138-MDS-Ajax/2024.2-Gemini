@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { Header, Footer, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao } from '../../components/index.js';
+import { Header, FooterDeVendas, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao, Titulo, ParagrafoPadrao } from '../../components/index.js';
 import styles from './PosVenda.module.css'
 
 function PosVenda() {
@@ -13,10 +13,10 @@ function PosVenda() {
             <div className={styles.SecoesDeTexto}>
 
                 <div className={styles.SecaoObrigado}>
-                    <h1 className={styles.TituloObrigado}>Obrigado!</h1>
-                    <p className={styles.TextoObrigado}>a equipe da fgr agradece pela sua compra! após a confirmação do pagamento, entre em contato pelo nosso whatsapp para receber seu produto!</p>
-                    <p className={styles.TextoCodigo}>O seu código para retirada é:</p>
-                    <p className={styles.CodigoRetirada}>#3060</p>
+                    <Titulo texto="Obrigado" tamanho="64px" gradiente={false}/>
+                    <ParagrafoPadrao texto="a equipe da fgr agradece pela sua compra! após a confirmação do pagamento, entre em contato pelo nosso whatsapp para receber seu produto!"/>
+                    <ParagrafoPadrao texto="O seu código para retirada é:"/>
+                    <Titulo texto="#3060" tamanho="32px" gradiente={false}/>
                 </div>
 
                 <div className={styles.SecaoPix}>
@@ -72,7 +72,7 @@ function PosVenda() {
             
             </div>
         
-        <Footer/>
+        <FooterDeVendas/>
 
     </div>
   )

@@ -1,49 +1,53 @@
 import {Link} from 'react-router-dom';
-import { Header, Footer, CamisetaNoCarrinho } from '../../components/index.js';
+import { Header, FooterDeVendas, CamisetaNoCarrinho, BotaoVerdePadrao } from '../../components/index.js';
 import styles from './Carrinho.module.css'
 
 function Carrinho() {
 
   return(
 
-    <div className={styles.PaginaCarrinho}>
+    <div className={styles.Carrinho}>
         <Header/>
 
-        <div className={styles.Nomes}>
-            <h5>Produtos</h5>
-            <h5>Quantidade</h5>
-            <h5>Valor</h5>
-        </div>
+        <div className={styles.SecaoCamisetaNoCarrinho}>
 
-        <div className={styles.CamisetasNoCarrinho}>
-            <CamisetaNoCarrinho 
-                imgSrc='/assets/camisetas/CamisetaMCLaren.png'
-                nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
-                preco= "R$ 59,99"
-                />
+            <div className={styles.Nomes}>
+                <h5>Produtos</h5>
+                <h5>Quantidade</h5>
+                <h5>Valor</h5>
+            </div>
 
-            <CamisetaNoCarrinho 
-                imgSrc='/assets/camisetas/CamisetaMCLaren.png'
-                nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
-                preco= "R$ 59,99"
-                />
-        </div>
+            <div className={styles.CamisetasNoCarrinho}>
+                <CamisetaNoCarrinho 
+                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    preco= "R$ 59,99"
+                    />
 
-        <div className={styles.Valores}>
-            <h5 className={styles.TextoValores}>Valor Total</h5>
-            <h5 className={styles.ValorTotal}>119,98 R$</h5>
+                <CamisetaNoCarrinho 
+                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    preco= "R$ 59,99"
+                    />
+            </div>
+
+            <div className={styles.Valores}>
+                <h5 className={styles.TextoValores}>Valor Total</h5>
+                <h5 className={styles.ValorTotal}>119,98 R$</h5>
+            </div>
+
         </div>
 
         <div className={styles.BotoesDeCompra}>
             <Link to='/Checkout'>
-                <button className={styles.BotaoDeCompra}>Prosseguir</button>
+                <BotaoVerdePadrao label="Prosseguir"/>
             </Link>
             <Link to='/Produtos'>
-                <button className={styles.BotaoDeCompra}>Continuar Comprando</button>
+                <BotaoVerdePadrao label="Continuar Comprando"/>
             </Link>
         </div>
   
-        <Footer/>
+        <FooterDeVendas/>
 
     </div>
   )

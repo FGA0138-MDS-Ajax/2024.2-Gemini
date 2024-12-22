@@ -1,154 +1,144 @@
-import { Header, Footer, CardCamiseta } from '../../components/index.js';
+import { Header, FooterDeVendas, CardCamiseta, Titulo } from '../../components/index.js';
 import styles from './Produtos.module.css';
 
 function PaginaProdutos(){
 
     return(
 
-        <div className={styles.PaginaProdutos}>
+        <section className={styles.Produtos}>
 
             <Header/>
 
             <div className={styles.Titulos}>
 
-                <h1 className={styles.TituloProdutos}>Produtos</h1>
+                <Titulo texto="Produtos" tamanho="64px" gradiente={false}/>
                 <h1 className={styles.TituloFiltrar}>Filtrar</h1>
 
             </div>
 
             <div className={styles.ProdutosGrid}>
 
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+            <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
+                  />
 
                 <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
+                  />
 
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                    <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
+                  />
 
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                    <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-1"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta1"
                     imgSrc='/assets/camisetas/CamisetaMCLaren.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
-
-                <CardCamiseta
-                    linkPaginaCamiseta= "/pagina-camiseta-2"
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta= "/Camiseta2"
                     imgSrc='/assets/camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
-                />
+                  />
 
             </div>
 
-            <Footer/>
+            <FooterDeVendas/>
 
-        </div>
+        </section>
 
     );
 
