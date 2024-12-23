@@ -1,5 +1,6 @@
 export {default as BotaoDeTamanho} from './BotaoDeTamanho/BotaoDetamanho.jsx';
 export {default as BotaoVerdePadrao} from './BotaoVerdePadrao/BotaoVerdePadrao.jsx';
+export {default as BotaoWhatsapp} from './BotaoWhatsapp/BotaoWhatsapp.jsx';
 export {default as CamisetaNoCarrinho} from './CamisetaNoCarrinho/CamisetaNoCarrinho.jsx';
 export {default as CamisetaNoCheckOut} from './CamisetaNoCheckOut/CamisetaNoCheckOut.jsx';
 export {default as CampoDeTexto} from './CampoDeTexto/CampoDeTexto.jsx';

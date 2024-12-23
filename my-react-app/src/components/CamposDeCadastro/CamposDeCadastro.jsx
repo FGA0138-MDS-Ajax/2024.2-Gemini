@@ -8,7 +8,7 @@ function CamposDeCadastro(){
 
         <div className={styles.CamposDeCadastro}>
 
-            <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
+            <img src='/assets/Logos/LogoFGR.svg' className={styles.Logo}/>
 
             <CampoDeTexto label="Nome Completo"/>
             <CampoDeTexto label="E-mail ou usuário"/>

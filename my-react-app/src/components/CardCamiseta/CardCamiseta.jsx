@@ -1,13 +1,19 @@
 import {Link} from 'react-router-dom';
 import styles from './CardCamiseta.module.css';
 
-function CardCamiseta({linkPaginaCamiseta, imgSrc, nome, preco, prestacoes}){
+function CardCamiseta({linkPaginaCamiseta, imgFrente, imgTras, nome, preco, prestacoes}){
 
     return(
 
         <Link to={linkPaginaCamiseta} className={styles.CardLink}>
             <div className={styles.CardCamiseta}>
-                <img className={styles.ImgCamiseta} src={imgSrc}/>
+
+                {/* Imagem da frente */}
+                <img className={`${styles.ImgCamiseta} ${styles.Front}`} src={imgFrente} alt="" />
+        
+                {/* Imagem de trás */}
+                <img className={`${styles.ImgCamiseta} ${styles.Back}`} src={imgTras} alt="" />
+                
                 <div className={styles.InfoCard}>
                     <h3 className={styles.NomeCamiseta}>{nome}</h3>
                         <div className={styles.Valores}>

@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import styles from './CamisetaNoCheckOut.module.css';
+import { Titulo } from '../../components';
 
 function CamisetaNoCheckOut({ imgSrc, nome, tamanho }){
 
@@ -8,8 +9,8 @@ function CamisetaNoCheckOut({ imgSrc, nome, tamanho }){
         <div className={styles.CamisetaNoCheckOut}>
             <img className={styles.ImgCamiseta} src={imgSrc}/>
             <div className={styles.InformacoesCamiseta}>
-                <h3 className={styles.NomeCamiseta}>{nome}</h3>
-                <h3 className={styles.TamanhoCamiseta}>{tamanho}</h3>
+                <Titulo texto={nome} tamanho="20px" gradiente={true}/>
+                <Titulo texto={tamanho} tamanho="20px" gradiente={true}/>
             </div>
         </div>
 

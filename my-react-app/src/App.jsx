@@ -1,17 +1,17 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css'
 
-import { Header, CardCamiseta, Footer, Carrossel, Titulo, ParagrafoPadraoEsquerda} from './components/index.js';
+import { Header, CardCamiseta, Footer, Carrossel, Titulo, ParagrafoPadraoEsquerda, BotaoWhatsapp} from './components/index.js';
 import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout, Historia, Patrocinadores, PosVenda} from './pages/index.jsx';
 import styles from './App.module.css';
 
 function App() {
 
   const LinksDasImagens = [
-    {src: 'src/assets/banner/bannerLegends.png', link: '', alt: 'Descricao'},
-    {src: 'src/assets/banner/Banner2.png', link: '', alt: 'Descricao'},
-    {src: 'src/assets/banner/bannerLegends.png', link: '', alt: 'Descricao'},
-    {src: 'src/assets/banner/Banner2.png', link: '', alt: 'Descricao'}
+    {src: '/assets/Banners/Banner1.png', link: '', alt: 'Descricao'},
+    {src: '/assets/Banners/Banner2.png', link: '', alt: 'Descricao'},
+    {src: '/assets/Banners/Banner1.png', link: '', alt: 'Descricao'},
+    {src: '/assets/Banners/Banner2.png', link: '', alt: 'Descricao'}
   ];
 
   return(
@@ -33,29 +33,33 @@ function App() {
                 <div className={styles.CamisetasEmDestaque}>
                   <CardCamiseta
                     linkPaginaCamiseta= "/Camiseta1"
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    imgFrente='/assets/Camisetas/CamisetaMCLaren.png'
+                    imgTras='/assets/Camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
                   />
                   <CardCamiseta
                     linkPaginaCamiseta= "/Camiseta2"
-                    imgSrc='/assets/camisetas/CamisetaRedbull.png'
-                    nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    imgFrente='/assets/Camisetas/CamisetaRedbull.png'
+                    imgTras='/assets/Camisetas/CamisetaMCLaren.png'
+                    nome = "RIVALS COLLECTIONS 2024 | REDBULL"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
                   />
                   <CardCamiseta
                     linkPaginaCamiseta= "/Camiseta1"
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    imgFrente='/assets/Camisetas/CamisetaMCLaren.png'
+                    imgTras='/assets/Camisetas/CamisetaRedbull.png'
                     nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
                   />
                   <CardCamiseta
                     linkPaginaCamiseta= "/Camiseta2"
-                    imgSrc='/assets/camisetas/CamisetaRedbull.png'
-                    nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    imgFrente='/assets/Camisetas/CamisetaRedbull.png'
+                    imgTras='/assets/Camisetas/CamisetaMCLaren.png'
+                    nome = "RIVALS COLLECTIONS 2024 | REDBULL"
                     preco= "R$ 59,99"
                     prestacoes = "2x de r$ 29,99"
                   />
@@ -71,8 +75,10 @@ function App() {
                     <Titulo texto="Competição" tamanho="86px" gradiente={false}/>
                     <ParagrafoPadraoEsquerda texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática os conhecimentos adquiridos em sala de aula, por meio do desenvolvimento de um projeto completo: um veículo do tipo Fórmula. Por um período de três dias, ocorrem testes estáticos e dinâmicos com os carros, com o objetivo de avaliar o desempenho de cada projeto na pista. Além disso, as equipes apresentam suas propostas técnicas, incluindo detalhes sobre o projeto, custos e também uma apresentação de marketing."/>
                   </div>
-                  <img src='src/assets/ImagemCompeticao.png' className={styles.ImagemCompeticao}/>
+                  <img src='/assets/Imagens/imagemCompeticao.png' className={styles.ImagemCompeticao}/>
                 </section>
+
+                <BotaoWhatsapp/>
 
                 <Footer/>
                 
@@ -124,4 +130,6 @@ function App() {
 }
 
 export default App
+
+
 

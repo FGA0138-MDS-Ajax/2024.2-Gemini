@@ -1,4 +1,5 @@
 import styles from './CamposDeIdentificacao.module.css';
+import { Titulo } from '../../components';
 
 function CamposDeIndetificacao(){
 
@@ -6,7 +7,7 @@ function CamposDeIndetificacao(){
 
         <div className={styles.CamposDeIdentificacao}>
 
-            <h1>Dados</h1>
+            <Titulo texto="Dados" tamanho="24px" gradiente={true}/>
 
             <h3 className={styles.Label}>Nome</h3>
             <input type="text" className={styles.CampoDeTexto} value="Este e um texto que pode ser editado."/>

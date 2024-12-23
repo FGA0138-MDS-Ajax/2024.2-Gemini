@@ -51,8 +51,13 @@ header{
     font-size: 35px;
 }
 
-.Icones:hover{
-    font-size: 36px;
-    color: #04DD2D;;
+.Icones {
+    padding-left: 20px;
+    font-size: 35px;
+    transition: filter 0.3s ease;
+}
+
+.Icones:hover {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(85%) saturate(5600%) hue-rotate(75deg);
 }
 

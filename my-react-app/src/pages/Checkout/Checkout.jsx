@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { Header, FooterDeVendas, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao, BotaoVerdePadrao } from '../../components/index.js';
+import { Header, FooterDeVendas, CamisetaNoCheckOut, ResumoPagamento, CamposDeIndentificacao, BotaoVerdePadrao, Titulo } from '../../components/index.js';
 import styles from './Checkout.module.css'
 
 function Checkout() {
@@ -15,13 +15,13 @@ function Checkout() {
 
                 <h3 className={styles.TituloCheckout}>Produtos</h3>
                 <CamisetaNoCheckOut
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    imgSrc='/assets/Camisetas/CamisetaMCLaren.png'
                     nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
                     tamanho= "Tamanho M"
                 />
                 <CamisetaNoCheckOut
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
-                    nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    imgSrc='/assets/Camisetas/CamisetaRedbull.png'
+                    nome= "RIVALS COLLECTIONS 2024 | REDBULL"
                     tamanho= "Tamanho M"
                 />
 
@@ -32,7 +32,7 @@ function Checkout() {
                 <h3 className={styles.TituloCheckout}>Identificacao</h3>
                 <CamposDeIndentificacao/>
 
-                <h3>Endereço de Entrega</h3>
+                <Titulo texto="Endereço de Entrega" tamanho="24px" gradiente={true}/>
 
                 <form>
                     <label>
@@ -54,7 +54,7 @@ function Checkout() {
                     total="119,98"
                 />
 
-                <h3>Selecione o Método De Pagamento</h3>
+                <Titulo texto="Selecione o Método De Pagamento" tamanho="24px" gradiente={true}/>
 
                 <form>
                     <label>

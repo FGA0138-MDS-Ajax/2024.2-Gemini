@@ -10,8 +10,8 @@ function ComponenteUsuario(){
             <Titulo texto="Conectado" tamanho="42px" gradiente={false}/>
 
             <div className={styles.ContasDeLogin}>
-                <img src='/assets/logoGoogle.png' className={styles.ContaDeLogin}></img>
-                <img src='/assets/logoFacebook.png' className={styles.ContaDeLogin}></img>
+                <img src='/assets/Logos/LogoGoogleRedonda.svg' className={styles.ContaDeLogin}></img>
+                <img src='/assets/Logos/LogoFacebookRedonda.svg' className={styles.ContaDeLogin}></img>
             </div>
 
             <div className={styles.Divisoria}/>

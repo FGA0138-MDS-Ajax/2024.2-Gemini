@@ -6,7 +6,7 @@
 }
 
 .SecaoProjeto{
-    background-image: url('src/assets/ImagemProjeto.png');
+    background-image: url('/assets/Imagens/ImagemProjeto.png');
     height: 437px;
     background-repeat: no-repeat;
     background-size: cover;

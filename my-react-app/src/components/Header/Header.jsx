@@ -7,7 +7,7 @@ function Header(){
         <header>
             <ul className={styles.ItensDoMenu}>
                 <Link to='/Home'>
-                    <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
+                    <img src='/assets/Logos/LogoFGR.svg' className={styles.Logo}/>
                 </Link>
                 <div className={styles.ClicaveisDaHeader}>
                     <Link to='/Produtos'>
@@ -22,12 +22,12 @@ function Header(){
                     <ul className={styles.IconesDaHeader}>
                         <li>
                             <Link to='/Carrinho'>
-                                <a><img src='src/assets/icones/ShoppingCart.svg' className={styles.Icones} /></a>
+                                <a><img src='assets/Icons/ShoppingCart.svg' className={styles.Icones} /></a>
                             </Link>
                         </li>
                         <li>
                             <Link to='/Usuario'>
-                                <a><img src='src/assets/icones/User.svg' className={styles.Icones}/></a>
+                                <a><img src='/assets/Icons/User.svg' className={styles.Icones}/></a>
                             </Link>
                         </li>
                     </ul>

@@ -11,6 +11,11 @@ footer{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .ConteudoPrincipal{
@@ -34,5 +39,10 @@ footer{
     width: 424px;
     height: 47px;
     flex-shrink: 0;
+}
+
+.DesenvolvidoPor{
+    display: flex;
+    justify-content: space-around;
 }
 

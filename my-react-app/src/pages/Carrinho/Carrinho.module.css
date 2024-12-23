@@ -29,19 +29,10 @@
     display: flex;
     color: #FFF;
     text-align: center;
-    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     justify-content: center;
-}
-
-.TextoValores{
-    background: rgba(250, 249, 249, 0.23);
-    padding: 0 10px 0 10px;
-}
-
-.ValorTotal{
-    padding-left: 20px;
+    gap: 20px;
 }
 

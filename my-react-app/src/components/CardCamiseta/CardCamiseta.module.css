@@ -7,16 +7,11 @@
     overflow: hidden;
 }
 
-.CardCamiseta:hover{
-    transform: scale(1.02);
-    transition: 0.3s ease;
-}
-
 .ImgCamiseta{
     width: 231px;
     height: 220px;
     border-radius: 15px;
-    border: 15px 5px 5px 0;
+    padding: 15px 5px 5px 5px;
     padding-top: 5px;
 }
 
@@ -27,18 +22,19 @@
     font-weight: 400;
 }
 
-.NomeCamiseta{
-    text-align: center;
+.ImgCamiseta.Back {
+    display: none;
+  }
+  
+.CardCamiseta:hover .ImgCamiseta.Front {
+    display: none;
+}
+  
+.CardCamiseta:hover .ImgCamiseta.Back {
+    display: block; 
 }
 
 .Valores{
     display: flex;
     justify-content: space-around;
-    margin-top: 5px;
-}
-
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
 }

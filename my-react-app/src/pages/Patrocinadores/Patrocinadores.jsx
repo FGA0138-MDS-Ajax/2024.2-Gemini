@@ -16,7 +16,7 @@ function Patrocinadores() {
 
             <div className={styles.GaleriaPatrocinadores}>
 
-                <img src='assets/Patrocinadores/Patrocinador1.png' alt="" />
+                <img src='assets/Patrocinadores/Dassault_Systemes-Logo.svg' alt="" />
 
             </div>
 

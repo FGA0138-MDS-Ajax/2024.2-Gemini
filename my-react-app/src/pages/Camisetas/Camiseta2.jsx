@@ -1,4 +1,4 @@
-import { Header, FooterDeVendas, MenuCamiseta } from '../../components/index.js';
+import { Header, FooterDeVendas, MenuCamiseta, BotaoWhatsapp } from '../../components/index.js';
 import styles from './Camiseta.module.css'
 
 function PaginaCamiseta2() {
@@ -9,9 +9,11 @@ function PaginaCamiseta2() {
       <Header/>
 
       <MenuCamiseta
-        imgSrc='/assets/camisetas/CamisetaRedbull.png'
+        imgSrc='/assets/Camisetas/CamisetaRedbull.png'
         nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
         preco= "R$ 59,99"/>
+
+      <BotaoWhatsapp/>
   
       <FooterDeVendas/>
 

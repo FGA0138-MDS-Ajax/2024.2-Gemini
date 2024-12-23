@@ -1,22 +1,16 @@
-import { Header, Footer, MenuUsuario } from '../../components/index.js';
-import styles from './Usuario.module.css';
+import { Header, Footer, MenuUsuario } from "../../components/index.js";
+import styles from "./Usuario.module.css";
 
-function PaginaUsuario(){
+function PaginaUsuario() {
+  return (
+    <div className={styles.PaginaUsuario}>
+      <Header />
 
-    return(
+      <MenuUsuario />
 
-        <div className={styles.PaginaUsuario}>
-
-            <Header/>
-
-            <MenuUsuario/>
-
-            <Footer/>
-
-        </div>
-
-    );
-
+      <Footer />
+    </div>
+  );
 }
 
-export default PaginaUsuario
+export default PaginaUsuario;

@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import { Header, FooterDeVendas, CamisetaNoCarrinho, BotaoVerdePadrao } from '../../components/index.js';
+import { Header, FooterDeVendas, CamisetaNoCarrinho, BotaoVerdePadrao, Titulo } from '../../components/index.js';
 import styles from './Carrinho.module.css'
 
 function Carrinho() {
@@ -12,28 +12,28 @@ function Carrinho() {
         <div className={styles.SecaoCamisetaNoCarrinho}>
 
             <div className={styles.Nomes}>
-                <h5>Produtos</h5>
-                <h5>Quantidade</h5>
-                <h5>Valor</h5>
+                <Titulo texto="Produtos" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Quantidade" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Valor" tamanho="24px" gradiente={true}/>
             </div>
 
             <div className={styles.CamisetasNoCarrinho}>
                 <CamisetaNoCarrinho 
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
+                    imgSrc='/assets/Camisetas/CamisetaMCLaren.png'
                     nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
                     preco= "R$ 59,99"
                     />
 
                 <CamisetaNoCarrinho 
-                    imgSrc='/assets/camisetas/CamisetaMCLaren.png'
-                    nome= "RIVALS COLLECTIONS 2024 | MCLAREN"
+                    imgSrc='/assets/Camisetas/CamisetaRedbull.png'
+                    nome= "RIVALS COLLECTIONS 2024 | REDBULL"
                     preco= "R$ 59,99"
                     />
             </div>
 
             <div className={styles.Valores}>
-                <h5 className={styles.TextoValores}>Valor Total</h5>
-                <h5 className={styles.ValorTotal}>119,98 R$</h5>
+                <Titulo texto="Valor Total" tamanho="24px" gradiente={true}/>
+                <Titulo texto="119,98" tamanho="24px" gradiente={true}/>
             </div>
 
         </div>

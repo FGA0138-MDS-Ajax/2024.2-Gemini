@@ -17,8 +17,10 @@ function MenuCamiseta({imgSrc, nome, preco}){
                     <BotaoDeTamanho label="XG"/>
                     <BotaoDeTamanho label="XXG"/>
                 </div>
-                <button className={styles.BotaoGuiaDeTamanho}>Guia de Tamanho</button>
-                <BotaoVerdePadrao label="Adicionar ao carrinho"/>
+                <div className={styles.BotoesDeVenda}>
+                    <button className={styles.BotaoGuiaDeTamanho}> <img src='/assets/Icons/Ruler.svg' alt="" />Guia de Tamanho</button>
+                    <BotaoVerdePadrao label="Adicionar ao carrinho"/>
+                </div>
             </div>
         </div>
     );

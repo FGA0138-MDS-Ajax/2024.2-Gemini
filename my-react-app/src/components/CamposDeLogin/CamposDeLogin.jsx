@@ -8,7 +8,7 @@ function CamposDeLogin(){
 
         <div className={styles.CamposDeLogin}>
 
-            <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
+            <img src='/assets/Logos/LogoFGR.svg' className={styles.Logo}/>
 
             <CampoDeTexto label="Usuário ou e-mail"/>
             <CampoDeTexto label="Senha"/>
@@ -27,11 +27,11 @@ function CamposDeLogin(){
             </div>
 
             <button className={styles.BotaoEntrarComContaGoogle}>
-                <img src='/assets/logoGoogle.png' className={styles.LogoConta}/>
+                <img src='/assets/Logos/LogoGoogleRedonda.svg' className={styles.LogoConta}/>
                 <p className={styles.TextoEntrarCom}>Entrar com Google</p>
             </button>
             <button className={styles.BotaoEntrarComContaFacebook}>
-                <img className={styles.TextoEntrarCom} src='/assets/logoFacebook.png'></img>
+                <img className={styles.TextoEntrarCom} src='/assets/Logos/LogoFacebookRedonda.svg'></img>
                 <p>Entrar com Facebook</p>
             </button>
 

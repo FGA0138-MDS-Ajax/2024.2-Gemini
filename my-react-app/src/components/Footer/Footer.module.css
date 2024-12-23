@@ -11,6 +11,11 @@ footer{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .RedesSociais{
@@ -27,6 +32,6 @@ footer{
 
 .DesenvolvidoPor{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
