@@ -13,6 +13,31 @@
     margin-bottom: 30px;
 }
 
+.FormLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.CampoDeTexto{
+    all: unset;
+    width: 483px;
+    height: 40px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #04DD2D;
+    background-color: transparent;
+    color: #a8a4a4;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .BotaoEsqueciSenha{
     all: unset;
     padding-left: 10px;
