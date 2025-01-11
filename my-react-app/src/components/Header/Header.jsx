@@ -10,14 +10,14 @@ function Header(){
                     <img src='/assets/Logos/LogoFGR.svg' className={styles.Logo}/>
                 </Link>
                 <div className={styles.ClicaveisDaHeader}>
-                    <Link to='/Produtos'>
-                        <h1 className={styles.TitulosDoMenu}> PRODUTOS </h1>
-                    </Link>
                     <Link to='/Historia'>
                         <h1 className={styles.TitulosDoMenu}> QUEM SOMOS / APRESENTAÇÃO </h1>
                     </Link>
                     <Link to='/Patrocinadores'>
                         <h1 className={styles.TitulosDoMenu}> PATROCINADORES </h1>
+                    </Link>
+                    <Link to='/Produtos'>
+                        <h1 className={styles.TitulosDoMenu}> PRODUTOS </h1>
                     </Link>
                     <ul className={styles.IconesDaHeader}>
                         <li>
