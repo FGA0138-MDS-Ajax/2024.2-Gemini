@@ -5,6 +5,7 @@
     background: #E5E5E5;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 .ImgCamiseta{
@@ -20,6 +21,10 @@
     color: #000;
     font-size: 15px;
     font-weight: 400;
+}
+
+.CardCamiseta:hover{
+    transform: scale(1.08);
 }
 
 .ImgCamiseta.Back {
