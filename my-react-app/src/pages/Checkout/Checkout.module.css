@@ -1,0 +1,37 @@
+.Checkout{
+    margin-top: 150px;
+}
+
+.ConteudoCheckout{
+    display: flex;
+    width: 1100PX;
+    margin-bottom: 50px;
+}
+
+.SecaoProdutos{
+    width: 420px;
+}
+
+.SecaoIdentificacao{
+    width: 350px;
+    text-align: left;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 0 10px;
+    margin: 0 30px;
+}
+
+.SecaoPagamento{
+    width: 200px;
+    text-align: left;
+}
+
+.TituloCheckout{
+    text-align: center;
+    background-color: rgba(250, 249, 249, 0.23);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px; /* Espaçamento entre as opções */
+}

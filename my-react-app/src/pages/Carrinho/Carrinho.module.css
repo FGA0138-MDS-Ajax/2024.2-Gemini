@@ -1,0 +1,55 @@
+.PaginaCarrinho{
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.Nomes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    width: 900px;
+    height: 36px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: rgba(250, 249, 249, 0.23);
+}
+
+.Valores{
+    width: 300px;
+    height: 36px;
+    display: flex;
+    color: #FFF;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+}
+
+.TextoValores{
+    background: rgba(250, 249, 249, 0.23);
+    padding: 0 10px 0 10px;
+}
+
+.ValorTotal{
+    padding-left: 20px;
+}
+
+.BotaoDeCompra{
+    height: 43px;
+    flex-shrink: 0;
+    background-color: rgba(7, 232, 49, 0.50);
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-family: "Bebas Neue";
+}

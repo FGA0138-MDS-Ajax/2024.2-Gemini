@@ -1,0 +1,28 @@
+footer{
+    font-family: "Bebas Neue";
+    border-top: 3px solid rgba(4, 221, 45, 0.65);
+    padding-top: 30px;
+    width: 90%;
+}
+
+.VoltarAoTopo{
+    color: #FFF;
+    font-family: "Bebas Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.RedesSociais{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+.IconeRedeSocial:hover{
+    transform: scale(1.1);
+    transition: 0.3 ease;
+}
+
