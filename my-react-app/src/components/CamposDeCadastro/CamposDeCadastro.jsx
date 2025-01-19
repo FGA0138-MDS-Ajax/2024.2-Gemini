@@ -1,30 +1,95 @@
-import {Link} from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Adicione useNavigate
+import { registerUser } from '../../services/authService';
 import styles from './CamposDeCadastro.module.css';
 
-function CamposDeCadastro(){
+function CamposDeCadastro() {
+  const [formData, setFormData] = useState({
+    nome: '',
+    email: '',
+    senha: '',
+    confirmarSenha: '',
+  });
+  const [error, setError] = useState('');
+  const navigate = useNavigate(); // Hook para redirecionamento
 
-    return(
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-        <div className={styles.CamposDeCadastro}>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (formData.senha !== formData.confirmarSenha) {
+      setError('As senhas não conferem.');
+      return;
+    }
+    try {
+      await registerUser(formData.email, formData.nome, formData.senha);
+      alert('Usuário registrado com sucesso!');
+      setError('');
+      navigate('/home'); // Redireciona para a página inicial
+    } catch (error) {
+      setError('Erro ao registrar usuário.');
+      console.error(error.message);
+    }
+  };
 
-            <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
+  return (
+    <div className={styles.CamposDeCadastro}>
+      <img src="src/assets/LogoFGR.png" className={styles.Logo} alt="Logo" />
 
-            <input type="text" className={styles.CampoDeTexto} value="Nome Completo"/>
-            <input type="text" className={styles.CampoDeTexto} value="E-mail ou usuário"/>
-            <input type="text" className={styles.CampoDeTexto} value="Senha"/>
-            <input type="text" className={styles.CampoDeTexto} value="Confirmar Senha"/>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className={styles.CampoDeTexto}
+          name="nome"
+          placeholder="Nome Completo"
+          value={formData.nome}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          className={styles.CampoDeTexto}
+          name="email"
+          placeholder="E-mail ou usuário"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          className={styles.CampoDeTexto}
+          name="senha"
+          placeholder="Senha"
+          value={formData.senha}
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          className={styles.CampoDeTexto}
+          name="confirmarSenha"
+          placeholder="Confirmar Senha"
+          value={formData.confirmarSenha}
+          onChange={handleChange}
+        />
 
-            <button className={styles.BotaoRegistrase}>Registra-se</button>
+        <button type="submit" className={styles.BotaoRegistrase}>
+          Registrar-se
+        </button>
+      </form>
 
-            <div className={styles.JaPossuiConta}>
-                <p className={styles.TextoJaPossuiConta}>Já possui uma conta?</p>
-                <button className={styles.BotaoLogin}>Faça Login</button>
-            </div>
+      <div className={styles.JaPossuiConta}>
+        <p className={styles.TextoJaPossuiConta}>Já possui uma conta?</p>
+        <Link to="/login">
+          <button className={styles.BotaoLogin}>Faça Login</button>
+        </Link>
+      </div>
 
-        </div>
-
-    );
-
+      {error && <p className={styles.Error}>{error}</p>}
+    </div>
+  );
 }
 
-export default CamposDeCadastro
+export default CamposDeCadastro;

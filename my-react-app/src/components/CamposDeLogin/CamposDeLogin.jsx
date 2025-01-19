@@ -1,39 +1,69 @@
-import {Link} from 'react-router-dom';
+import { useState } from 'react';
+import { login, registerUser } from '../../services/authService'; // Importa o serviço de criação de usuários
 import styles from './CamposDeLogin.module.css';
 
-function CamposDeLogin(){
+function CamposDeLogin() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(''); // Para mensagens de sucesso
 
-    return(
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await login(email, password);
+      alert('Login bem-sucedido!');
+      console.log(response);
+    } catch (err) {
+      setError('Falha no login. Verifique suas credenciais.');
+      console.error(err.message);
+    }
+  };
 
-        <div className={styles.CamposDeLogin}>
+  const handleRegister = async () => {
+    try {
+      const response = await registerUser(email, password);
+      setSuccess('Usuário criado com sucesso! Faça login.');
+      setError(''); // Limpa erros anteriores
+      console.log(response);
+    } catch (err) {
+      setError('Erro ao criar usuário: ' + err.message);
+      setSuccess(''); // Limpa mensagens de sucesso
+    }
+  };
 
-            <img src='src/assets/LogoFGR.png' className={styles.Logo}/>
+  return (
+    <div className={styles.CamposDeLogin}>
+      <img src="src/assets/LogoFGR.png" className={styles.Logo} alt="Logo" />
 
-            <input type="text" className={styles.CampoDeTexto} value="Usuário ou e-mail"/>
-            <input type="text" className={styles.CampoDeTexto} value="Senha"/>
+      <input
+        type="text"
+        className={styles.CampoDeTexto}
+        placeholder="Usuário ou e-mail"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-            <button className={styles.BotaoEsqueciSenha}>Esqueci a senha</button>
+      <input
+        type="text"
+        className={styles.CampoDeTexto}
+        placeholder="Senha"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
 
-            <button className={styles.BotaoEntrar}>Entrar</button>
+      <button className={styles.BotaoEntrar} onClick={handleLogin}>
+        Entrar
+      </button>
 
-            <div className={styles.NaoTemConta}>
-                <p className={styles.TextoNaoTemConta}>Não tem conta?</p>
-                <button className={styles.BotaoRegistrar}>Registrar</button>
-            </div>
+      <button className={styles.BotaoRegistrar} onClick={handleRegister}>
+        Criar Conta
+      </button>
 
-            <button className={styles.BotaoEntrarComContaGoogle}>
-                <img src='/assets/logoGoogle.png' className={styles.LogoConta}/>
-                <p className={styles.TextoEntrarCom}>Entrar com Google</p>
-            </button>
-            <button className={styles.BotaoEntrarComContaFacebook}>
-                <img className={styles.TextoEntrarCom} src='/assets/logoFacebook.png'></img>
-                <p>Entrar com Facebook</p>
-            </button>
-
-        </div>
-
-    );
-
+      {error && <p className={styles.Error}>{error}</p>}
+      {success && <p className={styles.Success}>{success}</p>}
+    </div>
+  );
 }
 
-export default CamposDeLogin
+export default CamposDeLogin;

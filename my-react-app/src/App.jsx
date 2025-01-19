@@ -5,6 +5,11 @@ import { Header, CardCamiseta, Footer, Carrossel} from './components/index.js';
 import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout} from './pages/index.jsx';
 import styles from './App.module.css';
 
+import { Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+
+
+
 function App() {
 
   const LinksDasImagens = [
@@ -103,6 +108,9 @@ function App() {
 
       {/* Pagina Checkout*/}
       <Route path='/Checkout' element={<Checkout/>} />
+
+      <Route path="/" element={<Navigate to="/Home" />} />
+      <Route path="/Home" element={<Home />} />
 
       </Routes>
 
