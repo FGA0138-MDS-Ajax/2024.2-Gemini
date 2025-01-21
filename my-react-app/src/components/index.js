@@ -1,4 +1,9 @@
+export {default as BotaoAdicionarProdutoEmDesataque} from './BotaoAdicionarProdutoEmDestaque/BotaoAdicionarProdutoEmDestaque.jsx';
+export {default as BotaoAdicionarBanner} from './BotaoAdicionarBanner/BotaoAdicionarBanner.jsx';
+export {default as BotaoAdicionarProduto} from './BotaoAdicionarProduto/BotaoAdicionarProduto.jsx';
 export {default as BotaoDeTamanho} from './BotaoDeTamanho/BotaoDetamanho.jsx';
+export {default as BotaoEditarFoto} from './BotaoEditarFoto/BotaoEditarFoto.jsx';
+export {default as BotaoEditarSecao} from './BotaoEditarSecao/BotaoEditarSecao.jsx'
 export {default as BotaoVerdePadrao} from './BotaoVerdePadrao/BotaoVerdePadrao.jsx';
 export {default as BotaoWhatsapp} from './BotaoWhatsapp/BotaoWhatsapp.jsx';
 export {default as CamisetaNoCarrinho} from './CamisetaNoCarrinho/CamisetaNoCarrinho.jsx';
@@ -17,6 +22,15 @@ export {default as Header} from './Header/Header.jsx';
 export {default as MenuCamiseta} from './MenuCamiseta/MenuCamiseta.jsx';
 export {default as MenuUsuario} from './MenuUsuario/MenuUsuario.jsx';
 export {default as ParagrafoPadrao} from './ParagrafoPadrao/ParagrafoPadrao.jsx';
+export {default as PopUpAdicionarProdutoEmDestaque} from './PopUpAdicionarProdutoEmDestaque/PopUpAdicionarProdutoEmDestaque.jsx';
+export {default as PopUpAdicionarProduto} from './PopUpAdicionarProduto/PopUpAdicionarProduto.jsx';
+export {default as PopUpAdicionarBanner} from './PopUpAdicionarBanner/PopUpAdicionarBanner.jsx';
+export {default as PopUpEditarImagem} from './PopUpEditarImagem/PopUpEditarImagem.jsx';
+export {default as PopUpEditarProduto} from './PopUpEditarProduto/PopUpEditarProduto.jsx';
+export {default as PopUpEditarListaDeProdutos} from './PopUpEditarListaDeProdutos/PopUpEditarListaDeProdutos.jsx';
+export {default as PopUpEditarListaDeBanners} from './PopUpEditarListaDeBanners/PopUpEditarListaDeBanners.jsx';
+export {default as PopUpEditarSecao} from './PopUpEditarSecao/PopUpEditarSecao.jsx';
+export {default as PopUpListaCamisetasEmDestaque} from './PopUpListaCamisetasEmDestaque/PopUpListaCamisetasEmDestaque.jsx'
 export {default as ParagrafoPadraoEsquerda} from './ParagrafoPadraoEsquerda/ParagrafoPadraoEsquerda.jsx';
 export {default as ResumoPagamento} from './ResumoPagamento/ResumoPagamento.jsx';
 export {default as Titulo} from './Titulo/Titulo.jsx';
