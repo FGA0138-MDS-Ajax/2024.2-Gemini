@@ -1,135 +1,355 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './App.css'
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
 
-import { Header, CardCamiseta, Footer, Carrossel, Titulo, ParagrafoPadraoEsquerda, BotaoWhatsapp} from './components/index.js';
-import { Cadastro, Camiseta1, Camiseta2, Login, Produtos, Usuario, Carrinho, Checkout, Historia, Patrocinadores, PosVenda} from './pages/index.jsx';
-import styles from './App.module.css';
+import {
+  Header,
+  CardCamiseta,
+  Footer,
+  Carrossel,
+  Titulo,
+  ParagrafoPadraoEsquerda,
+  BotaoWhatsapp,
+  BotaoEditarSecao,
+  BotaoEditarFoto,
+  ParagrafoPadrao,
+  PopUpEditarSecao,
+  PopUpListaCamisetasEmDestaque,
+  PopUpEditarListaDeBanners,
+  PopUpEditarImagem,
+  BotaoAdicionarBanner,
+  BotaoAdicionarProdutoEmDesataque,
+  PopUpAdicionarProdutoEmDestaque,
+  PopUpAdicionarBanner,
+} from "./components/index.js";
+import {
+  Cadastro,
+  Camiseta1,
+  Camiseta2,
+  Login,
+  Produtos,
+  Usuario,
+  Carrinho,
+  Checkout,
+  Historia,
+  Patrocinadores,
+  PosVenda,
+} from "./pages/index.jsx";
+import styles from "./App.module.css";
+import { useConteudos } from "./conteudos.js";
 
 function App() {
+  const {
+    conteudoBanners,
+    conteudoSecoes,
+    CamisetasEmDestaque,
+    ImagensDasSecoes,
+    setConteudoBanners,
+    setConteudoSecoes,
+    setCamisetasEmDestaque,
+    setImagensDasSecoes,
+  } = useConteudos();
 
   const LinksDasImagens = [
-    {src: '/assets/Banners/Banner1.png', link: '', alt: 'Descricao'},
-    {src: '/assets/Banners/Banner2.png', link: '', alt: 'Descricao'},
-    {src: '/assets/Banners/Banner1.png', link: '', alt: 'Descricao'},
-    {src: '/assets/Banners/Banner2.png', link: '', alt: 'Descricao'}
+    { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
+    { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" },
+    { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
+    { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" },
   ];
 
-  return(
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode);
+  };
 
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [dadosEdicao, setDadosEdicao] = useState({tipo: null});
+
+  const fecharPopUp = () => {
+    setIsEditMode(false);
+    setDadosEdicao({tipo: null});
+  };
+
+  function abrirEdicaoSecao(dados) {
+    setDadosEdicao({ ...dados, tipo: 'secao' });
+    setIsEditMode(true);
+  }
+
+  function abrirEdicaoImagem(dados) {
+    setDadosEdicao({ ...dados, tipo: 'imagem' });
+    setIsEditMode(true);
+  }
+
+  function abrirEdicaoBanner(dados) {
+    setDadosEdicao({ ...dados, tipo: 'banner' });
+    setIsEditMode(true);
+  }
+
+  function abrirEdicaoProdutosEmDestaque(dados) {
+    setDadosEdicao({ ...dados, tipo: 'produtos' });
+    setIsEditMode(true);
+  }
+
+  function abrirAdicionarProdutosEmDestaque(){
+    setDadosEdicao({tipo: 'addProdutosEmDestaque'})
+    setIsEditMode(true)
+  }
+
+  function abrirAdicionarBanner(){
+    setDadosEdicao({tipo : 'addBanner'})
+    setIsEditMode(true)
+  }
+
+  const salvarEdicao = (dadosEditados) => {
+    console.log("Dados salvos:", dadosEditados);
+    const { tipo, conteudo } = dadosEditados;
+    if (tipo === 'secao') {
+      setConteudoSecoes(prev => ({
+        ...prev,
+        [conteudo.titulo]: conteudo, // Exemplo de como salvar a seção editada
+      }));
+    }
+  };
+
+  return (
     <Router>
-
       <Routes>
         {/* Pagina Inicial */}
         <Route
           path="/Home"
           element={
-
             <section>
+              <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode} />
 
-              <Header/>
-
-                <Carrossel LinksDasImagens={LinksDasImagens}/>
-
-                <div className={styles.CamisetasEmDestaque}>
-                  <CardCamiseta
-                    linkPaginaCamiseta= "/Camiseta1"
-                    imgFrente='/assets/Camisetas/CamisetaMCLaren.png'
-                    imgTras='/assets/Camisetas/CamisetaRedbull.png'
-                    nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
-                    preco= "R$ 59,99"
-                    prestacoes = "2x de r$ 29,99"
+              <section className={styles.SecaoBanner}>
+                <Carrossel LinksDasImagens={LinksDasImagens} />
+                {isEditMode && (
+                  <>
+                    <BotaoEditarSecao 
+                      className={styles.BotaoEditar} 
+                      onClick={() => 
+                        abrirEdicaoBanner({
+                          banners: conteudoBanners,
+                        })
+                      }
+                      />
+                    <BotaoAdicionarBanner onClick={() => abrirAdicionarBanner()}
+                    />
+                  </>
+                )}
+                {isEditMode && dadosEdicao.tipo === 'banner' && (
+                    <PopUpEditarListaDeBanners
+                      dados={dadosEdicao}
+                      onClose={fecharPopUp}
+                      onSave={salvarEdicao}
+                    />
+                  )}
+                {isEditMode && dadosEdicao.tipo === 'addBanner' && (
+                  <PopUpAdicionarBanner
+                    onClose={fecharPopUp}
+                    onSave={salvarEdicao}
                   />
-                  <CardCamiseta
-                    linkPaginaCamiseta= "/Camiseta2"
-                    imgFrente='/assets/Camisetas/CamisetaRedbull.png'
-                    imgTras='/assets/Camisetas/CamisetaMCLaren.png'
-                    nome = "RIVALS COLLECTIONS 2024 | REDBULL"
-                    preco= "R$ 59,99"
-                    prestacoes = "2x de r$ 29,99"
-                  />
-                  <CardCamiseta
-                    linkPaginaCamiseta= "/Camiseta1"
-                    imgFrente='/assets/Camisetas/CamisetaMCLaren.png'
-                    imgTras='/assets/Camisetas/CamisetaRedbull.png'
-                    nome = "RIVALS COLLECTIONS 2024 | MCLAREN"
-                    preco= "R$ 59,99"
-                    prestacoes = "2x de r$ 29,99"
-                  />
-                  <CardCamiseta
-                    linkPaginaCamiseta= "/Camiseta2"
-                    imgFrente='/assets/Camisetas/CamisetaRedbull.png'
-                    imgTras='/assets/Camisetas/CamisetaMCLaren.png'
-                    nome = "RIVALS COLLECTIONS 2024 | REDBULL"
-                    preco= "R$ 59,99"
-                    prestacoes = "2x de r$ 29,99"
-                  />
-                </div>
+                )}
 
                 <section className={styles.SecaoProjeto}>
-                  <Titulo texto="Projeto" tamanho="86px" gradiente={false}/>
-                  <p className={styles.ParagrafoProjeto}>A FGR(Fórmula Gama Racing) é uma equipe de competição de Fórmula SAE elétrico da Universidade de Brasília(UnB), campus FGA. Os discentes são responsáveis por todo o projeto e a construção do veículo. A equipe é dividida em áreas técnicas: Dinâmica Veicular, Estruturas, Eletrônica, Powertrain e Drivertrain. E também tem os departamentos: Marketing, Financeiro e Gestão de Pessoas.</p>
+                  <div className={styles.DivProjeto}>
+                    <Titulo
+                      texto={conteudoSecoes.projeto.titulo}
+                      tamanho="86px"
+                      gradiente={false}
+                    />
+                    <p className={styles.ParagrafoProjeto}>
+                      {conteudoSecoes.projeto.texto}
+                    </p>
+                  </div>
+                  {isEditMode && (
+                    <>
+                      <BotaoEditarSecao
+                        className={styles.BotaoEditar}
+                        onClick={() =>
+                          abrirEdicaoSecao({
+                            titulo: conteudoSecoes.projeto.titulo,
+                            texto: conteudoSecoes.projeto.texto,
+                          })
+                        }
+                      />
+                    </>
+                  )}
+                  {isEditMode && dadosEdicao.tipo === 'secao' &&(
+                    <PopUpEditarSecao
+                      dados={dadosEdicao}
+                      onClose={fecharPopUp}
+                      onSave={salvarEdicao}
+                    />
+                  )}
                 </section>
 
                 <section className={styles.SecaoCompeticao}>
-                  <div className={styles.TextosCompeticao}>
-                    <Titulo texto="Competição" tamanho="86px" gradiente={false}/>
-                    <ParagrafoPadraoEsquerda texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática os conhecimentos adquiridos em sala de aula, por meio do desenvolvimento de um projeto completo: um veículo do tipo Fórmula. Por um período de três dias, ocorrem testes estáticos e dinâmicos com os carros, com o objetivo de avaliar o desempenho de cada projeto na pista. Além disso, as equipes apresentam suas propostas técnicas, incluindo detalhes sobre o projeto, custos e também uma apresentação de marketing."/>
+                  <div className={styles.DivCompeticao}>
+                    <div className={styles.TextosCompeticao}>
+                      <Titulo
+                        texto={conteudoSecoes.competicao.titulo}
+                        tamanho="86px"
+                        gradiente={false}
+                      />
+                      <ParagrafoPadraoEsquerda
+                        texto={conteudoSecoes.competicao.texto}
+                      />
+                    </div>
+                    <img
+                      src={ImagensDasSecoes.competicao.src}
+                      alt={ImagensDasSecoes.competicao.alt}
+                      className={styles.ImagemCompeticao}
+                    />
                   </div>
-                  <img src='/assets/Imagens/imagemCompeticao.png' className={styles.ImagemCompeticao}/>
+
+                  {isEditMode && (
+                    <>
+                      <BotaoEditarSecao
+                        className={styles.BotaoEditar}
+                        onClick={() =>
+                          abrirEdicaoSecao({
+                            titulo: conteudoSecoes.competicao.titulo,
+                            texto: conteudoSecoes.competicao.texto,
+                          })
+                        }
+                      />
+                      <BotaoEditarFoto 
+                        onClick={() => 
+                          abrirEdicaoImagem({
+                            src: ImagensDasSecoes.competicao.src,
+                            alt: ImagensDasSecoes.competicao.alt,
+                          })
+                        }
+                      />
+                    </>
+                  )}
+                  {isEditMode && dadosEdicao.tipo === 'secao' && (
+                    <PopUpEditarSecao
+                      dados={dadosEdicao}
+                      onClose={fecharPopUp}
+                      onSave={salvarEdicao}
+                    />
+                  )}
+                  {isEditMode && dadosEdicao.tipo === 'imagem' && (
+                    <PopUpEditarImagem
+                      dados={dadosEdicao}
+                      onClose={fecharPopUp}
+                      onSave={salvarEdicao}
+                    />
+                  )}
+
                 </section>
+              </section>
 
-                <BotaoWhatsapp/>
+              <section className={styles.SecaoCamisetasEmDestaque}>
+                <Titulo
+                  texto={conteudoSecoes.camisetasEmDestaque.titulo}
+                  tamanho="86px"
+                  gradiente={false}
+                />
 
-                <Footer/>
-                
+                <ParagrafoPadrao>
+                  {conteudoSecoes.camisetasEmDestaque.texto}
+                </ParagrafoPadrao>
+
+                <div className={styles.CamisetasEmDestaque}>
+                  <CardCamiseta
+                    linkPaginaCamiseta={
+                      CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+                    }
+                    imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+                    imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+                    nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+                    preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+                    prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta={
+                      CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+                    }
+                    imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+                    imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+                    nome={CamisetasEmDestaque.camisetaRedBull.nome}
+                    preco={CamisetasEmDestaque.camisetaRedBull.preco}
+                    prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta={
+                      CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+                    }
+                    imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+                    imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+                    nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+                    preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+                    prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
+                  />
+                  <CardCamiseta
+                    linkPaginaCamiseta={
+                      CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+                    }
+                    imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+                    imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+                    nome={CamisetasEmDestaque.camisetaRedBull.nome}
+                    preco={CamisetasEmDestaque.camisetaRedBull.preco}
+                    prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
+                  />
+                </div>
+                {isEditMode && (
+                  <>
+                    <BotaoEditarSecao className={styles.BotaoEditar} 
+                    onClick={() => 
+                      abrirEdicaoProdutosEmDestaque({
+                        titulo: conteudoSecoes.camisetasEmDestaque.titulo,
+                        texto: conteudoSecoes.camisetasEmDestaque.texto,
+                        camisetas: CamisetasEmDestaque,
+                      })
+                    }
+                    />
+                    <BotaoAdicionarProdutoEmDesataque 
+                      onClick={() => abrirAdicionarProdutosEmDestaque()}
+                    />
+                  </>
+                )}
+                {isEditMode && dadosEdicao.tipo === 'produtos' && (
+                  <PopUpListaCamisetasEmDestaque
+                    dados={dadosEdicao}
+                    onClose={fecharPopUp}
+                    onSave={salvarEdicao}
+                  />
+                )}
+                {isEditMode && dadosEdicao.tipo === 'addProdutosEmDestaque' && (
+                  <PopUpAdicionarProdutoEmDestaque
+                    onClose={fecharPopUp}
+                    onSave={salvarEdicao}
+                  />
+                )}
+              </section>
+
+              <BotaoWhatsapp />
+
+              <Footer />
             </section>
-
-      }
-
-      />
-
-      {/* Pagina Camiseta 1*/}
-      <Route path='/Camiseta1' element={<Camiseta1/>} />
-
-      
-      {/* Pagina Camiseta 2*/}
-      <Route path='/Camiseta2' element={<Camiseta2/>} />
-
-      {/* Pagina Usuario*/}
-      <Route path='/Usuario' element={<Usuario/>} />
-
-      {/* Pagina Produtos*/}
-      <Route path='/Produtos' element={<Produtos/>} />
-
-      {/* Pagina Cadastro*/}
-      <Route path='/Cadastro' element={<Cadastro/>} />
-
-      {/* Pagina Login*/}
-      <Route path='/Login' element={<Login/>} />
-
-      {/* Pagina Carrinho*/}
-      <Route path='/Carrinho' element={<Carrinho/>} />
-
-      {/* Pagina Checkout*/}
-      <Route path='/Checkout' element={<Checkout/>} />
-
-      {/* Pagina Historia*/}
-      <Route path='/Historia' element={<Historia/>} />
-
-      {/* Pagina Patrocinadores*/}
-      <Route path='/Patrocinadores' element={<Patrocinadores/>} />
-
-      {/* Pagina Pos-venda*/}
-      <Route path='/Pos-venda' element={<PosVenda/>} />
-
+          }
+        />
+        {/* Outras Rotas */}
+        <Route path="/Camiseta1" element={<Camiseta1 />} />{" "}
+        {/* Pagina Camiseta 1*/}
+        <Route path="/Camiseta2" element={<Camiseta2 />} />{" "}
+        {/* Pagina Camiseta 2*/}
+        <Route path="/Usuario" element={<Usuario />} /> {/* Pagina Usuario*/}
+        <Route path="/Produtos" element={<Produtos />} /> {/* Pagina Produtos*/}
+        <Route path="/Cadastro" element={<Cadastro />} /> {/* Pagina Cadastro*/}
+        <Route path="/Login" element={<Login />} /> {/* Pagina Login*/}
+        <Route path="/Carrinho" element={<Carrinho />} /> {/* Pagina Carrinho*/}
+        <Route path="/Checkout" element={<Checkout />} /> {/* Pagina Checkout*/}
+        <Route path="/Historia" element={<Historia />} /> {/* Pagina Historia*/}
+        <Route path="/Patrocinadores" element={<Patrocinadores />} />{" "}
+        {/* Pagina Patrocinadores*/}
+        <Route path="/Pos-venda" element={<PosVenda />} />{" "}
+        {/* Pagina Pos-venda*/}
       </Routes>
-
     </Router>
-    
   );
 }
 
-export default App
-
-
-
+export default App;

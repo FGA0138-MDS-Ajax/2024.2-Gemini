@@ -5,7 +5,7 @@
     width: 1200px;
 }
 
-.SecaoProjeto{
+.DivProjeto{
     background-image: url('/assets/Imagens/ImagemProjeto.png');
     height: 437px;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
     right: 103px;
 }
 
-.SecaoCompeticao{
+.DivCompeticao{
     display: flex;
     margin: 100px 0;
     justify-content: space-around;
@@ -36,4 +36,8 @@
 .ImagemCompeticao{
     width: 636px;
     height: 359px;
+}
+
+.BotaoEditar{
+       
 }
