@@ -1,0 +1,81 @@
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .PopUp {
+    background: #000000;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(7, 232, 49, 0.50);
+    max-width: 740px;
+    height: auto;
+    max-height: 85%;
+    width: 100%;
+    color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TituloPopUp{
+    font-size: 32px;
+  }
+
+  .Label{
+    font-size: 22px;
+    display: flex;
+    flex: column;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .CampoDeTexto{
+    width: auto;
+    height: auto;
+    text-align: left;
+    resize: auto;
+  }
+
+.CampoBotoes{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+  .BotaoConfirmarEdicao{
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 24px;
+    margin: 15px 10px;
+    background-color: rgba(7, 232, 49, 0.50);
+  }
+
+  .BotaoFecharEdicao{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(7, 232, 49, 0.50);
+  }
+
+  .IconeFechar{
+    display: block;
+  }
+
+
+  
+
+  
