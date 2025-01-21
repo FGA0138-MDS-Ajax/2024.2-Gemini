@@ -1,12 +1,19 @@
-import { Header, Footer, Titulo } from '../../components/index.js';
+import {useState} from 'react';
+import { Header, Footer, Titulo,BotaoEditarSecao } from '../../components/index.js';
 import styles from './Patrocinadores.module.css'
 
 function Patrocinadores() {
 
+  const [isEditMode, setIsEditMode] = useState(false)
+
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode)
+  }
+
   return(
 
     <section className={styles.Patrocinadores}>
-        <Header/>
+        <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode}/>
 
         <div className={styles.SecaoPatrocinadores}>
 
@@ -19,6 +26,8 @@ function Patrocinadores() {
                 <img src='assets/Patrocinadores/Dassault_Systemes-Logo.svg' alt="" />
 
             </div>
+
+            {isEditMode && <BotaoEditarSecao className={styles.BotaoEditar}/>}
 
         </div>
   
