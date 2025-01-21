@@ -1,27 +1,79 @@
-import { Header, Footer, Titulo, ParagrafoPadrao } from '../../components/index.js';
+import { useState } from 'react';
+import { Header, Footer, Titulo, ParagrafoPadrao, BotaoEditarSecao, BotaoEditarFoto, PopUpEditarSecao } from '../../components/index.js';
 import styles from './Historia.module.css'
+import { useConteudos } from "../../conteudos.js";
 
 function Historia() {
 
-  return(
+  const [isEditMode, setIsEditMode] = useState(false)
+  const [dadosEdicao, setDadosEdicao] = useState({})
 
-    <div className={styles.PaginaHistoria}>
-        <Header/>
+  const {
+    conteudoSecoes,
+    setConteudoSecoes,
+  } = useConteudos();
+
+    const toggleEditMode = () => {
+      setIsEditMode(!isEditMode);
+    };
+
+    const abrirPopUp = (dados) => {
+      setDadosEdicao(dados);
+      setIsEditMode(true);
+    };
+
+    const fecharPopUp = () => {
+      setDadosEdicao({});
+      setTipoEdicao(null);
+    }
+
+    const salvarEdicao = (dadosEditados) => {
+      console.log("Dados salvos:", dadosEditados);
+      const { conteudo } = dadosEditados;
+      setConteudoSecoes((prev) => ({
+        ...prev,
+      }));
+    };
+
+    return (
+
+      <div className={styles.PaginaHistoria}>
+        <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode} />
 
         <div className={styles.SecaoNossaHistoria}>
 
-            <Titulo texto="Nossa História" tamanho="86px" gradiente={false}/>
+          <Titulo texto={conteudoSecoes.historia.titulo} tamanho="86px" gradiente={false} />
+          <ParagrafoPadrao texto={conteudoSecoes.historia.texto} />
 
-            <ParagrafoPadrao texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus consectetur felis. Integer ut ex posuere, laoreet massa et, pretium quam. Morbi dolor nunc, convallis non rutrum vel, ornare lobortis erat. Ut tristique fringilla lectus. Donec sed aliquet lorem. Duis in sollicitudin purus, vulputate fringilla tellus. Ut in tristique risus, non luctus risus. Donec lorem erat, egestas in mattis at, posuere venenatis felis. Fusce bibendum finibus gravida. Ut finibus mauris eget facilisis elementum."/>
-            <ParagrafoPadrao texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus consectetur felis. Integer ut ex posuere, laoreet massa et, pretium quam. Morbi dolor nunc, convallis non rutrum vel, ornare lobortis erat. Ut tristique fringilla lectus. Donec sed aliquet lorem. Duis in sollicitudin purus, vulputate fringilla tellus. Ut in tristique risus, non luctus risus. Donec lorem erat, egestas in mattis at, posuere venenatis felis. Fusce bibendum finibus gravida. Ut finibus mauris eget facilisis elementum."/>
-            <ParagrafoPadrao texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus consectetur felis. Integer ut ex posuere, laoreet massa et, pretium quam. Morbi dolor nunc, convallis non rutrum vel, ornare lobortis erat. Ut tristique fringilla lectus. Donec sed aliquet lorem. Duis in sollicitudin purus, vulputate fringilla tellus. Ut in tristique risus, non luctus risus. Donec lorem erat, egestas in mattis at, posuere venenatis felis. Fusce bibendum finibus gravida. Ut finibus mauris eget facilisis elementum."/>
+          {isEditMode && (
+            <>
+              <BotaoEditarSecao
+                className={styles.BotaoEditar}
+                onClick={() =>
+                  abrirPopUp({
+                    titulo: conteudoSecoes.historia.titulo,
+                    texto: conteudoSecoes.historia.texto,
+                  })
+                }
+              />
+              <BotaoEditarFoto />
+            </>
+          )}
+
+          {isEditMode && dadosEdicao.titulo && (
+            <PopUpEditarSecao
+              dados={dadosEdicao}
+              onClose={fecharPopUp}
+              onSave={salvarEdicao}
+            />
+          )}
 
         </div>
-  
-        <Footer/>
 
-    </div>
-  )
-}
+        <Footer />
 
-export default Historia
+      </div>
+    )
+  }
+
+  export default Historia
