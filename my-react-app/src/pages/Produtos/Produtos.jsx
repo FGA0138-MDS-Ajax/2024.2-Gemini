@@ -1,16 +1,58 @@
+import { useState } from "react";
 import {
   Header,
   FooterDeVendas,
   CardCamiseta,
   Titulo,
   BotaoWhatsapp,
+  BotaoEditarSecao,
+  PopUpEditarListaDeProdutos,
+  BotaoAdicionarProduto,
+  PopUpAdicionarProduto
 } from "../../components/index.js";
 import styles from "./Produtos.module.css";
+import { useConteudos } from "../../conteudos.js";
 
 function PaginaProdutos() {
+  const [isEditMode, setIsEditMode] = useState(false)
+  const [dadosEdicao, setDadosEdicao] = useState({})
+
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode);
+  };
+
+  const abrirPopUp = (dados) => {
+    setDadosEdicao(dados);
+    setIsEditMode(true);
+  };
+
+  const fecharPopUp = () => {
+    setIsEditMode(false);
+    setDadosEdicao({});
+  };
+
+  const salvarEdicao = (dadosEditados) => {
+    console.log("Dados salvos:", dadosEditados);
+    const { conteudo } = dadosEditados;
+    setConteudoSecoes((prev) => ({
+      ...prev,
+    }));
+  };
+
+  function abrirAdicionarProdutos(){
+    setDadosEdicao({tipo: 'addProdutos'})
+    setIsEditMode(true)
+  }
+
+
+  const {
+    CamisetasEmDestaque,
+    setConteudoSecoes,
+  } = useConteudos();
+
   return (
     <section className={styles.Produtos}>
-      <Header />
+      <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode} />
 
       <div className={styles.Titulos}>
         <Titulo texto="Produtos" tamanho="64px" gradiente={false} />
@@ -23,137 +65,198 @@ function PaginaProdutos() {
 
       <div className={styles.ProdutosGrid}>
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
 
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
 
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
         />
         <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
+        />
+
+        <CardCamiseta
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
+        />
+        <CardCamiseta
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
+        />
+        <CardCamiseta
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
+          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
+          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
+          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
+        />
+        <CardCamiseta
+          linkPaginaCamiseta={
+            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
+          }
+          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
+          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
+          nome={CamisetasEmDestaque.camisetaRedBull.nome}
+          preco={CamisetasEmDestaque.camisetaRedBull.preco}
+          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
         />
       </div>
+
+      {isEditMode && (
+                  <>
+                    <BotaoEditarSecao
+                      className={styles.BotaoEditar}
+                      onClick={() =>
+                        abrirPopUp({
+                          camisetas: CamisetasEmDestaque
+                        })
+                      }
+                    />
+                    <BotaoAdicionarProduto onClick={() => abrirAdicionarProdutos()}/>
+                  </>
+                )}
+
+        {isEditMode && dadosEdicao.camisetas && (
+          <PopUpEditarListaDeProdutos
+          dados={dadosEdicao}
+          onClose={fecharPopUp}
+          onSave={salvarEdicao}
+          />
+        )}
+
+{isEditMode && dadosEdicao.tipo === 'addProdutos' && (
+                  <PopUpAdicionarProduto
+                    onClose={fecharPopUp}
+                    onSave={salvarEdicao}
+                  />
+                )}
 
       <BotaoWhatsapp />
 
