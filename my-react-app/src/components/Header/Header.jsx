@@ -1,7 +1,9 @@
 import {Link} from 'react-router-dom';
+import {useState} from 'react';
 import styles from './Header.module.css';
 
-function Header(){
+function Header({isEditMode, toggleEditMode}){
+    console.log('isEditMode:', isEditMode);
 
     return(
         <header>
@@ -22,13 +24,18 @@ function Header(){
                     <ul className={styles.IconesDaHeader}>
                         <li>
                             <Link to='/Carrinho'>
-                                <a><img src='assets/Icons/ShoppingCart.svg' className={styles.Icones} /></a>
+                                <img src='assets/Icons/ShoppingCart.svg' className={styles.Icones} />
                             </Link>
                         </li>
                         <li>
                             <Link to='/Usuario'>
-                                <a><img src='/assets/Icons/User.svg' className={styles.Icones}/></a>
+                                <img src='/assets/Icons/User.svg' className={styles.Icones}/>
                             </Link>
+                        </li>
+                        <li>
+                            <button onClick={toggleEditMode} className={styles.EditarPagina}>
+                                <img src='assets/Icons/Edit.svg' className={styles.Icones}/>
+                            </button>
                         </li>
                     </ul>
                 </div>
