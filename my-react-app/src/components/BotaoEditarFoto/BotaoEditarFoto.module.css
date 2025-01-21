@@ -1,0 +1,15 @@
+.BotaoEditarFoto{
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: rgba(7, 232, 49, 0.50);
+    line-height: normal;
+    align-items: center;
+    margin: 15px;
+}
+
+.IconeEditar{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    width: 36px;
+    height: 36px;
+}
