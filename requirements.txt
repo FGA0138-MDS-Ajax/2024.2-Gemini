@@ -6,3 +6,4 @@ python-decouple==3.8
 pytz==2024.2
 sqlparse==0.5.3
 typing_extensions==4.12.2
+Pillow
