@@ -5,6 +5,9 @@ from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth import authenticate
 from .models import Usuario
 from .serializers import UsuarioSerializer
+from rest_framework import viewsets
+from rest_framework.permissions import IsAdminUser
+
 
 # Registro de usuário
 class RegisterView(APIView):
@@ -34,3 +37,11 @@ class UserDetailView(APIView):
         user = request.user
         serializer = UsuarioSerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
+    
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    Gerenciamento de usuários (somente para administradores).
+    """
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+    permission_classes = [IsAdminUser]

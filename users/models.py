@@ -36,3 +36,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.nome
+
+    def reset_password(self, new_password):
+        self.set_password(new_password)
+        self.save()
