@@ -38,7 +38,7 @@ export const useConteudos = () => {
     camisetasEmDestaque: {
       titulo: "Camisetas Em Destaque",
       texto:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus consectetur felis. Integer ut ex posuere, laoreet massa et, pretium quam. Morbi dolor nunc, convallis non rutrum vel, ornare lobortis erat. Ut tristique fringilla lectus. Donec sed aliquet lorem. Duis in sollicitudin purus, vulputate fringilla tellus. Ut in tristique risus, non luctus risus. Donec lorem erat, egestas in mattis at, posuere venenatis felis. Fusce bibendum finibus gravida. Ut finibus mauris eget facilisis elementum.",
+        "Conheça alguns dos nossos produtos que estão a venda no momento.",
     },
     historia: {
       titulo: "Nossa História",
@@ -57,6 +57,22 @@ export const useConteudos = () => {
       linkPaginaCamiseta: "/Camiseta2",
     },
     camisetaMCLaren: {
+      imgFrente: "/assets/Camisetas/CamisetaMCLaren.png",
+      imgTras: "/assets/Camisetas/CamisetaRedbull.png",
+      nome: "RIVALS COLLECTIONS 2024 | MCLAREN",
+      preco: "R$ 59,99",
+      prestacoes: "2x de r$ 29,99",
+      linkPaginaCamiseta: "/Camiseta1",
+    },
+    camisetaRedBull2: {
+      imgFrente: "/assets/Camisetas/CamisetaRedbull.png",
+      imgTras: "/assets/Camisetas/CamisetaRedbull.png",
+      nome: "RIVALS COLLECTIONS 2024 | REDBULL",
+      preco: "R$ 59,99",
+      prestacoes: "2x de r$ 29,99",
+      linkPaginaCamiseta: "/Camiseta2",
+    },
+    camisetaMCLaren2: {
       imgFrente: "/assets/Camisetas/CamisetaMCLaren.png",
       imgTras: "/assets/Camisetas/CamisetaRedbull.png",
       nome: "RIVALS COLLECTIONS 2024 | MCLAREN",
