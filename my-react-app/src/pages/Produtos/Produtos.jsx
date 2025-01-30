@@ -233,6 +233,7 @@ function PaginaProdutos() {
                   <>
                     <BotaoEditarSecao
                       className={styles.BotaoEditar}
+                      nome="lista de produtos"
                       onClick={() =>
                         abrirPopUp({
                           camisetas: CamisetasEmDestaque
