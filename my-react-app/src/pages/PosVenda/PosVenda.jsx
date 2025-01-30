@@ -17,7 +17,7 @@ function PosVenda() {
 
       <div className={styles.SecoesDeTexto}>
         <div className={styles.SecaoObrigado}>
-          <Titulo texto="Obrigado" tamanho="64px" gradiente={false} />
+          <Titulo texto="Obrigado" tamanho="64px"/>
           <ParagrafoPadrao texto="a equipe da fgr agradece pela sua compra! após a confirmação do pagamento, entre em contato pelo nosso whatsapp para receber seu produto!" />
           <ParagrafoPadrao texto="O seu código para retirada é:" />
           <Titulo texto="#3060" tamanho="32px" gradiente={false} />
@@ -57,7 +57,6 @@ function PosVenda() {
           <Titulo
             texto="Método de Pagamento Selecionado"
             tamanho="24px"
-            gradiente={true}
           />
 
           <form>

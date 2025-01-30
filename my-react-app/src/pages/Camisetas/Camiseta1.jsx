@@ -50,6 +50,7 @@ function PaginaCamiseta1() {
       {isEditMode &&(
         <>
           <BotaoEditarSecao className={styles.BotaoEditar}
+          nome="camiseta"
           onClick={() => 
             abrirEdicaoProduto({
               imgFrente: produtos.camisetaMCLaren.imgFrente,

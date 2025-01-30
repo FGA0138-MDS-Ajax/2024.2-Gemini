@@ -9,8 +9,8 @@ function CamisetaNoCheckOut({ imgSrc, nome, tamanho }){
         <div className={styles.CamisetaNoCheckOut}>
             <img className={styles.ImgCamiseta} src={imgSrc}/>
             <div className={styles.InformacoesCamiseta}>
-                <Titulo texto={nome} tamanho="20px" gradiente={true}/>
-                <Titulo texto={tamanho} tamanho="20px" gradiente={true}/>
+                <Titulo texto={nome} tamanho="20px"/>
+                <Titulo texto={tamanho} tamanho="20px"/>
             </div>
         </div>
 

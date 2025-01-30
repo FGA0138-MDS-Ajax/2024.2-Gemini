@@ -12,9 +12,9 @@ function Carrinho() {
         <div className={styles.SecaoCamisetaNoCarrinho}>
 
             <div className={styles.Nomes}>
-                <Titulo texto="Produtos" tamanho="24px" gradiente={true}/>
-                <Titulo texto="Quantidade" tamanho="24px" gradiente={true}/>
-                <Titulo texto="Valor" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Produtos" tamanho="24px"/>
+                <Titulo texto="Quantidade" tamanho="24px"/>
+                <Titulo texto="Valor" tamanho="24px"/>
             </div>
 
             <div className={styles.CamisetasNoCarrinho}>
@@ -32,18 +32,18 @@ function Carrinho() {
             </div>
 
             <div className={styles.Valores}>
-                <Titulo texto="Valor Total" tamanho="24px" gradiente={true}/>
-                <Titulo texto="119,98" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Valor Total" tamanho="24px"/>
+                <Titulo texto="119,98" tamanho="24px"/>
             </div>
 
         </div>
 
         <div className={styles.BotoesDeCompra}>
-            <Link to='/Checkout'>
-                <BotaoVerdePadrao label="Prosseguir"/>
-            </Link>
             <Link to='/Produtos'>
                 <BotaoVerdePadrao label="Continuar Comprando"/>
+            </Link>
+            <Link to='/Checkout'>
+                <BotaoVerdePadrao label="Prosseguir"/>
             </Link>
         </div>
   

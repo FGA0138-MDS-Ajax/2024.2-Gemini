@@ -7,7 +7,7 @@ function ResumoPagamento({local, total}){
 
         <div className={styles.ResumoPagamento}>
             
-            <Titulo texto="Resumo" tamanho="24px" gradiente={true}/>
+            <Titulo texto="Resumo" tamanho="24px"/>
 
             <h3 className={styles.TituloPagamento}>Local</h3>
             <h3 className={styles.InfoPagamento}>{local}</h3>

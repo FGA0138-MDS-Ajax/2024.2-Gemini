@@ -10,13 +10,13 @@ function CamisetaNoCarrinho({imgSrc, nome, preco}){
 
             <div className={styles.CamisetaNoCarrinho}>
                 <img className={styles.ImgCamiseta} src={imgSrc}/>
-                <Titulo texto={nome} tamanho="20px" gradiente={true}/>
+                <Titulo texto={nome} tamanho="20px"/>
                 <div className={styles.BotoesDeQtd}>
                     <button className={styles.BotaoDeQtd}><img src='assets/Icons/Sum.svg' alt="" /></button>
                     <p className={styles.QtdDoItem}>1</p>
                     <button className={styles.BotaoDeQtd}><img src='assets/Icons/Reduce.svg' alt="" /></button>
                 </div>
-                <Titulo texto={preco} tamanho="20px" gradiente={true}/>
+                <Titulo texto={preco} tamanho="20px"/>
                 <button className={styles.BotaoLixeira}><img src='assets/Icons/Delete.svg' alt="" /></button>
             </div>
 

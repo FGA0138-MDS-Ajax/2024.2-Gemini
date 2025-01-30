@@ -32,7 +32,7 @@ function Checkout() {
                 <h3 className={styles.TituloCheckout}>Identificacao</h3>
                 <CamposDeIndentificacao/>
 
-                <Titulo texto="Endereço de Entrega" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Endereço de Entrega" tamanho="24px"/>
 
                 <form>
                     <label>
@@ -54,7 +54,7 @@ function Checkout() {
                     total="119,98"
                 />
 
-                <Titulo texto="Selecione o Método De Pagamento" tamanho="24px" gradiente={true}/>
+                <Titulo texto="Selecione o Método De Pagamento" tamanho="24px"/>
 
                 <form>
                     <label>
