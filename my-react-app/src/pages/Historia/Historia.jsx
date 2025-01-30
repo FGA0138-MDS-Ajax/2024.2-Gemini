@@ -27,13 +27,15 @@ function Historia() {
       setTipoEdicao(null);
     }
 
-    const salvarEdicao = (dadosEditados) => {
-      console.log("Dados salvos:", dadosEditados);
-      const { conteudo } = dadosEditados;
-      setConteudoSecoes((prev) => ({
-        ...prev,
-      }));
-    };
+    const salvarEdicao = (dadosAtualizados) => {
+      setConteudoSecoes((prevState) => ({
+        ...prevState,
+        historia: {
+          titulo: dadosAtualizados.conteudo.titulo,
+          texto: dadosAtualizados.conteudo.texto,
+        },
+      }))
+     }
 
     return (
 
@@ -48,6 +50,7 @@ function Historia() {
           {isEditMode && (
             <>
               <BotaoEditarSecao
+                nome="nossa história"
                 className={styles.BotaoEditar}
                 onClick={() =>
                   abrirPopUp({
