@@ -7,8 +7,8 @@ function MenuCamiseta({imgSrc, nome, preco}){
         <div className={styles.MenuCamiseta}>
             <img className={styles.ImgCamiseta} src={imgSrc}/>
             <div className={styles.ConteudoEscrito}>
-                <Titulo texto={nome} tamanho="64px" gradiente={true}/>
-                <Titulo texto={preco} tamanho="64px" gradiente={true}/>
+                <Titulo texto={nome} tamanho="64px" gradiente={false}/>
+                <Titulo texto={preco} tamanho="64px" gradiente={false}/>
                 <h5 className={styles.TextoTamanho}>Tamanho</h5>
                 <div className={styles.BotoesDeTamanho}>
                     <BotaoDeTamanho label="P"/>
