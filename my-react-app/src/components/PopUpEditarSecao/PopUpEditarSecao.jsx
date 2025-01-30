@@ -18,8 +18,8 @@ function PopUpEditarSecao({ dados, onClose, onSave }) {
 
   const handleSave = () => {
     onSave({conteudo: formData });
-    onClose();
   };
+
 
   return (
     <div className={styles.Overlay}>

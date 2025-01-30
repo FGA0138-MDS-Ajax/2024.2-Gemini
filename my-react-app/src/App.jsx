@@ -62,52 +62,59 @@ function App() {
   };
 
   const [isEditMode, setIsEditMode] = useState(false);
-  const [dadosEdicao, setDadosEdicao] = useState({tipo: null});
+  const [dadosEdicao, setDadosEdicao] = useState({ tipo: null });
 
   const fecharPopUp = () => {
-    setIsEditMode(false);
-    setDadosEdicao({tipo: null});
+    setDadosEdicao({ tipo: null });
   };
 
   function abrirEdicaoSecao(dados) {
-    setDadosEdicao({ ...dados, tipo: 'secao' });
+    setDadosEdicao({ ...dados, tipo: "secao" });
     setIsEditMode(true);
   }
 
   function abrirEdicaoImagem(dados) {
-    setDadosEdicao({ ...dados, tipo: 'imagem' });
+    setDadosEdicao({ ...dados, tipo: "imagem" });
     setIsEditMode(true);
   }
 
   function abrirEdicaoBanner(dados) {
-    setDadosEdicao({ ...dados, tipo: 'banner' });
+    setDadosEdicao({ ...dados, tipo: "banner" });
     setIsEditMode(true);
   }
 
   function abrirEdicaoProdutosEmDestaque(dados) {
-    setDadosEdicao({ ...dados, tipo: 'produtos' });
+    setDadosEdicao({ ...dados, tipo: "produtos" });
     setIsEditMode(true);
   }
 
-  function abrirAdicionarProdutosEmDestaque(){
-    setDadosEdicao({tipo: 'addProdutosEmDestaque'})
-    setIsEditMode(true)
+  function abrirAdicionarProdutosEmDestaque() {
+    setDadosEdicao({ tipo: "addProdutosEmDestaque" });
+    setIsEditMode(true);
   }
 
-  function abrirAdicionarBanner(){
-    setDadosEdicao({tipo : 'addBanner'})
-    setIsEditMode(true)
+  function abrirAdicionarBanner() {
+    setDadosEdicao({ tipo: "addBanner" });
+    setIsEditMode(true);
   }
 
-  const salvarEdicao = (dadosEditados) => {
-    console.log("Dados salvos:", dadosEditados);
-    const { tipo, conteudo } = dadosEditados;
-    if (tipo === 'secao') {
-      setConteudoSecoes(prev => ({
-        ...prev,
-        [conteudo.titulo]: conteudo, // Exemplo de como salvar a seção editada
-      }));
-    }
+  const salvarEdicao = (dadosAtualizados) => {
+    setConteudoSecoes((prevState) => ({
+      ...prevState,
+      projeto: {
+        titulo: dadosAtualizados.conteudo.titulo,
+        texto: dadosAtualizados.conteudo.texto,
+      },
+      competicao: {
+        titulo: dadosAtualizados.conteudo.titulo,
+        texto: dadosAtualizados.conteudo.texto,
+      },
+      camisetasEmDestaque: {
+        titulo: dadosAtualizados.conteudo.titulo,
+        texto: dadosAtualizados.conteudo.texto,
+      },
+    }));
+
   };
 
   return (
@@ -124,26 +131,28 @@ function App() {
                 <Carrossel LinksDasImagens={LinksDasImagens} />
                 {isEditMode && (
                   <>
-                    <BotaoEditarSecao 
-                      className={styles.BotaoEditar} 
-                      onClick={() => 
+                    <BotaoEditarSecao
+                      className={styles.BotaoEditar}
+                      nome="Banners"
+                      onClick={() =>
                         abrirEdicaoBanner({
                           banners: conteudoBanners,
                         })
                       }
-                      />
-                    <BotaoAdicionarBanner onClick={() => abrirAdicionarBanner()}
+                    />
+                    <BotaoAdicionarBanner
+                      onClick={() => abrirAdicionarBanner()}
                     />
                   </>
                 )}
-                {isEditMode && dadosEdicao.tipo === 'banner' && (
-                    <PopUpEditarListaDeBanners
-                      dados={dadosEdicao}
-                      onClose={fecharPopUp}
-                      onSave={salvarEdicao}
-                    />
-                  )}
-                {isEditMode && dadosEdicao.tipo === 'addBanner' && (
+                {isEditMode && dadosEdicao.tipo === "banner" && (
+                  <PopUpEditarListaDeBanners
+                    dados={dadosEdicao}
+                    onClose={fecharPopUp}
+                    onSave={salvarEdicao}
+                  />
+                )}
+                {isEditMode && dadosEdicao.tipo === "addBanner" && (
                   <PopUpAdicionarBanner
                     onClose={fecharPopUp}
                     onSave={salvarEdicao}
@@ -164,6 +173,7 @@ function App() {
                   {isEditMode && (
                     <>
                       <BotaoEditarSecao
+                        nome="seção projeto"
                         className={styles.BotaoEditar}
                         onClick={() =>
                           abrirEdicaoSecao({
@@ -174,7 +184,7 @@ function App() {
                       />
                     </>
                   )}
-                  {isEditMode && dadosEdicao.tipo === 'secao' &&(
+                  {isEditMode && dadosEdicao.tipo === "secao" && (
                     <PopUpEditarSecao
                       dados={dadosEdicao}
                       onClose={fecharPopUp}
@@ -206,6 +216,7 @@ function App() {
                     <>
                       <BotaoEditarSecao
                         className={styles.BotaoEditar}
+                        nome="seção competição"
                         onClick={() =>
                           abrirEdicaoSecao({
                             titulo: conteudoSecoes.competicao.titulo,
@@ -213,8 +224,8 @@ function App() {
                           })
                         }
                       />
-                      <BotaoEditarFoto 
-                        onClick={() => 
+                      <BotaoEditarFoto
+                        onClick={() =>
                           abrirEdicaoImagem({
                             src: ImagensDasSecoes.competicao.src,
                             alt: ImagensDasSecoes.competicao.alt,
@@ -223,21 +234,20 @@ function App() {
                       />
                     </>
                   )}
-                  {isEditMode && dadosEdicao.tipo === 'secao' && (
+                  {isEditMode && dadosEdicao.tipo === "secao" && (
                     <PopUpEditarSecao
                       dados={dadosEdicao}
                       onClose={fecharPopUp}
                       onSave={salvarEdicao}
                     />
                   )}
-                  {isEditMode && dadosEdicao.tipo === 'imagem' && (
+                  {isEditMode && dadosEdicao.tipo === "imagem" && (
                     <PopUpEditarImagem
                       dados={dadosEdicao}
                       onClose={fecharPopUp}
                       onSave={salvarEdicao}
                     />
                   )}
-
                 </section>
               </section>
 
@@ -248,76 +258,50 @@ function App() {
                   gradiente={false}
                 />
 
-                <ParagrafoPadrao>
-                  {conteudoSecoes.camisetasEmDestaque.texto}
-                </ParagrafoPadrao>
+                <ParagrafoPadrao
+                  texto={conteudoSecoes.camisetasEmDestaque.texto}
+                />
 
                 <div className={styles.CamisetasEmDestaque}>
-                  <CardCamiseta
-                    linkPaginaCamiseta={
-                      CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-                    }
-                    imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-                    imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-                    nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-                    preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-                    prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-                  />
-                  <CardCamiseta
-                    linkPaginaCamiseta={
-                      CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-                    }
-                    imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-                    imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-                    nome={CamisetasEmDestaque.camisetaRedBull.nome}
-                    preco={CamisetasEmDestaque.camisetaRedBull.preco}
-                    prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-                  />
-                  <CardCamiseta
-                    linkPaginaCamiseta={
-                      CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-                    }
-                    imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-                    imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-                    nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-                    preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-                    prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-                  />
-                  <CardCamiseta
-                    linkPaginaCamiseta={
-                      CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-                    }
-                    imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-                    imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-                    nome={CamisetasEmDestaque.camisetaRedBull.nome}
-                    preco={CamisetasEmDestaque.camisetaRedBull.preco}
-                    prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-                  />
+                  {Object.entries(CamisetasEmDestaque).map(
+                    ([key, camiseta]) => (
+                      <CardCamiseta
+                        linkPaginaCamiseta={camiseta.linkPaginaCamiseta}
+                        imgFrente={camiseta.imgFrente}
+                        imgTras={camiseta.imgTras}
+                        nome={camiseta.nome}
+                        preco={camiseta.preco}
+                        prestacoes={camiseta.prestacoes}
+                      />
+                    )
+                  )}
                 </div>
                 {isEditMode && (
                   <>
-                    <BotaoEditarSecao className={styles.BotaoEditar} 
-                    onClick={() => 
-                      abrirEdicaoProdutosEmDestaque({
-                        titulo: conteudoSecoes.camisetasEmDestaque.titulo,
-                        texto: conteudoSecoes.camisetasEmDestaque.texto,
-                        camisetas: CamisetasEmDestaque,
-                      })
-                    }
+                    <BotaoEditarSecao
+                      className={styles.BotaoEditar}
+                      nome="produtos em destaque"
+                      onClick={() =>
+                        abrirEdicaoProdutosEmDestaque({
+                          titulo: conteudoSecoes.camisetasEmDestaque.titulo,
+                          texto: conteudoSecoes.camisetasEmDestaque.texto,
+                          camisetas: CamisetasEmDestaque,
+                        })
+                      }
                     />
-                    <BotaoAdicionarProdutoEmDesataque 
+                    <BotaoAdicionarProdutoEmDesataque
                       onClick={() => abrirAdicionarProdutosEmDestaque()}
                     />
                   </>
                 )}
-                {isEditMode && dadosEdicao.tipo === 'produtos' && (
+                {isEditMode && dadosEdicao.tipo === "produtos" && (
                   <PopUpListaCamisetasEmDestaque
                     dados={dadosEdicao}
                     onClose={fecharPopUp}
                     onSave={salvarEdicao}
                   />
                 )}
-                {isEditMode && dadosEdicao.tipo === 'addProdutosEmDestaque' && (
+                {isEditMode && dadosEdicao.tipo === "addProdutosEmDestaque" && (
                   <PopUpAdicionarProdutoEmDestaque
                     onClose={fecharPopUp}
                     onSave={salvarEdicao}

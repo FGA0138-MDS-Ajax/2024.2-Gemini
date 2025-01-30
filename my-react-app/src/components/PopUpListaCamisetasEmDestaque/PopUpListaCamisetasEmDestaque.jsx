@@ -22,7 +22,6 @@ function PopUpListaCamisetasEmDestaque({ dados, onClose, onSave }) {
     onSave({ conteudo: formData });
     onClose();
   };
-
   return (
     <div className={styles.Overlay}>
       <div className={styles.PopUp}>
@@ -78,7 +77,7 @@ function PopUpListaCamisetasEmDestaque({ dados, onClose, onSave }) {
                               <button className={styles.BotoesDaCamiseta}>
                                 Editar Camiseta
                               </button>
-                              <button className={styles.BotoesDaCamiseta}>
+                              <button className={styles.BotoesDaCamiseta} onClick={() => excluirCamiseta(key)}>
                                 Excluir da Lista
                               </button>
                             </div>

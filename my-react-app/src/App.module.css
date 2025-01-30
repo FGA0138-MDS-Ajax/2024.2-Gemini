@@ -36,6 +36,7 @@
 .ImagemCompeticao{
     width: 636px;
     height: 359px;
+    border-radius: 10px;
 }
 
 .BotaoEditar{
