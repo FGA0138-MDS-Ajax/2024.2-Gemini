@@ -1,0 +1,21 @@
+# Ignorar arquivos compilados do Python
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar diretórios __pycache__
+__pycache__/
+
+# Ignorar ambientes virtuais do Python
+venv/
+env/
+
+# Ignorar arquivos de ambiente
+.env
+*.env
+
+# Ignorar arquivos de migração do Django (caso esteja usando Django)
+migrations/
+
+# Ignorar configurações e caches do VS Code
+.vscode/
