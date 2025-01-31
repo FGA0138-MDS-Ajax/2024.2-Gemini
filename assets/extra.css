@@ -1,19 +1,19 @@
-/* Definição do tema preto e verde */
+/* Tema preto e verde */
 :root {
-    --md-primary-fg-color: #008000; /* Verde principal */
+    --md-primary-fg-color: #008000; /* Verde escuro */
     --md-primary-bg-color: #000000; /* Fundo preto */
-    --md-default-bg-color: #000000; /* Fundo preto padrão */
+    --md-default-bg-color: #000000; /* Fundo preto */
     --md-text-color: #ffffff; /* Texto branco */
-    --md-accent-fg-color: #00ff00; /* Verde neon para destaque */
+    --md-accent-fg-color: #00ff00; /* Verde neon */
   }
   
-  /* Cabeçalho e rodapé com fundo preto e texto verde */
+  /* Cabeçalho e rodapé pretos */
   .md-header, .md-footer {
     background-color: #000000 !important;
     color: #00ff00 !important;
   }
   
-  /* Links e botões no tema verde */
+  /* Links e botões verdes */
   .md-typeset a {
     color: #00ff00;
   }
