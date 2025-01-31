@@ -1,64 +1,72 @@
-/* Tema preto e verde */
-:root {
-    --md-primary-fg-color: #008000; /* Verde escuro */
-    --md-primary-bg-color: #000000; /* Fundo preto */
-    --md-default-bg-color: #000000; /* Fundo preto */
-    --md-text-color: #ffffff; /* Texto branco */
-    --md-accent-fg-color: #00ff00; /* Verde neon */
-  }
-  
-  /* Cabeçalho e rodapé pretos */
-  .md-header, .md-footer {
-    background-color: #000000 !important;
-    color: #00ff00 !important;
-  }
-  
-  /* Links e botões verdes */
-  .md-typeset a {
-    color: #00ff00;
-  }
-  
-  .md-button {
-    background-color: #008000;
-    color: white;
-  }
-  
-  .md-button:hover {
-    background-color: #00cc00;
-  }
-  
-  /* Barra de pesquisa */
-  .md-search__input {
-    background-color: #222222;
-    color: #ffffff;
-  }
-  
-  .md-search__icon {
-    color: #00ff00;
-  }
-  
-  /* Alteração da cor dos títulos */
-  .md-typeset h1, 
-  .md-typeset h2, 
-  .md-typeset h3, 
-  .md-typeset h4, 
-  .md-typeset h5, 
-  .md-typeset h6 {
-    color: #00ff00;
-  }
-  
-  /* Cor de fundo dos blocos de código */
-  .md-code-block {
-    background-color: #1b1b1b;
-    border-left: 3px solid #00ff00;
-  }
-  
-  /* Ajuste para a navegação lateral */
-  .md-nav__link {
-    color: white;
-  }
-  
-  .md-nav__link--active {
-    color: #00ff00 !important;
-  }
-  
+/* Tema verde para o modo claro */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #008000; /* Verde escuro */
+  --md-primary-bg-color: #ffffff; /* Fundo branco */
+  --md-default-bg-color: #ffffff; /* Fundo branco */
+  --md-text-color: #000000; /* Texto preto */
+  --md-accent-fg-color: #008000; /* Verde escuro */
+}
+
+/* Tema azul para o modo escuro */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0000ff; /* Azul escuro */
+  --md-primary-bg-color: #000000; /* Fundo preto */
+  --md-default-bg-color: #000000; /* Fundo preto */
+  --md-text-color: #ffffff; /* Texto branco */
+  --md-accent-fg-color: #00ffff; /* Azul neon */
+}
+
+/* Cabeçalho e rodapé */
+.md-header, .md-footer {
+  background-color: var(--md-primary-bg-color) !important;
+  color: var(--md-accent-fg-color) !important;
+}
+
+/* Links e botões */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+
+.md-button {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-button:hover {
+  background-color: var(--md-accent-fg-color);
+}
+
+/* Barra de pesquisa */
+.md-search__input {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.md-search__icon {
+  color: var(--md-accent-fg-color);
+}
+
+/* Alteração da cor dos títulos */
+.md-typeset h1, 
+.md-typeset h2, 
+.md-typeset h3, 
+.md-typeset h4, 
+.md-typeset h5, 
+.md-typeset h6 {
+  color: var(--md-accent-fg-color);
+}
+
+/* Cor de fundo dos blocos de código */
+.md-code-block {
+  background-color: #1b1b1b;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* Ajuste para a navegação lateral */
+.md-nav__link {
+  color: white;
+}
+
+.md-nav__link--active {
+  color: var(--md-accent-fg-color) !important;
+}
