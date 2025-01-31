@@ -97,4 +97,6 @@ Nesta seção, são descritas as tecnologias selecionadas para o desenvolvimento
 ## <a> 2.1 Ciclo de vida do Projeto de Desenvolvimento de Software </a>
 
 
-![Figura 1: Ciclo de Vida](assets/ciclo.png)
+<p align="center">
+  <img src="assets/ciclo.png" width="200px" alt="Ciclo de vida">
+</p>
