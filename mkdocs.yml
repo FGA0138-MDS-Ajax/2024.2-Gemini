@@ -41,7 +41,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: "deep purble"
-      accent: "lime"
+      accent: "cyan"
       toggle:
         icon: material/brightness-4
         name: Mudar para a preferência do sistema
