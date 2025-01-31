@@ -2,10 +2,8 @@
 # <a>GEMINI - FGR E-commerce</a>
 </center>
 
-<div style="text-align: center;">
-    <img src="assets/logo.jpg"  alt = 'LOGO FGR' style="width: 80vw; border-radius: 20%;"/>
-    <p><b>Figura 1:</b> Logo FGR</p>
-</div>
+![Figura 1: Logo FGR](assets/logo.jpg){ width="80%" style="border-radius: 20%;" }
+
 
 
 
