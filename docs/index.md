@@ -3,7 +3,7 @@
 </center>
 
 <div style="text-align: center;">
-    <img src="assets/logo.jpg" style="width: 80vw; border-radius: 20%;"/>
+    <img src="assets/logo.jpg"  alt = 'LOGO FGR' style="width: 80vw; border-radius: 20%;"/>
     <p><b>Figura 1:</b> Logo FGR</p>
 </div>
 
