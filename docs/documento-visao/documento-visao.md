@@ -136,3 +136,13 @@ Na tabela a seguir, é apresentado a organização do projeto de forma que divid
 
 
 ---
+
+### <a> 2.3 Planejamento das Fases e/ou Iterações do Projeto </a>
+
+|  *Sprint* | *Produto (Entrega)* | *Data Início* | *Data Fim* | *Entregável(eis)* | *Responsaveis* | *% conclusão* |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+|  *Sprint 1* | *Entender a Definição do Produto /tecnologias* |  *01/11/2024* |  *01/11/2024* | ***Reunião no com  monitor*** |  *todos* |  *100%* |
+|  *Sprint 2* |  *Requisitos \- E-comerc* |  *11/11/2024* |  *11/11/2024* | ***Reunião no teams \- conversa com cliente*** |  *todos* |  *100%*  |
+| *Sprint 3* | *Requisito de alta / média e baixa prioridade* |  *19/11/2024* |  *19/11/2024* | ***Reunião no teams \- conversa com cliente*** |  *todos* |  *100%*  |
+| *Sprint 4* |  *Prototipação das telas \- Figma e ajuste dos requisitos*  |  *26/11/2024* |  *26/11/2024*  | ***Reunião no teams \- conversa com cliente*** |  *todos* |  *100%*  |
+| *...* | *...* | *...* | *...* |  |  |  |
