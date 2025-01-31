@@ -3,8 +3,8 @@
 </center>
 
 <div style="text-align: center;">
-    <img src="assets/logo.jpeg" style="width: 30vw; border-radius: 20%;"/>
-    <p><b>Figura 1:</b> Logo do Ben 10</p>
+    <img src="assets/logo.jpg" style="width: 80vw; border-radius: 20%;"/>
+    <p><b>Figura 1:</b> Logo FGR</p>
 </div>
 
 
