@@ -65,9 +65,6 @@ nav:
   - Atas de Reunião:
     - Ata 1: "atas-reuniao/ata-reuniao-1.md"
 
-extra_css:
-  - assets/extra.css
-
 extra:
   version:
     provider: mike
