@@ -20,3 +20,26 @@ Este projeto oferece as seguintes funcionalidades:
 
 - Introdução da equipe de competição para os visitantes do site, apresentando sua história, conquistas e integrantes;
 - Destaque dos diferentes patrocinadores da FGR.
+
+
+
+<center>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/eduardoferre"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/67663168?v=4" width="100px;" alt=""/><br /><sub><b>Eduardo Ferreira</b></sub></a></td>
+    <td align="center"><a href="https://github.com/Edzada"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/122990164?v=4" width="100px;" alt=""/><br /><sub><b>Esdras de Sousa</b></sub></a></td>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/124414056?v=4" width="100px;" alt=""/><br /><sub><b></b></sub></a></td>
+    <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b></b></sub></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 5</b></sub></a></td>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 6</b></sub></a></td>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 7</b></sub></a></td>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 8</b></sub></a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 9</b></sub></a></td>
+    <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 10</b></sub></a></td>
+  </tr>
+</table>
+</center>
