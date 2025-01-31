@@ -39,9 +39,9 @@ theme:
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: default
-      primary: "green"
-      accent: "light green"
+      scheme: slate
+      primary: "deep purble"
+      accent: "lime"
       toggle:
         icon: material/brightness-4
         name: Mudar para a preferência do sistema
