@@ -50,9 +50,9 @@ Por isso, o desenvolvimento de um E-commerce personalizado para a FGR visa soluc
 ### <a> 1.3 Objetivos do Produto</a>
 
 <div style="text-align: justify;">
-Ao desenvolver o seu próprio marketplace a Fórmula Gama Racing consegue centralizar suas vendas de produtos em um lugar só, o que antes seria uma conversa no whatsapp ou no instagram para discutir os valores dos produtos, o tamanho das camisetas, onde elas seriam entregues, quem estava comprando e qual era o método de pagamento, passa a ser automatizado em seu website. Isso economiza tempo de ambas as partes, dado que o comprador não precisa que um integrante da FGR esteja disponível para atendê-lo e os membros da equipe podem se dedicar em outras funções.
+Ao desenvolver o seu próprio marketplace a Fórmula Gama Racing consegue centralizar suas vendas de produtos em um lugar só, o que antes seria uma conversa no whatsapp ou no instagram para discutir os valores dos produtos, o tamanho das camisetas, onde elas seriam entregues, quem estava comprando e qual era o método de pagamento, passa a ser automatizado em seu website. Isso economiza tempo de ambas as partes, dado que o comprador não precisa que um integrante da FGR esteja disponível para atendê-lo e os membros da equipe podem se dedicar em outras funções. <br>
 
-Com isso, o gerenciamento de vendas e pedidos da equipe irá melhorar, uma vez que poderão ver se um pedido ainda deve ser entregue, assim como o número de pedidos em um determinado período facilitando o controle do estoque aliado a uma forma mais simples de analisar quais itens estão dando maior retorno financeiro e quais podem ser melhor divulgados. 
+Com isso, o gerenciamento de vendas e pedidos da equipe irá melhorar, uma vez que poderão ver se um pedido ainda deve ser entregue, assim como o número de pedidos em um determinado período facilitando o controle do estoque aliado a uma forma mais simples de analisar quais itens estão dando maior retorno financeiro e quais podem ser melhor divulgados. <br>
 
 Desta forma, o principal objetivo é a criação de uma plataforma integrada de marketplace para automatizar as vendas e o gerenciamento de produtos da FGR, otimizando os processos internos e fortalecendo a experiência dos clientes. Outros pontos importantes são: 
 
@@ -117,5 +117,22 @@ Dessa forma, o desenvolvimento do marketplace será iterativo, com melhorias con
 
 Por fim, com essa abordagem ágil, o projeto se tornará mais do que uma simples solução de marketplace; será um exemplo de desenvolvimento organizado, colaborativo e inovador, garantindo entregas consistentes e de alta qualidade. Teams e WhatsApp também serão utilizados como ferramentas de comunicação da equipe. <br>
 </div>
+
+---
+
+### <a> 2.2 Organização do Projeto </a>
+
+<div style="text-align:justify;">
+Na tabela a seguir, é apresentado a organização do projeto de forma que divide e atribui as responsabilidades entre os membros do projeto, sendo todos os participantes, igualmente importantes e com grandes papéis a serem desenvolvidos.
+</div>
+
+| Papel | Atribuições | Responsável | Participantes |
+| :---- | :---- | :---- | :---- |
+| Desenvolvedor | Codificar o produto, codificar testes unitários, realizar refatoração | Matheus | Toda a Equipe |
+| Analista de Qualidade | Garantir a qualidade do produto, garantir o cumprimento do conceito de pronto, realizar inspeções de código | – | Toda a Equipe |
+| Cliente | Apresentar os Requisitos do projeto, entregar as informações necessárias para a construção do projeto e validação do software | Gabriel, Italo (Membros da FGR) | Eduardo, Matheus |
+| Scrum Master | Garantir a qualidade do produto, garantir o cumprimento do conceito de pronto, realizar inspeções de código. | Matheus | Matheus |
+| Product Owner | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas. | Gabriel | Eduardo |
+
 
 ---
