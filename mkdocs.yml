@@ -1,4 +1,58 @@
-site_name: Documentação
+site_name: "2024.2-Gemini"
+site_url: "https://fga0138-mds-ajax.github.io/2024.2-Gemini/"
+repo_url: "https://github.com/fga0138-mds-ajax/2024.2-Gemini"
+repo_name: "fga0138-mds-ajax/2024.2-Gemini"
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: 'green'
+      accent: 'light green'
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para o modo escuro
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para a preferência do sistema
+
+  language: pt-BR
+  #favicon: assets/arquivo.png
+  #logo: assets/arquivo.png
+
+  icon:
+    repo: fontawesome/solid/code-branch
+    logo: material/book
+    search: material/magnify
+
 
 nav:
   - Instruções mkdocs: "index.md"
@@ -9,5 +63,9 @@ nav:
   - Atas de Reunião:
     - Ata 1: "atas-reuniao/ata-reuniao-1.md"
 
-theme:
-  name: material
+extra_css:
+  - assets/extra.css
+
+extra:
+  version:
+    provider: mike

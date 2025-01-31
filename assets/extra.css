@@ -1,0 +1,64 @@
+/* Definição do tema preto e verde */
+:root {
+    --md-primary-fg-color: #008000; /* Verde principal */
+    --md-primary-bg-color: #000000; /* Fundo preto */
+    --md-default-bg-color: #000000; /* Fundo preto padrão */
+    --md-text-color: #ffffff; /* Texto branco */
+    --md-accent-fg-color: #00ff00; /* Verde neon para destaque */
+  }
+  
+  /* Cabeçalho e rodapé com fundo preto e texto verde */
+  .md-header, .md-footer {
+    background-color: #000000 !important;
+    color: #00ff00 !important;
+  }
+  
+  /* Links e botões no tema verde */
+  .md-typeset a {
+    color: #00ff00;
+  }
+  
+  .md-button {
+    background-color: #008000;
+    color: white;
+  }
+  
+  .md-button:hover {
+    background-color: #00cc00;
+  }
+  
+  /* Barra de pesquisa */
+  .md-search__input {
+    background-color: #222222;
+    color: #ffffff;
+  }
+  
+  .md-search__icon {
+    color: #00ff00;
+  }
+  
+  /* Alteração da cor dos títulos */
+  .md-typeset h1, 
+  .md-typeset h2, 
+  .md-typeset h3, 
+  .md-typeset h4, 
+  .md-typeset h5, 
+  .md-typeset h6 {
+    color: #00ff00;
+  }
+  
+  /* Cor de fundo dos blocos de código */
+  .md-code-block {
+    background-color: #1b1b1b;
+    border-left: 3px solid #00ff00;
+  }
+  
+  /* Ajuste para a navegação lateral */
+  .md-nav__link {
+    color: white;
+  }
+  
+  .md-nav__link--active {
+    color: #00ff00 !important;
+  }
+  
