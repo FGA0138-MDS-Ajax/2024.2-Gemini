@@ -22,14 +22,14 @@ Este projeto oferece as seguintes funcionalidades:
 - Destaque dos diferentes patrocinadores da FGR.
 
 
-
+## <a>Equipe</a>
 <center>
 <table>
   <tr>
     <td align="center"><a href="https://github.com/eduardoferre"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/67663168?v=4" width="100px;" alt=""/><br /><sub><b>Eduardo Ferreira</b></sub></a></td>
     <td align="center"><a href="https://github.com/Edzada"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/122990164?v=4" width="100px;" alt=""/><br /><sub><b>Esdras de Sousa</b></sub></a></td>
-    <td align="center"><a href=""><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/124414056?v=4" width="100px;" alt=""/><br /><sub><b></b></sub></a></td>
-    <td align="center"><a href=""><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b></b></sub></a></td>
+    <td align="center"><a href="https://github.com/uires2023"><img style="border-radius: 50%;" src="hhttps://avatars.githubusercontent.com/u/88348553?v=4" width="100px;" alt=""/><br /><sub><b>Uires Carlos</b></sub></a></td>
+    <td align="center"><a href="https://github.com/audittmega"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/143733162?v=4" width="100px;" alt=""/><br /><sub><b>Thiago Tonin</b></sub></a></td>
   </tr>
   <tr>
     <td align="center"><a href="#"><img style="border-radius: 50%;" src="#" width="100px;" alt=""/><br /><sub><b>Participante 5</b></sub></a></td>
