@@ -57,7 +57,7 @@ theme:
 
 
 nav:
-  - Instruções mkdocs: "index.md"
+  - Início: "index.md"
   - Documento de Visão: "documento-visao/documento-visao.md"
   - Documento de Requisitos: "documento-requisitos/documento-requisitos.md"
   - Documento de Arquitetura: "documento-arquitetura/documento-arquitetura.md"

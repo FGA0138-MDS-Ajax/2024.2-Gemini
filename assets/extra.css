@@ -1,19 +1,15 @@
-/* Tema verde para o modo claro */
-[data-md-color-scheme="default"] {
-  --md-primary-fg-color: #008000; /* Verde escuro */
-  --md-primary-bg-color: #ffffff; /* Fundo branco */
-  --md-default-bg-color: #ffffff; /* Fundo branco */
-  --md-text-color: #000000; /* Texto preto */
-  --md-accent-fg-color: #008000; /* Verde escuro */
+[data-md-color-primary=green] {
+  --md-primary-fg-color: #184119;
+  --md-primary-fg-color--light: #68bb6c;
+  --md-primary-fg-color--dark:rgb(66, 100, 67);
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: #ffffffb3;
 }
-
-/* Tema azul para o modo escuro */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #0000ff; /* Azul escuro */
-  --md-primary-bg-color: #000000; /* Fundo preto */
-  --md-default-bg-color: #000000; /* Fundo preto */
-  --md-text-color: #ffffff; /* Texto branco */
-  --md-accent-fg-color: #00ffff; /* Azul neon */
+[data-md-color-accent=light-green] {
+  --md-accent-fg-color:rgb(135, 202, 104);
+  --md-accent-fg-color--transparent: #63de171a;
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: #ffffffb3;
 }
 
 /* Cabeçalho e rodapé */
