@@ -146,3 +146,31 @@ Na tabela a seguir, é apresentado a organização do projeto de forma que divid
 | *Sprint 3* | *Requisito de alta / média e baixa prioridade* |  *19/11/2024* |  *19/11/2024* | ***Reunião no teams \- conversa com cliente*** |  *todos* |  *100%*  |
 | *Sprint 4* |  *Prototipação das telas \- Figma e ajuste dos requisitos*  |  *26/11/2024* |  *26/11/2024*  | ***Reunião no teams \- conversa com cliente*** |  *todos* |  *100%*  |
 | *...* | *...* | *...* | *...* |  |  |  |
+
+
+---
+
+### <a> 2.4 Matriz de Comunicação </a>
+
+| *Descrição* | *Área/ Envolvidos* | *Periodicidade* | *Produtos Gerados* |
+| :---- | :---- | :---- | :---- |
+| Reunião com cliente  Acompanhamento dos Riscos, Compromissos, Ações Pendentes, Indicadores  | Equipe  Monitor  | Semanal | Ata de reunião Apresentação do que foi feito  Relatório de situação do projeto  |
+|  |  | Quinzenal |  |
+| \- Acompanhamento das Sprints (Miguel) | Equipe *Monitor* | Semanal | Reunião , e  Detalhamento das atividades  |
+
+---
+
+### <a> 2.5 Gerenciamento de Riscos </a>
+
+| Risco | Grau de Exposição | Mitigação | Plano de Contingência |
+| :---- | :---- | :---- | :---- |
+| Mau entendimento do backlog do projeto | Alto | Tirar todas as dúvidas com o Scrum Master e o Product Owner | Reunião com  a equipe para esclarecimento |
+| Falta de experiência da equipe em tecnologias e linguagens de programação específicas  | Médio | Estudos individuais/Leitura da documentação | Os mais experientes e com mais facilidade, ajudar os que têm dificuldade, auxiliando no aprendizado |
+| Atraso na entrega das Sprints | Alto | Manter comunicação regular e sincera com toda a equipe | Organizar cronograma e negociar prazos de entrega |
+| Definição incorreta do escopo do projeto | Muito alto | Criação de reuniões para o levantamento de requisitos além de produzir um backlog claro para entendimento dos desenvolvedores e clientes. |  |
+| Problemas no desenvolvimento da interface de usuário | Médio a baixo | Realizar testes com o protótipo criado para verificar sua usabilidade. | Atualização do design deixando-o mais acessível para os usuários. |
+| Atrasos no desenvolvimento do produto de software | Alto | Definir para as sprints histórias de usuário que sejam condizentes com o período da sprint. Dividir histórias de usuário grandes e complexas e versões menores e mais simples. | Focar no desenvolvimento das funcionalidades principais do projeto. |
+| Problemas na integração dos métodos de pagamento | Muito alto | Realizar diversos testes com o intuito de encontrar possíveis bugs evitando que estes cheguem no produto final. | Redirecionar o cliente para o whatsapp da equipe para que possa ser negociado o pagamento. |
+| Falhas na segurança do perfil de administrador do site | Alto | Exigir a criação de senhas com múltiplos tipos de caracteres e implementar autenticação de dois fatores. |  |
+
+---
