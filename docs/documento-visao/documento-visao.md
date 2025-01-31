@@ -103,7 +103,7 @@ Nesta seção, são descritas as tecnologias selecionadas para o desenvolvimento
 ### <a> 2.1 Ciclo de vida do Projeto de Desenvolvimento de Software </a>
 
 
-![Ciclo de Vida do Projeto](docs/assets/ciclo.png)
+![Ciclo de Vida do Projeto](./assets/ciclo.png)
 <div style="text-align:justify;">
 A metodologia do desenvolvimento ágil será adotada para esse projeto, mesmo sendo uma forma de desenvolvimento mais recente, ela não deixa de ser sólida o suficiente para sustentar a criação do marketplace, bem como sua capacidade de adaptação e flexibilidade diante das mudanças. Além disso, corrige um dos principais problemas do desenvolvimento orientado a planos: a rejeição às mudanças durante o processo. No desenvolvimento orientado a planos, alterações nos requisitos podem atrasar o projeto por semanas ou até meses. Em contraste, o ágil “abraça” as mudanças como parte do processo, permitindo que a equipe de programadores se torne uma parte central na evolução do produto.
 
