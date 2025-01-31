@@ -2,7 +2,7 @@
 # <a>GEMINI - FGR E-commerce</a>
 </center>
 
-![Figura 1: Logo FGR](assets/logo.jpg){ width="80%" style="border-radius: 20%;" }
+![Figura 1: Logo FGR](assets/LogoFGR.png){ width="80%" style="border-radius: 20%;" }
 
 
 
