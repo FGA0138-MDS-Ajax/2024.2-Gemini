@@ -1,4 +1,4 @@
-# <a> 1. Visão Geral do Produto e Projeto </a>
+# <a> 1. Visão Geral do Produto </a>
 
 
 ---
@@ -28,7 +28,7 @@ Por isso, o desenvolvimento de um E-commerce personalizado para a FGR visa soluc
 
 ## <a> 1.2 Declaração de Posição Produto </a>
 
-<div style ="text-align: justify">
+<div style ="text-align: justify;">
     A segguir, apresenta-se o posicionamento exclusivo que o produto pretende preencher no mercado, destacando sua intenção, finalidade, públicos-alvos e importância. Esses aspectos foram definidos para guiar o desenvolvimento e alinhar a solução às necessidades da equipe e do mercado.
 </div>
 
@@ -45,7 +45,7 @@ Por isso, o desenvolvimento de um E-commerce personalizado para a FGR visa soluc
 
 ## <a> 1.3 Objetivos do Produto</a>
 
-<div style="text-align: justify">
+<div style="text-align: justify;">
 Ao desenvolver o seu próprio marketplace a Fórmula Gama Racing consegue centralizar suas vendas de produtos em um lugar só, o que antes seria uma conversa no whatsapp ou no instagram para discutir os valores dos produtos, o tamanho das camisetas, onde elas seriam entregues, quem estava comprando e qual era o método de pagamento, passa a ser automatizado em seu website. Isso economiza tempo de ambas as partes, dado que o comprador não precisa que um integrante da FGR esteja disponível para atendê-lo e os membros da equipe podem se dedicar em outras funções.
 Com isso, o gerenciamento de vendas e pedidos da equipe irá melhorar, uma vez que poderão ver se um pedido ainda deve ser entregue, assim como o número de pedidos em um determinado período facilitando o controle do estoque aliado a uma forma mais simples de analisar quais itens estão dando maior retorno financeiro e quais podem ser melhor divulgados. 
 Desta forma, o principal objetivo é a criação de uma plataforma integrada de marketplace para automatizar as vendas e o gerenciamento de produtos da FGR, otimizando os processos internos e fortalecendo a experiência dos clientes. Outros pontos importantes são: 
@@ -60,7 +60,7 @@ Desta forma, o principal objetivo é a criação de uma plataforma integrada de 
 Tais objetivos garantem que o produto não seja apenas uma ferramenta de vendas, mas uma solução completa que contribua para o crescimento sustentável da Fórmula Gama Racing, fortalecendo sua presença e promovendo maior eficiência interna entre os membros.
 
 
-<div style="text-align:justify">
+<div style="text-align:justify;">
 Tais objetivos garantem que o produto não seja apenas uma ferramenta de vendas, mas uma solução completa que contribua para o crescimento sustentável da Fórmula Gama Racing, fortalecendo sua presença e promovendo maior eficiência interna entre os membros.
 </div>
 
@@ -68,3 +68,35 @@ Tais objetivos garantem que o produto não seja apenas uma ferramenta de vendas,
 ---
 
 ## <a> 1.4 Tecnologias a Serem Utilizadas </a>
+
+<div style="text-align:justify;">
+Nesta seção, são descritas as tecnologias selecionadas para o desenvolvimento do projeto, abrangendo as linguagens de programação, metodologias de trabalho, técnicas aplicadas e ferramentas utilizadas.
+</div>
+
+
+| 💻 **Categoria**          | 🛠️ **Ferramentas/Tecnologias** |
+|--------------------------|--------------------------------|
+| 📌 **Metodologias Ágeis** | Scrum, XP                     |
+| 🎨 **Front-end**          | JavaScript                    |
+| ⚙️ **Back-end**           | Python                         |
+| 🗄️ **Banco de Dados**     | SQL                            |
+| 📚 **Frameworks**         | React, Django                 |
+| 🎨 **Prototipação**       | Figma                         |
+| 💬 **Comunicação**        | WhatsApp, Teams, Discord      |
+| 🔄 **Versionamento de Código** | Git, GitHub                 |
+
+
+---
+
+# <a> 2. Visão Geral do Projeto </a>
+
+
+---
+
+
+## <a> 2.1 Ciclo de vida do Projeto de Desenvolvimento de Software </a>
+
+<div style = "text-align: center;">
+    <img src="assets/ciclo.png" style="width: 30vw;"/>
+    <p><b>Figura 1:</b> Ciclo de Vida </p>
+</div>
