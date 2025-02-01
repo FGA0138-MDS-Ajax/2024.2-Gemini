@@ -206,7 +206,7 @@ Haverá duas reuniões semanais para garantir que o processo esteja alinhado e a
 
 ---
 
-## <a> 4. Referências </a>
+## <a> 4. Declaração de Escopo do Projeto </a>
 
 ---
 
@@ -222,6 +222,49 @@ Após todas as decisões necessárias tomadas para o início do projeto, iniciam
 - Sistema de vendas com opções pagamento em pix e boleto.
 - Catálogo de produtos da equipe.
 - Página de patrocinadores. 
+
+
+---
+
+### <a> 4.2 Perfis </a>
+
+| \# | Nome do perfil | Características do perfil | Permissões de acesso |
+| :---- | :---- | :---- | :---- |
+|  | Usuário | Usuário é o perfil de acesso público a aplicação, onde para ele estarão disponíveis as páginas de acesso geral e loja. | Cadastro e login, configurações de conta, interação com o site, realizar compras e explorar catálogo |
+|  | Administrador | Responsável por gerenciar usuários, alterar configurações do sistema, gerenciar pagamento e fazer manutenções caso necessário. | Configurar usuários, pagamento, conteúdo da aplicação e acesso aos logs e dados |
+
+
+---
+
+### <a> 4.3 Cenários </a>
+
+Tabela : Cenários a serem desenvolvidos
+
+| Numeração do cenário | Cenário | Requisitos Obrigatórios (MUST) | Requisitos desejáveis ((Should/Could) | Forma de Elicitação |
+| :---- | :---- | :---- | :---- | :---- |
+| 1 | Cadastro de Usuários | Desenvolver as telas de Cadastro para Usuários solicitando informações como: email, senha, gênero, telefone e data de nascimento | Implementar um login/cadastro com email institucional, Conta Google ou Conta Facebook | Reunião com a equipe e o cliente |
+| 2 | Login de Usuários | Desenvolver a tela para Login do Usuário com a solicitação de email e senha cadastrados, recuperação de senha e cadastro de usuário(caso não exista um cadastro) | Implementar um login/cadastro com email institucional, Conta Google ou Conta Facebook  | Reunião com a equipe e o cliente |
+| 3 | Login do administrador | Permitir o login/cadastro de uma conta administradora única para gerenciamento de vendas e estoque | Implementar a possibilidade de login usando o email institucional | Reunião com a equipe e o cliente |
+| 4 | Página principal (HOME) | Página principal para exibir as informações gerais do site como banner promocional, atalhos para outras seções, e informações da equipe | Desenvolver um chatbot para suporte ou pop-up com link para whatsapp | Reunião com a equipe e o cliente |
+| 5 | Aba para E-commerce  | Desenvolver a aba para E-commerce para visualizar os produtos   | Visualizar a frente e verso do produto ao passar o mouse e ampliar | Reunião com a equipe e o cliente |
+| 6 | Carrinho de compras  | Exibir um sumário dos produtos selecionados e os valores a pagar | Finalizar a compra com os dados da conta cadastrada do usuário | Reunião com a equipe e o cliente |
+| 7 | Tela de Pagamento | Desenvolver a tela com as informações da compra, métodos de pagamento (pix e boleto) e local de entrega | Permitir o pagamento por cartão de débito e crédito  | Reunião com a equipe e o cliente |
+| 8 | Painel de Controle (ADMIN) | Desenvolver um painel de acesso restrito ao administrador para controlar gráficos de vendas e estoque | Disponibilizar gráficos interativos  | Reunião com a equipe e o cliente |
+| 9 | Tela para edição (ADMIN) | Permitir ao administrador editar as telas principais, como editar fotos e textos. | \- | Reunião com a equipe e o cliente  |
+
+Tabela : Cenários funcionais
+
+| Sistema: WebFGR – Cenários funcionais |  |  |
+| :---- | :---- | :---- |
+| Numeração do cenário 1 | Nome do cenário Cadastro de Usuários  | Sprint 1 |
+| 2 | Login de Usuários | 1 |
+| 3 | Login do Administrador | 1 |
+| 4 | Página Principal | 2 |
+| 5 | Aba E-commerce | 3 |
+| 6 | Carrinho de Compras | 3 |
+| 7 | Tela de Pagamento | 4 |
+| 8 | Painel de Controle (ADMIN) | 5 |
+| 9 | Tela de Edição (ADMIN) | 5 |
 
 
 ---
