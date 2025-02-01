@@ -272,7 +272,7 @@ Tabela : Cenários funcionais
 
 ### <a> 4.4 Tabela de Backlog do Produto </a>
 
-| Sistema: xxxx – Backlog do produto |  |  |  |  |  |  |
+| Sistema: FGR E-commerce – Backlog do produto |  |  |  |  |  |  |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | Numeração (Cenário / requisito) | Sprint | Nome do requisito | Tipo de requisito (Funcional / não funcional) | Priorização do requisito Must, Should, Could | Descrição sucinta do requisito | **User stories (U.S.) associadas** Identifique as U.S. associadas ao requisito |
 | 1 | 1 | Cadastro de Usuários | Funcional | Must | Permitir o cadastro de novos usuários com campos obrigatórios (nome, e-mail, senha). | "Como usuário, quero me cadastrar no sistema para acessar as funcionalidades de compra." |
