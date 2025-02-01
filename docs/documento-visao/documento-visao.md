@@ -180,13 +180,13 @@ Na tabela a seguir, é apresentado a organização do projeto de forma que divid
 <div style="text-align:justify;">
 Mudanças em requisitos/backlog traz grande impacto, pois muitas ações deverão ser feitas como replanejamento do projeto, ajustes de cronograma com a equipe e Cliente, certamente alteração no orçamento acordado no início, mais recursos para a equipe trabalhar, possíveis impactos na qualidade, devido ao novo processo ajustado.  <br><br>
 
-O que deve ser feito para gerenciar possíveis alterações ou mudanças nos requisitos/backlog:   
+O que deve ser feito para gerenciar possíveis alterações ou mudanças nos requisitos/backlog:   <br>
 1. Deve ser avaliado o impacto da mudança e logo revisar e atualizar a documentação comunicando os envolvidos, dessa forma ajustar o plano do projeto reavaliando os riscos para a nova aprovação e implantar as mudanças.  Deve-se pensar e criar um gerenciamento de mudanças, mantendo uma comunicação ativa na equipe.   <br><br>
 
-Problemas no desenvolvimento da interface: uma navegação confusa ao cliente é um fator de trabalho não entregue corretamente em determinada sprint, podendo ser se tornar débito técnico, pois a falta de uma funcionalidade exigida e não entregue ao cliente, pode tornar a navegação na aplicação comprometida.  
+Problemas no desenvolvimento da interface: uma navegação confusa ao cliente é um fator de trabalho não entregue corretamente em determinada sprint, podendo ser se tornar débito técnico, pois a falta de uma funcionalidade exigida e não entregue ao cliente, pode tornar a navegação na aplicação comprometida.  <br>
 1. Devem ser feitos testes de usabilidade e um design cliente como centro, fazendo uma documentação clara com as devidas manifestações do cliente.  <br><br>
 
-Atrasos no desenvolvimento do software vem da falta de uma planejamento e gerenciamento em equipe, pois cada passo de um desenvolvedor é um passo para outro desenvolvedor e o projeto entre em atrasos causará insatisfação do cliente.  
+Atrasos no desenvolvimento do software vem da falta de uma planejamento e gerenciamento em equipe, pois cada passo de um desenvolvedor é um passo para outro desenvolvedor e o projeto entre em atrasos causará insatisfação do cliente.  <br>
 1. Devem ser feitas como replanejamento avaliar o atraso com suas causas e efeitos devendo rever os requisitos isso leva ao replanejamento do cronograma, como estratégia devem diminuir os testes e otimizar tarefas.   <br><br>
 </div>
 
