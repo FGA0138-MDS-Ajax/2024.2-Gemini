@@ -196,12 +196,32 @@ Atrasos no desenvolvimento do software vem da falta de uma planejamento e gerenc
 
 
 <div style="text-align:justify;">
-O processo de desenvolvimento será conduzido utilizando as metodologias Scrum e XP, com foco em entregas rápidas e incrementais. O objetivo é garantir um produto 100% funcional, conforme o escopo definido, sendo entregue dentro dos prazos estipulados.  
-O processo de desenvolvimento será dividido em etapas sequenciais e bem definidas, começando pelo planejamento, onde o Product Owner será responsável por definir e priorizar o backlog de requisitos, alinhando os objetivos do projeto com as necessidades do cliente. O planejamento determinará também o que será entregue em cada sprint, garantindo que todos os membros da equipe estejam alinhados com as expectativas do cliente e com o que precisa ser desenvolvido.  
-Na fase de prototipação, será utilizado o Figma para criar o design do layout do website, com base nos requisitos previamente estabelecidos. Este protótipo servirá como uma visão inicial do produto, permitindo que ajustes sejam feitos de forma ágil à medida que o desenvolvimento avança. A equipe de desenvolvedores será responsável pela implementação do código, tanto para o front-end quanto para o back-end, utilizando as práticas estabelecidas no backlog. Para isso, será adotada a prática de programação em pares, conforme a metodologia XP, visando promover a troca de conhecimentos entre desenvolvedores, além de garantir um código mais robusto e de fácil manutenção.  
-O desenvolvimento será realizado utilizando as seguintes tecnologias: o backend será construído com Python utilizando o framework Django, o frontend será desenvolvido com React.js e o banco de dados será SQL.  
+O processo de desenvolvimento será conduzido utilizando as metodologias Scrum e XP, com foco em entregas rápidas e incrementais. O objetivo é garantir um produto 100% funcional, conforme o escopo definido, sendo entregue dentro dos prazos estipulados.  <br>
+O processo de desenvolvimento será dividido em etapas sequenciais e bem definidas, começando pelo planejamento, onde o Product Owner será responsável por definir e priorizar o backlog de requisitos, alinhando os objetivos do projeto com as necessidades do cliente. O planejamento determinará também o que será entregue em cada sprint, garantindo que todos os membros da equipe estejam alinhados com as expectativas do cliente e com o que precisa ser desenvolvido.  <br>
+Na fase de prototipação, será utilizado o Figma para criar o design do layout do website, com base nos requisitos previamente estabelecidos. Este protótipo servirá como uma visão inicial do produto, permitindo que ajustes sejam feitos de forma ágil à medida que o desenvolvimento avança. A equipe de desenvolvedores será responsável pela implementação do código, tanto para o front-end quanto para o back-end, utilizando as práticas estabelecidas no backlog. Para isso, será adotada a prática de programação em pares, conforme a metodologia XP, visando promover a troca de conhecimentos entre desenvolvedores, além de garantir um código mais robusto e de fácil manutenção. <br> 
+O desenvolvimento será realizado utilizando as seguintes tecnologias: o backend será construído com Python utilizando o framework Django, o frontend será desenvolvido com React.js e o banco de dados será SQL.  <br>
 Haverá duas reuniões semanais para garantir que o processo esteja alinhado e as expectativas sejam atendidas. Uma reunião será realizada com o cliente, ao fim de cada sprint, para revisar os avanços e discutir ajustes ou novas ideias. A outra reunião ocorrerá com a equipe para discutir o progresso e planejar as próximas etapas.  
 </div>
+
+
+---
+
+## <a> 4. Referências </a>
+
+---
+
+### <a> 4.1 Backlog do Produto </a>
+
+<div style="text-align:justify;">
+Após todas as decisões necessárias tomadas para o início do projeto, iniciamos as reuniões com nossos clientes para definir todas as necessidades com suas devidas prioridades para o nosso projeto através de um brainstorming. Foram definidas também as funções de cada membro da equipe e em que área irão atuar. As tarefas definidas foram:
+</div>
+
+- Site de e-commerce para vendas de produtos da equipe.
+- Página de apresentação da equipe e membros.
+- Sistema de login para administradores e clientes.
+- Sistema de vendas com opções pagamento em pix e boleto.
+- Catálogo de produtos da equipe.
+- Página de patrocinadores. 
 
 
 ---
