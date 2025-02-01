@@ -290,3 +290,10 @@ Tabela : Cenários funcionais
 
 
 ---
+
+## <a> 5 Referências Bibliográficas  </a>
+
+
+1. # **SCHWABER, Ken; SUTHERLAND, Jeff.** Guia do Scrum: o guia definitivo para o Scrum: as regras do jogo. Versão 2020\. Disponível em: [https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf). Acesso em:  dez. 2024\.
+
+2. **Universidade Federal de Pernambuco.** Guia prático para a metodologia XP. Disponível em: [https://aprender3.unb.br/pluginfile.php/3028026/mod\_resource/content/1/4a.GUIA%20XP\_UFPE.pdf](https://aprender3.unb.br/pluginfile.php/3028026/mod_resource/content/1/4a.GUIA%20XP_UFPE.pdf). Acesso em: 30 nov. 2024\.
