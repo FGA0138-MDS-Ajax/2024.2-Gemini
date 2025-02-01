@@ -272,21 +272,21 @@ Tabela : Cenários funcionais
 
 ### <a> 4.4 Tabela de Backlog do Produto </a>
 
-| Sistema: FGR E-commerce – Backlog do produto |  |  |  |  |  |  |
-| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
-| Numeração (Cenário / requisito) | Sprint | Nome do requisito | Tipo de requisito (Funcional / não funcional) | Priorização do requisito Must, Should, Could | Descrição sucinta do requisito | **User stories (U.S.) associadas** Identifique as U.S. associadas ao requisito |
-| 1 | 1 | Cadastro de Usuários | Funcional | Must | Permitir o cadastro de novos usuários com campos obrigatórios (nome, e-mail, senha). | "Como usuário, quero me cadastrar no sistema para acessar as funcionalidades de compra." |
-| 2 | 1 | Login de Usuários | Funcional | Must | Permitir que usuários façam login no sistema utilizando e-mail e senha. | "Como usuário, quero fazer login para acessar minha conta e realizar compras." |
-| 3 | 1 | Login do Administrador | Funcional | Must | Permitir que o administrador acesse o sistema com um login único e diferenciado. | "Como administrador, quero acessar o sistema para gerenciar produtos, pedidos e usuários." |
-| 4 | 2 | Página Principal (HOME) | Funcional | Should | Desenvolver a home do site com banners promocionais e atalhos para páginas principais. | "Como visitante, quero acessar a home do site para conhecer os produtos e navegar para outras seções." |
-| 5 | 2 | Aba E-commerce | Funcional | Must | Exibir os produtos disponíveis para venda com informações detalhadas e filtros. | "Como usuário, quero visualizar os produtos disponíveis para escolher o que comprar." |
-| 6 | 3 | Carrinho de Compras | Funcional  | Must | Permitir que usuários adicionem produtos ao carrinho e visualizem o total da compra. | "Como usuário, quero adicionar itens ao carrinho para revisar minha compra antes de finalizar." |
-| 7 | 4 | Tela de Pagamento | Funcional | Must | Implementar métodos de pagamento (, PIX, boleto). | "Como usuário, quero finalizar minha compra utilizando um método de pagamento seguro." |
-| 8 | 5 | Painel de Controle (ADMIN) | Funcional  | Must | Desenvolver interface para que o administrador gerencie produtos, pedidos e relatórios. | "Como administrador, quero acessar um painel para monitorar vendas, gerenciar estoque e visualizar relatórios." |
-| 9 | 5 | Tela de Edição (ADMIN) | Funcional | Must | Permitir que o administrador adicione, edite ou remova produtos do catálogo. | "Como administrador, quero atualizar o catálogo de produtos para manter as informações corretas e atrativas." |
-| 10 | 3 | Segurança de Dados | Não Funcional | Should | Implementar HTTPS para criptografar as comunicações entre o cliente e o servidor | "Como usuário, quero que meus dados pessoais e de pagamento sejam protegidos ao realizar compras no site." |
-| 11 | 5 | Documentação do Código | Não Funcional  | Could | O código deve ser documentado para facilitar a manutenção e compreensão pela equipe. | "Como desenvolvedor, quero ter o código bem documentado para realizar alterações futuras de maneira mais eficiente." |
-| 12 | 6 | Conformidade com o LGPD | Não Funcional | Should | Garantir que o sistema esteja em conformidade com a Lei Geral de Proteção de Dados (LGPD). | "Como usuário, quero que meus dados sejam tratados de forma segura e em conformidade com as leis de proteção de dados." |
-| 13 | 6 | Backup Automático de Dados | Não Funcional | Should | Configurar backups automáticos do banco de dados para evitar perda de informações. | "Como administrador, quero ter backups automáticos para restaurar dados em caso de falhas ou ataques ao sistema." |
+| Numeração (Cenário / Requisito) | Sprint | Nome do Requisito | Tipo de Requisito (Funcional / Não Funcional) | Priorização (Must, Should, Could) | Descrição Sucinta | **User Stories (U.S.) Associadas** |
+|--------------------------------|--------|-------------------|--------------------------------|--------------------|-------------------------|------------------------------------------|
+| 1  | 1  | Cadastro de Usuários       | Funcional         | Must  | Permitir o cadastro de novos usuários com campos obrigatórios (nome, e-mail, senha). | "Como usuário, quero me cadastrar no sistema para acessar as funcionalidades de compra." |
+| 2  | 1  | Login de Usuários          | Funcional         | Must  | Permitir que usuários façam login no sistema utilizando e-mail e senha. | "Como usuário, quero fazer login para acessar minha conta e realizar compras." |
+| 3  | 1  | Login do Administrador     | Funcional         | Must  | Permitir que o administrador acesse o sistema com um login único e diferenciado. | "Como administrador, quero acessar o sistema para gerenciar produtos, pedidos e usuários." |
+| 4  | 2  | Página Principal (HOME)    | Funcional         | Should | Desenvolver a home do site com banners promocionais e atalhos para páginas principais. | "Como visitante, quero acessar a home do site para conhecer os produtos e navegar para outras seções." |
+| 5  | 2  | Aba E-commerce             | Funcional         | Must  | Exibir os produtos disponíveis para venda com informações detalhadas e filtros. | "Como usuário, quero visualizar os produtos disponíveis para escolher o que comprar." |
+| 6  | 3  | Carrinho de Compras        | Funcional         | Must  | Permitir que usuários adicionem produtos ao carrinho e visualizem o total da compra. | "Como usuário, quero adicionar itens ao carrinho para revisar minha compra antes de finalizar." |
+| 7  | 4  | Tela de Pagamento          | Funcional         | Must  | Implementar métodos de pagamento (PIX, boleto). | "Como usuário, quero finalizar minha compra utilizando um método de pagamento seguro." |
+| 8  | 5  | Painel de Controle (ADMIN) | Funcional         | Must  | Desenvolver interface para que o administrador gerencie produtos, pedidos e relatórios. | "Como administrador, quero acessar um painel para monitorar vendas, gerenciar estoque e visualizar relatórios." |
+| 9  | 5  | Tela de Edição (ADMIN)     | Funcional         | Must  | Permitir que o administrador adicione, edite ou remova produtos do catálogo. | "Como administrador, quero atualizar o catálogo de produtos para manter as informações corretas e atrativas." |
+| 10 | 3  | Segurança de Dados         | Não Funcional     | Should | Implementar HTTPS para criptografar as comunicações entre o cliente e o servidor. | "Como usuário, quero que meus dados pessoais e de pagamento sejam protegidos ao realizar compras no site." |
+| 11 | 5  | Documentação do Código     | Não Funcional     | Could  | O código deve ser documentado para facilitar a manutenção e compreensão pela equipe. | "Como desenvolvedor, quero ter o código bem documentado para realizar alterações futuras de maneira mais eficiente." |
+| 12 | 6  | Conformidade com o LGPD    | Não Funcional     | Should | Garantir que o sistema esteja em conformidade com a Lei Geral de Proteção de Dados (LGPD). | "Como usuário, quero que meus dados sejam tratados de forma segura e em conformidade com as leis de proteção de dados." |
+| 13 | 6  | Backup Automático de Dados | Não Funcional     | Should | Configurar backups automáticos do banco de dados para evitar perda de informações. | "Como administrador, quero ter backups automáticos para restaurar dados em caso de falhas ou ataques ao sistema." |
+
 
 ---
