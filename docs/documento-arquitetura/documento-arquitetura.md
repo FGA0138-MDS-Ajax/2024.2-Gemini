@@ -76,8 +76,8 @@ O Django fornece uma maneira flexível e poderosa para lidar com a separação e
 
 ### <a> 2.3 Detalhamento </a>
 
-O projeto utiliza o padrão arquitetural **Model-View-Controller (MVC)**, amplamente adotado no desenvolvimento de aplicações web devido à sua capacidade de organizar de maneira clara e modular os componentes de um sistema. No contexto do framework Django, o padrão MVC é implementado com algumas adaptações específicas ao framework, sendo comumente referenciado como **Model-Template-View (MTV)**. Essa abordagem garante uma separação de responsabilidades que facilita o desenvolvimento, manutenção e escalabilidade do sistema.  
-O **Modelo** é responsável por representar os dados e a lógica de negócios do sistema. Ele inclui classes que definem as entidades do domínio, seus atributos e seus relacionamentos, sendo diretamente mapeadas para tabelas no banco de dados relacional (utilizando o ORM integrado do Django).  <br>
+O projeto utiliza o padrão arquitetural **Model-View-Controller (MVC)**, amplamente adotado no desenvolvimento de aplicações web devido à sua capacidade de organizar de maneira clara e modular os componentes de um sistema. No contexto do framework Django, o padrão MVC é implementado com algumas adaptações específicas ao framework, sendo comumente referenciado como **Model-Template-View (MTV)**. Essa abordagem garante uma separação de responsabilidades que facilita o desenvolvimento, manutenção e escalabilidade do sistema.  <br><br>
+O **Modelo** é responsável por representar os dados e a lógica de negócios do sistema. Ele inclui classes que definem as entidades do domínio, seus atributos e seus relacionamentos, sendo diretamente mapeadas para tabelas no banco de dados relacional (utilizando o ORM integrado do Django).  <br><br>
 **Principais Funções do Modelo:**
 
 * Definir as entidades do domínio do projeto, como Produtos, Pedidos, Usuários, entre outros.  
