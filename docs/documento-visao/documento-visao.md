@@ -177,6 +177,7 @@ Na tabela a seguir, é apresentado a organização do projeto de forma que divid
 
 ### <a> 2.6 Critérios de Replanejamento </a>
 
+<div style="text-align:justify;">
 Mudanças em requisitos/backlog:  traz grande impacto, pois muitas ações deverão ser feitas como replanejamento do projeto, ajustes de cronograma com a equipe e Cliente, certamente alteração no orçamento acordado no início, mais recursos para a equipe trabalhar, possíveis impactos na qualidade, devido ao novo processo ajustado.  
 O que deve ser feito para gerenciar possíveis alterações ou mudanças nos requisitos/backlog:   
 -	Deve ser avaliado o impacto da mudança e logo revisar e atualizar a documentação comunicando os envolvidos, dessa forma ajustar o plano do projeto reavaliando os riscos para a nova aprovação e implantar as mudanças.  Deve-se pensar e criar um gerenciamento de mudanças, mantendo uma comunicação ativa na equipe.   
@@ -186,3 +187,21 @@ Problemas no desenvolvimento da interface: uma navegação confusa ao cliente é
 
 Atrasos no desenvolvimento do software vem da falta de uma planejamento e gerenciamento em equipe, pois cada passo de um desenvolvedor é um passo para outro desenvolvedor e o projeto entre em atrasos causará insatisfação do cliente.  
 -	Devem ser feitas como replanejamento avaliar o atraso com suas causas e efeitos devendo rever os requisitos isso leva ao replanejamento do cronograma, como estratégia devem diminuir os testes e otimizar tarefas.   
+</div>
+
+
+--- 
+
+## <a> 3. Processo de Desenvolvimento de Software </a>
+
+
+<div style="text-align:justify;">
+O processo de desenvolvimento será conduzido utilizando as metodologias Scrum e XP, com foco em entregas rápidas e incrementais. O objetivo é garantir um produto 100% funcional, conforme o escopo definido, sendo entregue dentro dos prazos estipulados.  
+O processo de desenvolvimento será dividido em etapas sequenciais e bem definidas, começando pelo planejamento, onde o Product Owner será responsável por definir e priorizar o backlog de requisitos, alinhando os objetivos do projeto com as necessidades do cliente. O planejamento determinará também o que será entregue em cada sprint, garantindo que todos os membros da equipe estejam alinhados com as expectativas do cliente e com o que precisa ser desenvolvido.  
+Na fase de prototipação, será utilizado o Figma para criar o design do layout do website, com base nos requisitos previamente estabelecidos. Este protótipo servirá como uma visão inicial do produto, permitindo que ajustes sejam feitos de forma ágil à medida que o desenvolvimento avança. A equipe de desenvolvedores será responsável pela implementação do código, tanto para o front-end quanto para o back-end, utilizando as práticas estabelecidas no backlog. Para isso, será adotada a prática de programação em pares, conforme a metodologia XP, visando promover a troca de conhecimentos entre desenvolvedores, além de garantir um código mais robusto e de fácil manutenção.  
+O desenvolvimento será realizado utilizando as seguintes tecnologias: o backend será construído com Python utilizando o framework Django, o frontend será desenvolvido com React.js e o banco de dados será SQL.  
+Haverá duas reuniões semanais para garantir que o processo esteja alinhado e as expectativas sejam atendidas. Uma reunião será realizada com o cliente, ao fim de cada sprint, para revisar os avanços e discutir ajustes ou novas ideias. A outra reunião ocorrerá com a equipe para discutir o progresso e planejar as próximas etapas.  
+</div>
+
+
+---
