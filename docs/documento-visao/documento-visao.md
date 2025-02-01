@@ -291,7 +291,7 @@ Tabela : Cenários funcionais
 
 ---
 
-## <a> 5 Referências Bibliográficas  </a>
+## <a> 5. Referências Bibliográficas  </a>
 
 
 1. **SCHWABER, Ken; SUTHERLAND, Jeff.** Guia do Scrum: o guia definitivo para o Scrum: as regras do jogo. Versão 2020\. Disponível em: [https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-PortugueseBR-3.0.pdf). Acesso em:  dez. 2024\.
