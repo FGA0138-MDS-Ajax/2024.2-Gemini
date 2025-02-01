@@ -1,6 +1,8 @@
-# **Documento de Arquitetura**
+# <a> Documento de Arquitetura </a>
 
-# Histórico de Revisão
+---
+
+## <a> Histórico de Revisão </a>
 
 | Data | Versão | Descrição | Autor |
 | ----- | ----- | ----- | ----- |
@@ -27,49 +29,27 @@ Autores:
 
 1 (\*) – para cada integrante da equipe, considere sua participação tanto no Documento de Arquitetura, quando nos demais documentos já entregues pela equipe (Visão do produto e do projeto; Declaração de escopo) e atribua um, percentual. A soma dos percentuais de todos os integrantes deve fechar em 100%)
 
-# **Sumário**
+---
 
-1. [***Introdução***	***4***](#introdução)
+## <a> 1. Introdução </a>
 
-   1.1 [**Propósito**	**4**](#propósito)
-
-   1.2 [**Escopo**	**4**](#escopo)
-
-2. [***Representação Arquitetural***	***4***](#representação-arquitetural)
-
-   2.1 [**Definições**	**4**](#definições)
-
-   2.2 [**Justifique sua escolha.**	**4**](#justifique-sua-escolha.)
-
-   2.3 [**Detalhamento**	**4**](#detalhamento)
-
-   2.4 [**Metas e restrições arquiteturais**	**4**](#metas-e-restrições-arquiteturais)
-
-   2.5 [**Visão de Casos de uso (escopo do produto)**	**4**](#visão-de-casos-de-uso-\(escopo-do-produto\))
-
-   2.6 [**Visão lógica**	**4**](#visão-lógica)
-
-   2.7 [**Visão de Implementação**	**4**](#visão-de-implementação)
-
-   2.8 [**Visão de Implantação.**	**5**](#visão-de-implantação)
-
-   2.9 [**Restrições adicionais**	**5**](#restrições-adicionais)
-
-3. [***Bibliografia***	***5***](#bibliografia)
-
-1. ## **Introdução** {#introdução}
-
-   1.1 ## **Propósito** {#propósito}
+### <a> 1.1 Propósito </a>
 
 Este documento descreve a arquitetura do sistema sendo desenvolvido pelo grupo Gemini, na disciplina de MDS \- Métodos de Desenvolvimento de Software (2024.2), E-Commerce FGR, a fim de fornecer uma visão abrangente do sistema para desenvolvedores, testadores e demais interessados.
 
-1.2 ## **Escopo** {#escopo}
+---
+
+
+### <a> 1.2 Escopo </a>
 
 O projeto de E-commerce para a  equipe de competição da Universidade de Brasília, FGR (Formula Racing Gama)  propõe a criação de um sistema de vendas e divulgação de marca para a equipe, que visa solucionar problemas em ambas áreas. Após as reuniões de alinhamento com os clientes, nossa equipe visa trazer um sistema funcional e profissional que satisfaça todas as exigências feitas pelo cliente. Mais sobre o projeto no “Documento de visão \- Gemini”.
 
-2. ## **Representação Arquitetural** {#representação-arquitetural}
 
-   2.1 ## **Definições** {#definições}
+---
+
+## <a> 2. Representação Arquitetural  </a>
+
+### <a> 2.1 Definições </a>
 
 O sistema será desenvolvido utilizando a arquitetura do Django, que segue o padrão Model Template Control (MTC). Essa arquitetura é semelhante ao padrão MVC (Model View Controller), mas com uma distinção importante: o foco está na interação direta entre as Templates e as Views, facilitando a geração de páginas dinâmicas e a separação de responsabilidades.
 
@@ -80,19 +60,24 @@ O sistema será desenvolvido utilizando a arquitetura do Django, que segue o pad
 **Camada de acesso a dados (Controller):** É responsável por agir como intermediário entre o Model e o Template. Elas recebem as requisições dos usuários, como a adição de itens ao carrinho ou a realização de um pagamento, e interagem com os Models para manipular dados conforme necessário. determinam quais dados serão recuperados ou atualizados nos Models e selecionam os Templates apropriados para exibir as informações ao usuário.  
 ![][image1]
 
-### 
 
-2.2 ### Justifique sua escolha. {#justifique-sua-escolha.}
+---
+
+
+### <a> 2.2 Hustifique sua Escolha </a>
 
 O padrão MTC foi escolhido porque oferece uma estrutura leve e eficiente, adequada à simplicidade do sistema. Ele prioriza a rapidez no desenvolvimento e facilita a organização do código, ao mesmo tempo em que mantém uma separação clara entre as responsabilidades. Essa abordagem reduz a necessidade de configurações complexas e permite que o foco esteja na entrega funcional do produto, garantindo um sistema escalável para futuras melhorias. Além disso, o MTC aproveita nativamente os recursos do Django, otimizando o uso de suas ferramentas e tornando o processo mais produtivo e intuitivo.
 
 O Django fornece uma maneira flexível e poderosa para lidar com a separação e com a lógica da programação em backend, pois através de arquivos que estruturam a parte estrutural e visual de páginas web. Além disso, ele também fornece suporte ao desenvolvimento rápido e um design limpo.
 
 
-2.3 ## **Detalhamento** {#detalhamento}
+---
+
+
+### <a> 2.3 Detalhamento </a>
 
 O projeto utiliza o padrão arquitetural **Model-View-Controller (MVC)**, amplamente adotado no desenvolvimento de aplicações web devido à sua capacidade de organizar de maneira clara e modular os componentes de um sistema. No contexto do framework Django, o padrão MVC é implementado com algumas adaptações específicas ao framework, sendo comumente referenciado como **Model-Template-View (MTV)**. Essa abordagem garante uma separação de responsabilidades que facilita o desenvolvimento, manutenção e escalabilidade do sistema.  
-O **Modelo** é responsável por representar os dados e a lógica de negócios do sistema. Ele inclui classes que definem as entidades do domínio, seus atributos e seus relacionamentos, sendo diretamente mapeadas para tabelas no banco de dados relacional (utilizando o ORM integrado do Django).  
+O **Modelo** é responsável por representar os dados e a lógica de negócios do sistema. Ele inclui classes que definem as entidades do domínio, seus atributos e seus relacionamentos, sendo diretamente mapeadas para tabelas no banco de dados relacional (utilizando o ORM integrado do Django).  <br>
 **Principais Funções do Modelo:**
 
 * Definir as entidades do domínio do projeto, como Produtos, Pedidos, Usuários, entre outros.  
@@ -115,7 +100,11 @@ Os **Templates** desempenham o papel da **Visão** no padrão MVC clássico, for
 * Suportam **tags** e **filtros** para manipulação de dados antes da renderização.  
 * Separaram a camada de apresentação da lógica de negócios.
 
-  2.4 ## **Metas e restrições arquiteturais** {#metas-e-restrições-arquiteturais}
+
+
+---
+
+### <a> 2.4 Metas e Restrições Arquiteturais </a>
 
 Para definir as metas de arquitetura do software, são consideráveis os seguintes aspectos:
 
@@ -130,11 +119,20 @@ Ao definir as restrições arquiteturais para o software de divulgação e geren
 
 Esses objetivos e restrições arquiteturais devem ser avaliados com atenção e incorporados ao desenvolvimento do sistema, de forma a atender plenamente às necessidades da equipe de competição e garantir um funcionamento seguro e eficiente.
 
-2.5 ## **Visão de Casos de uso (escopo do produto)** {#visão-de-casos-de-uso-(escopo-do-produto)}
 
-   2.6 ## **Visão lógica** {#visão-lógica}
+---
 
-     A visão lógica é a apresentação da estrutura do projeto, como está o seu desenvolvimento e integração com cada parte do sistema/web. Cada parte do sistema/web interagindo e ligado aos outro componentes assim tornado o sistema com eficiência e agilidade, nas suas conexões, quando o usuário pede uma informação, essa deve ser de forma rápida retorno e confiabilidade.
+
+### <a> 2.5 Visão de Casos de Uso (escopo do produto) </a>
+
+
+---
+
+
+### <a> 2.6 Visão Lógica </a>
+
+
+A visão lógica é a apresentação da estrutura do projeto, como está o seu desenvolvimento e integração com cada parte do sistema/web. Cada parte do sistema/web interagindo e ligado aos outro componentes assim tornado o sistema com eficiência e agilidade, nas suas conexões, quando o usuário pede uma informação, essa deve ser de forma rápida retorno e confiabilidade.
 
 * Módulo autenticação  
 * Módulo cadastro de usuário  
@@ -170,49 +168,44 @@ O usuário a partir do acesso poderá ser negado e possíveis erros podem aconte
 
 A seguir o diagrama de de classe que representa como os dados são persistidos pela aplicação e sua explicação:
 
-classe usuario{
-
+```bash
+classe Usuario {
     id: int
-
     nome: string
-
     email: string
 
     autenticar()
-
 }
 
 classe Produto {
-
     id: int
-
     nome: string
-
     preco: float
 
-    adicionar.Carrinho()
-
+    adicionarCarrinho()
 }
 
 classe Pedido {
-
     id: int
-
     data: date
-
     total: float
 
     finalizar()
-
 }
 
-    
+```
 
-2.8 ## **Visão de Implementação** {#visão-de-implementação}
 
-   * 
+--- 
 
-2.8 ## **Visão de Implantação**  {#visão-de-implantação}
+
+### <a> 2.7 Visão de Implementação </a>
+
+
+---
+
+
+### <a> 2.8 Visão de Implantação </a>
 
 O software será implantado como uma aplicação web, seguindo o padrão de aplicação modernas. Para o desenvolvimento, utilizaremos JavaScript, React, Vite para a stack Front-End, essa escolha visa criar uma interface de usuário dinâmica, responsiva e de alta performance, atendendo às demandas de um e-commerce. 
 
@@ -220,11 +213,21 @@ No Back-End, será utilizado Python com o framework Django, devido á sua robust
 
 Para o banco de dados, optamos pelo PostgreSQL como banco de dados relacional, devido à sua confiabilidade, suporte a consultas complexas e alto desempenho, que serão úteis para a gestão de dados do e-commerce. Além disso, sua integração com Django é simples e eficiente, reduzindo a complexidade do desenvolvimento. Será utilizado PowerBI para a criação de relatórios sobre as vendas, que será alimentado pelas informações armazenadas no banco de dados PostgreSQL. O Power BI é uma ferramenta que facilita a visualização e análise de dados, oferecendo insights sobre o desempenho de vendas, comportamento dos clientes e outros indicadores chaves para auxiliar nas tomadas de decisões melhores e estratégicas.
 
-2.9 ## **Restrições adicionais** {#restrições-adicionais}
 
-3. ## **Bibliografia** {#bibliografia}
+---
+
+
+### <a> 2.9 Restrições Adicionais </a>
+
+
+---
+
+
+## <a> 3. Referências Bibliográficas </a>
 
 *Arquitet*ura MVC: entendendo o modelo-visão-controlador. DIO.me, 2024\. Disponível em: [https://www.dio.me/articles/arquitetura-mvc-entendendo-o-modelo-visao-controlador](https://www.dio.me/articles/arquitetura-mvc-entendendo-o-modelo-visao-controlador). Acesso em: 18 dez. 2024\.
+
+
 
 [image1]: <data:image/png;base64,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>
 
