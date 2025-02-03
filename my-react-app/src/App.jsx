@@ -122,7 +122,7 @@ function App() {
       <Routes>
         {/* Pagina Inicial */}
         <Route
-          path="/"
+          path="/Home"
           element={
             <section>
               <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode} />
