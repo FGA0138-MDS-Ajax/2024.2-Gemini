@@ -1,4 +1,4 @@
-import styles from './CampoDetexto.module.css';
+import styles from './CampoDeTexto.module.css';
 
 function CampoDeTexto({label}){
 
