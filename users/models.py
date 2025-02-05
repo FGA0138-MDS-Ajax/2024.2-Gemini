@@ -22,9 +22,8 @@ class UserManager(BaseUserManager):
 
         return self.create_user(email, nome, password, **extra_fields)
 
-
 class Usuario(AbstractBaseUser, PermissionsMixin):
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, primary_key=True)  # Definindo como chave primária
     nome = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

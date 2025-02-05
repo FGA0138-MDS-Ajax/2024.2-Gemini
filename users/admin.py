@@ -7,6 +7,7 @@ class CustomUserAdmin(UserAdmin):
     model = Usuario
     list_display = ('email', 'nome', 'is_staff', 'is_active')
     ordering = ('email',)
+    readonly_fields = ('last_login',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Informações Pessoais', {'fields': ('nome',)}),
@@ -19,3 +20,6 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('email', 'nome', 'password1', 'password2', 'is_staff', 'is_active')}
         ),
     )
+
+    # Definir email como chave de busca no Django Admin
+    search_fields = ('email',)

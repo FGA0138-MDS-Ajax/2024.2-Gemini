@@ -1,28 +1,22 @@
 from rest_framework import serializers
 from .models import Usuario
 
-
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ['id', 'email', 'nome', 'is_active', 'is_staff', 'password']
+        fields = ['email', 'nome', 'is_active', 'is_staff', 'password']
         extra_kwargs = {
-            'password': {'write_only': True},  # Não exibe a senha na resposta
-            'is_active': {'read_only': True},  # Apenas administradores podem alterar
+            'password': {'write_only': True},  # Senha não deve aparecer na resposta
+            'is_active': {'read_only': True},  # Apenas admins podem alterar
             'is_staff': {'read_only': True},
         }
 
     def create(self, validated_data):
-        # Criação de usuário com hash da senha
-        user = Usuario.objects.create_user(
-            email=validated_data['email'],
-            nome=validated_data['nome'],
-            password=validated_data['password']
-        )
-        return user
+        # Criando usuário e garantindo que a senha seja hasheada
+        return Usuario.objects.create_user(**validated_data)
 
 
 class AdminUsuarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ['id', 'email', 'nome', 'is_active', 'is_staff']
+        fields = ['email', 'nome', 'is_active', 'is_staff']
