@@ -13,7 +13,7 @@ function Header({isEditMode, toggleEditMode}){
                 </Link>
                 <div className={styles.ClicaveisDaHeader}>
                     <Link to='/Historia'>
-                        <h1 className={styles.TitulosDoMenu}> QUEM SOMOS / APRESENTAÇÃO </h1>
+                        <h1 className={styles.TitulosDoMenu}> QUEM SOMOS </h1>
                     </Link>
                     <Link to='/Patrocinadores'>
                         <h1 className={styles.TitulosDoMenu}> PATROCINADORES </h1>
