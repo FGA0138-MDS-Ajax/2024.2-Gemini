@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from rest_framework import viewsets
 from .models import Carrinho, ItemCarrinho, Pedido, Entrega
 from .serializers import CarrinhoSerializer, ItemCarrinhoSerializer, PedidoSerializer, EntregaSerializer
-from users.models import User
+from users.models import Usuario as User
 from products.models import Produto
 from django.views.decorators.csrf import csrf_exempt
 import json

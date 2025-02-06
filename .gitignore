@@ -6,3 +6,8 @@ db.sqlite3
 .idea/
 *.log
 .env
+# Ignorar dependências do Node.js
+node_modules/
+
+# Ignorar o diretório do frontend (caso seja reconstruído)
+my-react-app/

@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/users/', include('users.urls')),
-    path('accounts/', include('allauth.urls')),
+    path('admin/', admin.site.urls),  # 🔹 Mantém apenas uma rota para o admin
+    path('api/users/', include('users.urls')),  # 🔹 Rotas de usuários
+    path('accounts/', include('allauth.urls')),  # 🔹 Autenticação com Allauth
+    path('api/', include('loja.urls')),  # 🔹 Rotas da API principal (carrinhos, pedidos, etc.)
 ]
