@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # 🔹 Mantém apenas uma rota para o admin
@@ -23,3 +26,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),  # 🔹 Autenticação com Allauth
     path('api/', include('loja.urls')),  # 🔹 Rotas da API principal (carrinhos, pedidos, etc.)
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

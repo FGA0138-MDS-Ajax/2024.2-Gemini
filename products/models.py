@@ -22,3 +22,15 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+    
+from django.db import models
+
+class Banner(models.Model):
+    id_banner = models.AutoField(primary_key=True)
+    nome_banner = models.CharField(max_length=255)
+    descricao = models.TextField(blank=True, null=True)
+    foto = models.ImageField(upload_to='banners/', blank=True, null=True)  
+    
+    def __str__(self):
+        return self.nome_banner
+

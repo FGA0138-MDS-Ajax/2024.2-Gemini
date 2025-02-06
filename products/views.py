@@ -1,8 +1,9 @@
 from rest_framework import viewsets, filters
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAdminUser
-from .models import Produto, Categoria
+from .models import Produto, Categoria, Banner
 from .serializers import ProductsSerializer
 from .serializers import CategoriaSerializer
+from .serializers import BannerSerializer
 
 
 class ProdutoViewSet(viewsets.ModelViewSet):
@@ -26,3 +27,7 @@ class CategoriaViewSet(viewsets.ModelViewSet):
     queryset = Categoria.objects.all().order_by('nome')
     serializer_class = CategoriaSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
+
+class BannerViewSet(viewsets.ModelViewSet):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
