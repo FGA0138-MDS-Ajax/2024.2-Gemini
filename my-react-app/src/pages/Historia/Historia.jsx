@@ -1,17 +1,14 @@
 import { useState } from 'react';
 import { Header, Footer, Titulo, ParagrafoPadrao, BotaoEditarSecao, BotaoEditarFoto, PopUpEditarSecao } from '../../components/index.js';
 import styles from './Historia.module.css'
-import { useConteudos } from "../../conteudos.js";
+import { ListaTextosSecoes } from "../../Content/ListaTextosSecoes.js";
 
 function Historia() {
 
   const [isEditMode, setIsEditMode] = useState(false)
   const [dadosEdicao, setDadosEdicao] = useState({})
 
-  const {
-    conteudoSecoes,
-    setConteudoSecoes,
-  } = useConteudos();
+  const{TextoSecao, setTextoSecao} = ListaTextosSecoes();
 
     const toggleEditMode = () => {
       setIsEditMode(!isEditMode);
@@ -44,8 +41,8 @@ function Historia() {
 
         <div className={styles.SecaoNossaHistoria}>
 
-          <Titulo texto={conteudoSecoes.historia.titulo} tamanho="86px" gradiente={false} />
-          <ParagrafoPadrao texto={conteudoSecoes.historia.texto} />
+          <Titulo texto={TextoSecao.historia.titulo} tamanho="86px" />
+          <ParagrafoPadrao texto={TextoSecao.historia.texto} />
 
           {isEditMode && (
             <>
@@ -54,8 +51,8 @@ function Historia() {
                 className={styles.BotaoEditar}
                 onClick={() =>
                   abrirPopUp({
-                    titulo: conteudoSecoes.historia.titulo,
-                    texto: conteudoSecoes.historia.texto,
+                    titulo: TextoSecao.historia.titulo,
+                    texto: TextoSecao.historia.texto,
                   })
                 }
               />

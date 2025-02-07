@@ -8,14 +8,15 @@ import {
   BotaoEditarSecao,
   PopUpEditarListaDeProdutos,
   BotaoAdicionarProduto,
-  PopUpAdicionarProduto
+  PopUpAdicionarProduto,
 } from "../../components/index.js";
 import styles from "./Produtos.module.css";
-import { useConteudos } from "../../conteudos.js";
+import { ListaProdutosEmDestaque } from "../../Content/ListaProdutosEmDestaque.js";
 
 function PaginaProdutos() {
-  const [isEditMode, setIsEditMode] = useState(false)
-  const [dadosEdicao, setDadosEdicao] = useState({})
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [dadosEdicao, setDadosEdicao] = useState({});
+  const { ProdutosEmDestaque, setProdutosEmDestaque} = ListaProdutosEmDestaque();
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode);
@@ -39,16 +40,10 @@ function PaginaProdutos() {
     }));
   };
 
-  function abrirAdicionarProdutos(){
-    setDadosEdicao({tipo: 'addProdutos'})
-    setIsEditMode(true)
+  function abrirAdicionarProdutos() {
+    setDadosEdicao({ tipo: "addProdutos" });
+    setIsEditMode(true);
   }
-
-
-  const {
-    CamisetasEmDestaque,
-    setConteudoSecoes,
-  } = useConteudos();
 
   return (
     <section className={styles.Produtos}>
@@ -64,200 +59,44 @@ function PaginaProdutos() {
       </div>
 
       <div className={styles.ProdutosGrid}>
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaMCLaren.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaMCLaren.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaMCLaren.imgTras}
-          nome={CamisetasEmDestaque.camisetaMCLaren.nome}
-          preco={CamisetasEmDestaque.camisetaMCLaren.preco}
-          prestacoes={CamisetasEmDestaque.camisetaMCLaren.prestacoes}
-        />
-        <CardCamiseta
-          linkPaginaCamiseta={
-            CamisetasEmDestaque.camisetaRedBull.linkPaginaCamiseta
-          }
-          imgFrente={CamisetasEmDestaque.camisetaRedBull.imgFrente}
-          imgTras={CamisetasEmDestaque.camisetaRedBull.imgTras}
-          nome={CamisetasEmDestaque.camisetaRedBull.nome}
-          preco={CamisetasEmDestaque.camisetaRedBull.preco}
-          prestacoes={CamisetasEmDestaque.camisetaRedBull.prestacoes}
-        />
+        {Object.entries(ProdutosEmDestaque).map(([key, camiseta]) => (
+          <CardCamiseta
+            linkPaginaCamiseta={camiseta.linkPaginaCamiseta}
+            imgFrente={camiseta.imgFrente}
+            imgTras={camiseta.imgTras}
+            nome={camiseta.nome}
+            preco={camiseta.preco}
+            prestacoes={camiseta.prestacoes}
+          />
+        ))}
       </div>
 
       {isEditMode && (
-                  <>
-                    <BotaoEditarSecao
-                      className={styles.BotaoEditar}
-                      nome="lista de produtos"
-                      onClick={() =>
-                        abrirPopUp({
-                          camisetas: CamisetasEmDestaque
-                        })
-                      }
-                    />
-                    <BotaoAdicionarProduto onClick={() => abrirAdicionarProdutos()}/>
-                  </>
-                )}
+        <>
+          <BotaoEditarSecao
+            className={styles.BotaoEditar}
+            nome="lista de produtos"
+            onClick={() =>
+              abrirPopUp({
+                camisetas: CamisetasEmDestaque,
+              })
+            }
+          />
+          <BotaoAdicionarProduto onClick={() => abrirAdicionarProdutos()} />
+        </>
+      )}
 
-        {isEditMode && dadosEdicao.camisetas && (
-          <PopUpEditarListaDeProdutos
+      {isEditMode && dadosEdicao.camisetas && (
+        <PopUpEditarListaDeProdutos
           dados={dadosEdicao}
           onClose={fecharPopUp}
           onSave={salvarEdicao}
-          />
-        )}
+        />
+      )}
 
-{isEditMode && dadosEdicao.tipo === 'addProdutos' && (
-                  <PopUpAdicionarProduto
-                    onClose={fecharPopUp}
-                    onSave={salvarEdicao}
-                  />
-                )}
+      {isEditMode && dadosEdicao.tipo === "addProdutos" && (
+        <PopUpAdicionarProduto onClose={fecharPopUp} onSave={salvarEdicao} />
+      )}
 
       <BotaoWhatsapp />
 
