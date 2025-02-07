@@ -8,6 +8,10 @@ from .models import Usuario
 from .serializers import UsuarioSerializer, AdminUsuarioSerializer
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth import update_session_auth_hash
+from django.core.mail import send_mail
+from django.conf import settings
+from .services import gerar_token, validar_token
+
 
 
 # Registro de usuário (Apenas para usuários não autenticados)
@@ -85,3 +89,56 @@ class ChangePasswordView(APIView):
         update_session_auth_hash(request, usuario)
 
         return Response({"mensagem": "Senha alterada com sucesso!"}, status=status.HTTP_200_OK)
+    
+class ForgotPasswordView(APIView):
+    """
+    Gera um token de recuperação de senha e envia por e-mail.
+    """
+    def post(self, request):
+        email = request.data.get("email")
+        usuario = Usuario.objects.filter(email=email).first()
+
+        if not usuario:
+            return Response({"erro": "Usuário não encontrado."}, status=status.HTTP_404_NOT_FOUND)
+
+        # Gera token de recuperação
+        token = gerar_token(usuario)
+
+        # Envia email com o token
+        send_mail(
+            "Recuperação de Senha",
+            f"Seu token para redefinir a senha: {token}",
+            settings.DEFAULT_FROM_EMAIL,
+            [email],
+            fail_silently=False,
+        )
+
+        return Response({"mensagem": "Token enviado para o email!"}, status=status.HTTP_200_OK)
+
+
+class ResetPasswordView(APIView):
+    """
+    Permite redefinir a senha usando um token válido.
+    """
+    def post(self, request):
+        email = request.data.get("email")
+        token = request.data.get("token")
+        new_password = request.data.get("new_password")
+
+        usuario = validar_token(email, token)
+
+        if not usuario:
+            return Response({"erro": "Token inválido ou expirado."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Valida a nova senha
+        try:
+            validate_password(new_password)
+        except Exception as e:
+            return Response({"erro": e.messages}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Atualiza a senha do usuário e remove o token
+        usuario.set_password(new_password)
+        usuario.reset_token = None  # Remove o token usado
+        usuario.save()
+
+        return Response({"mensagem": "Senha redefinida com sucesso!"}, status=status.HTTP_200_OK)
