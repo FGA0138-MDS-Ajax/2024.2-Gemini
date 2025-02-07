@@ -42,3 +42,19 @@
 .BotaoEditar{
        
 }
+
+.CamisetasEmDestaque{
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.CamisetasEmDestaque::-webkit-scrollbar{
+    height: 8px;
+}
+
+.CamisetasEmDestaque::-webkit-scrollbar-thumb{
+    background-color: rgba(7, 232, 49, 0.50);
+    border-radius: 4px;
+}

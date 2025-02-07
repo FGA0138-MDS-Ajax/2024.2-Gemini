@@ -6,7 +6,7 @@ import {
   Header,
   CardCamiseta,
   Footer,
-  Carrossel,
+  CarrosselBanners,
   Titulo,
   ParagrafoPadraoEsquerda,
   BotaoWhatsapp,
@@ -36,26 +36,18 @@ import {
   PosVenda,
 } from "./pages/index.jsx";
 import styles from "./App.module.css";
-import { useConteudos } from "./conteudos.js";
+import { ListaBanners } from "./Content/ListaBanners.js";
+import { ListaProdutosEmDestaque } from "./Content/ListaProdutosEmDestaque.js";
+import { ListaTextosSecoes } from "./Content/ListaTextosSecoes.js";
+import { ListaImagens } from "./Content/ListaImagens.js";
 
 function App() {
-  const {
-    conteudoBanners,
-    conteudoSecoes,
-    CamisetasEmDestaque,
-    ImagensDasSecoes,
-    setConteudoBanners,
-    setConteudoSecoes,
-    setCamisetasEmDestaque,
-    setImagensDasSecoes,
-  } = useConteudos();
 
-  const LinksDasImagens = [
-    { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
-    { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" },
-    { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
-    { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" },
-  ];
+  const{Banners, setBanners} = ListaBanners();
+  const{ProdutosEmDestaque, setProdutosEmDestaque} = ListaProdutosEmDestaque();
+  const{TextoSecao, setTextoSecao} = ListaTextosSecoes();
+  const{Imagem, setImagem} = ListaImagens();
+
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode);
@@ -128,7 +120,7 @@ function App() {
               <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode} />
 
               <section className={styles.SecaoBanner}>
-                <Carrossel LinksDasImagens={LinksDasImagens} />
+                <CarrosselBanners conteudoBanners={Banners} />
                 {isEditMode && (
                   <>
                     <BotaoEditarSecao
@@ -136,7 +128,7 @@ function App() {
                       nome="Banners"
                       onClick={() =>
                         abrirEdicaoBanner({
-                          banners: conteudoBanners,
+                          banners: Banners,
                         })
                       }
                     />
@@ -162,12 +154,12 @@ function App() {
                 <section className={styles.SecaoProjeto}>
                   <div className={styles.DivProjeto}>
                     <Titulo
-                      texto={conteudoSecoes.projeto.titulo}
+                      texto={TextoSecao.projeto.titulo}
                       tamanho="86px"
                       gradiente={false}
                     />
                     <p className={styles.ParagrafoProjeto}>
-                      {conteudoSecoes.projeto.texto}
+                      {TextoSecao.projeto.texto}
                     </p>
                   </div>
                   {isEditMode && (
@@ -177,8 +169,8 @@ function App() {
                         className={styles.BotaoEditar}
                         onClick={() =>
                           abrirEdicaoSecao({
-                            titulo: conteudoSecoes.projeto.titulo,
-                            texto: conteudoSecoes.projeto.texto,
+                            titulo: TextoSecao.projeto.titulo,
+                            texto: TextoSecao.projeto.texto,
                           })
                         }
                       />
@@ -197,17 +189,17 @@ function App() {
                   <div className={styles.DivCompeticao}>
                     <div className={styles.TextosCompeticao}>
                       <Titulo
-                        texto={conteudoSecoes.competicao.titulo}
+                        texto={TextoSecao.competicao.titulo}
                         tamanho="86px"
                         gradiente={false}
                       />
                       <ParagrafoPadraoEsquerda
-                        texto={conteudoSecoes.competicao.texto}
+                        texto={TextoSecao.competicao.texto}
                       />
                     </div>
                     <img
-                      src={ImagensDasSecoes.competicao.src}
-                      alt={ImagensDasSecoes.competicao.alt}
+                      src={Imagem.competicao.src}
+                      alt={Imagem.competicao.alt}
                       className={styles.ImagemCompeticao}
                     />
                   </div>
@@ -219,8 +211,8 @@ function App() {
                         nome="seção competição"
                         onClick={() =>
                           abrirEdicaoSecao({
-                            titulo: conteudoSecoes.competicao.titulo,
-                            texto: conteudoSecoes.competicao.texto,
+                            titulo: TextoSecao.competicao.titulo,
+                            texto: TextoSecao.competicao.texto,
                           })
                         }
                       />
@@ -253,17 +245,17 @@ function App() {
 
               <section className={styles.SecaoCamisetasEmDestaque}>
                 <Titulo
-                  texto={conteudoSecoes.camisetasEmDestaque.titulo}
+                  texto={TextoSecao.camisetasEmDestaque.titulo}
                   tamanho="86px"
                   gradiente={false}
                 />
 
                 <ParagrafoPadrao
-                  texto={conteudoSecoes.camisetasEmDestaque.texto}
+                  texto={TextoSecao.camisetasEmDestaque.texto}
                 />
 
                 <div className={styles.CamisetasEmDestaque}>
-                  {Object.entries(CamisetasEmDestaque).map(
+                  {Object.entries(ProdutosEmDestaque).map(
                     ([key, camiseta]) => (
                       <CardCamiseta
                         linkPaginaCamiseta={camiseta.linkPaginaCamiseta}
@@ -285,7 +277,7 @@ function App() {
                         abrirEdicaoProdutosEmDestaque({
                           titulo: conteudoSecoes.camisetasEmDestaque.titulo,
                           texto: conteudoSecoes.camisetasEmDestaque.texto,
-                          camisetas: CamisetasEmDestaque,
+                          camisetas: ProdutosEmDestaque,
                         })
                       }
                     />
