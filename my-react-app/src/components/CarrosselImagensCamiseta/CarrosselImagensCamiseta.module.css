@@ -1,0 +1,90 @@
+.CarrosselImagensCamiseta{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.ConteudoCarrossel{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImagensDoCarrossel{
+    display: flex;
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.CarrosselWrapper{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.CarrosselItem{
+    width: 360px;
+    height: auto;
+    justify-content: center;
+    transition: transform 0.5 ease-in-out;
+    overflow: hidden;
+}
+
+.CarrosselItem img{
+    width: 360px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    
+}
+
+.BotaoProxima, .BotaoAnterior{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.SetaAnterior{
+    rotate: 180deg;
+}
+
+.BotaoAnterior{
+    left: 20px;
+}
+
+.BotaoProxima{
+    right: 20px;
+}
+
+.Indicadores{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Indicador{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.Indicador.Ativo{
+    background-color: #FFF;
+}
