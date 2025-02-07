@@ -1,14 +1,14 @@
-import { BotaoVerdePadrao, Titulo, BotaoDeTamanho } from '../../components';
+import { BotaoVerdePadrao, Titulo, BotaoDeTamanho, CarrosselImagensCamiseta } from '../../components';
 import styles from './MenuCamiseta.module.css';
 
-function MenuCamiseta({imgSrc, nome, preco}){
+function MenuCamiseta({produtos}){
 
     return(
         <div className={styles.MenuCamiseta}>
-            <img className={styles.ImgCamiseta} src={imgSrc}/>
+           <CarrosselImagensCamiseta conteudoImagens={produtos.imagens}/>
             <div className={styles.ConteudoEscrito}>
-                <Titulo texto={nome} tamanho="64px" gradiente={false}/>
-                <Titulo texto={preco} tamanho="64px" gradiente={false}/>
+                <Titulo texto={produtos.nome} tamanho="64px" gradiente={false}/>
+                <Titulo texto={produtos.preco} tamanho="64px" gradiente={false}/>
                 <h5 className={styles.TextoTamanho}>Tamanho</h5>
                 <div className={styles.BotoesDeTamanho}>
                     <BotaoDeTamanho label="P"/>
