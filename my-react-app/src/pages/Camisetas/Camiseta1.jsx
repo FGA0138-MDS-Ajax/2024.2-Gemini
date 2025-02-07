@@ -1,17 +1,14 @@
 import {useState} from 'react';
 import { Header, FooterDeVendas, MenuCamiseta, BotaoWhatsapp, BotaoEditarSecao, PopUpEditarProduto } from '../../components/index.js';
 import styles from './Camiseta.module.css'
-import { useConteudos } from "../../conteudos.js";
+import { ListaProdutos } from "../../Content/ListaProdutos.js";
 
 function PaginaCamiseta1() {
 
   const [isEditMode, setIsEditMode] = useState(false)
   const [dadosEdicao, setDadosEdicao] = useState({tipo: null});
 
-  const {
-    produtos,
-    setProdutos,
-  } = useConteudos();
+  const { Produtos, setProdutos} = ListaProdutos();
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode)
@@ -42,10 +39,7 @@ function PaginaCamiseta1() {
     <div className={styles.PaginaCamiseta}>
       <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode}/>
 
-      <MenuCamiseta
-        imgSrc= {produtos.camisetaMCLaren.imgFrente}
-        nome = {produtos.camisetaMCLaren.nome}
-        preco= {produtos.camisetaMCLaren.preco}/>
+      <MenuCamiseta produtos={Produtos.camisetaMCLaren}/>
 
       {isEditMode &&(
         <>
@@ -53,12 +47,12 @@ function PaginaCamiseta1() {
           nome="camiseta"
           onClick={() => 
             abrirEdicaoProduto({
-              imgFrente: produtos.camisetaMCLaren.imgFrente,
-              altFrente: produtos.camisetaMCLaren.altFrente,
-              imgTras: produtos.camisetaMCLaren.imgTras,
-              altTras: produtos.camisetaMCLaren.altTras,
-              nome: produtos.camisetaMCLaren.nome,
-              preco: produtos.camisetaMCLaren.preco,
+              imgFrente: Produtos.camisetaMCLaren.imgFrente,
+              altFrente: Produtos.camisetaMCLaren.altFrente,
+              imgTras: Produtos.camisetaMCLaren.imgTras,
+              altTras: Produtos.camisetaMCLaren.altTras,
+              nome: Produtos.camisetaMCLaren.nome,
+              preco: Produtos.camisetaMCLaren.preco,
             })
           }
           />

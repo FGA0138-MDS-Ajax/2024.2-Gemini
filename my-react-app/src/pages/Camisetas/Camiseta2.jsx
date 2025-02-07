@@ -1,17 +1,13 @@
 import {useState} from 'react';
 import { Header, FooterDeVendas, MenuCamiseta, BotaoWhatsapp, BotaoEditarSecao, PopUpEditarProduto } from '../../components/index.js';
 import styles from './Camiseta.module.css'
-import {useConteudos} from '../../conteudos.js'
+import { ListaProdutos } from "../../Content/ListaProdutos.js";
 
 function PaginaCamiseta2() {
 
   const [isEditMode, setIsEditMode] = useState(false)
   const [dadosEdicao, setDadosEdicao] = useState({tipo: null});
-
-  const {
-    produtos,
-    setProdutos,
-  } = useConteudos();
+  const { Produtos, setProdutos} = ListaProdutos();
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode)
@@ -40,10 +36,7 @@ function PaginaCamiseta2() {
     <div className={styles.PaginaCamiseta}>
       <Header isEditMode={isEditMode} toggleEditMode={toggleEditMode}/>
 
-      <MenuCamiseta
-        imgSrc={produtos.camisetaRedBull.imgFrente}
-        nome = {produtos.camisetaRedBull.nome}
-        preco={produtos.camisetaRedBull.preco}/>
+      <MenuCamiseta produtos = {Produtos.camisetaRedBull}/>
 
       {isEditMode &&(
               <>
@@ -51,12 +44,12 @@ function PaginaCamiseta2() {
                 nome="camiseta"
                 onClick={() => 
                   abrirEdicaoProduto({
-                    imgFrente: produtos.camisetaRedBull.imgFrente,
-                    altFrente: produtos.camisetaRedBull.altFrente,
-                    imgTras: produtos.camisetaRedBull.imgTras,
-                    altTras: produtos.camisetaRedBull.altTras,
-                    nome: produtos.camisetaRedBull.nome,
-                    preco: produtos.camisetaRedBull.preco,
+                    imgFrente: Produtos.camisetaRedBull.imgFrente,
+                    altFrente: Produtos.camisetaRedBull.altFrente,
+                    imgTras: Produtos.camisetaRedBull.imgTras,
+                    altTras: Produtos.camisetaRedBull.altTras,
+                    nome: Produtos.camisetaRedBull.nome,
+                    preco: Produtos.camisetaRedBull.preco,
                   })
                 }
                 />
