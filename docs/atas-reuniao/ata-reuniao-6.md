@@ -28,8 +28,8 @@
 
 ### Participantes Ausentes
 
-    * Gabriel Basto Bertolazi______________ (Monitor)
-    * Ítalo de Sousa Bezerra_______________(cliente representante)
+   * Gabriel Basto Bertolazi______________ (Monitor)
+   * Ítalo de Sousa Bezerra_______________(cliente representante)
    
     
 
