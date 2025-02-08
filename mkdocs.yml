@@ -63,8 +63,17 @@ nav:
   - Documento de Arquitetura: "documento-arquitetura/documento-arquitetura.md"
   - Documento de Plano de Testes: "documento-plano-testes/documento-plano-testes.md"
   - Atas de Reunião:
-    - Ata 1 - 01/11/2024: "atas-reuniao/ata-reuniao-1.md"
+    - Ata 1: "atas-reuniao/ata-reuniao-1.md"
     - Ata 2: "atas-reuniao/ata-reuniao-2.md"
+    - Ata 3: "atas-reuniao/ata-reuniao-3.md"
+    - Ata 4: "atas-reuniao/ata-reuniao-4.md"
+    - Ata 5: "atas-reuniao/ata-reuniao-5.md"
+    - Ata 6: "atas-reuniao/ata-reuniao-6.md"
+    - Ata 7: "atas-reuniao/ata-reuniao-7.md"
+    - Ata 8: "atas-reuniao/ata-reuniao-8.md"
+    - Ata 9: "atas-reuniao/ata-reuniao-9.md"
+    - Ata 10: "atas-reuniao/ata-reuniao-10.md"
+
 extra:
   version:
     provider: mike
