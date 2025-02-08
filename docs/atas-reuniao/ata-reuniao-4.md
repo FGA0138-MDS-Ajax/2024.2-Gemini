@@ -1,7 +1,7 @@
 | Versão | Data | Descrição da Alteração | Nome(s) Integrante(s) |
 | :----: | :--: | :--------------------: | :-------------------: |
 | 1.0 | 26/11/2024 | Reunião com FGR | Uires Carlos de Oliveira |
-|
+
 # 4º ATA DE REUNIÃO
 
 ## DATA:    Terça-feira, 26/11/2024
