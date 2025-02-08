@@ -1,0 +1,43 @@
+.CamposDeIdentificacao{
+    width: 330px;
+    text-align: left;
+}
+
+h1,
+.CampoDeTexto,
+.Label{
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1{
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.h3{
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    padding: 0;
+}
+
+.CampoDeTexto{
+    all: unset;
+    width: 330px;
+    height: 20px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 20px;
+    color: #FFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+Label{
+    font-size: 16px;
+}

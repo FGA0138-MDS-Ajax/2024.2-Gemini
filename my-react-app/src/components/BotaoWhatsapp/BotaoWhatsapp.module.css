@@ -1,0 +1,19 @@
+.BotaoWhatsapp {
+    z-index: 1000;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    width: 56px;
+    height: 56px;
+    background-color: #29a71a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.LogoWhatsapp {
+    width: 76%;
+    height: 76%;
+}

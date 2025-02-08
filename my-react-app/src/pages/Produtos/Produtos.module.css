@@ -1,0 +1,28 @@
+.Produtos{
+    justify-items: center;
+    justify-content: baseline;
+}
+
+.Titulos{
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin-bottom: 50px;
+    align-items: baseline;
+}
+
+.TituloFiltrar{
+    font-size: 24px;
+}
+
+.ProdutosGrid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+    justify-content: center;
+}

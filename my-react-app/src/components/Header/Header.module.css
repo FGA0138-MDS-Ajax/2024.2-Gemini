@@ -1,0 +1,63 @@
+header{
+    background-color: #000000;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+}
+
+.ItensDoMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.Logo{
+    width: 161px;
+    height: 58px;
+    padding-right: 38px;
+}
+
+.ClicaveisDaHeader{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #04DD2D;
+    justify-content: space-around;
+    padding-top: 12.5px;
+}
+
+.TitulosDoMenu{
+    font-size: 24px;
+    padding: 0 60px 0 60px;
+    display: flex;
+}
+
+.TitulosDoMenu:hover{
+    display: flex;
+    color: #04DD2D;
+    transition: 0.3s;
+}
+
+.IconesDaHeader{
+    list-style: none;
+    display: flex;
+}
+
+.Icones{
+    padding-left: 20px;
+    font-size: 35px;
+}
+
+.Icones {
+    padding-left: 20px;
+    font-size: 35px;
+    transition: filter 0.3s ease;
+}
+
+.Icones:hover {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(85%) saturate(5600%) hue-rotate(75deg);
+}
+

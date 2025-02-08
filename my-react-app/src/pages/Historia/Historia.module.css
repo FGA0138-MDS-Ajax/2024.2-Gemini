@@ -1,0 +1,8 @@
+.SecaoNossaHistoria{
+    background-image: url('/assets/Imagens/ImagemProjeto.png');
+    width: 1280px;
+    height: 437px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

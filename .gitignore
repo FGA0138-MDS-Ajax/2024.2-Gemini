@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+db.sqlite3
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env
+# Ignorar dependências do Node.js
+node_modules/
+
+# Ignorar o diretório do frontend (caso seja reconstruído)
+my-react-app/
