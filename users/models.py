@@ -27,8 +27,9 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     nome = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    reset_token = models.UUIDField(default=None, null=True, blank=True)  # Token para recuperação de senha
 
+    reset_token = models.UUIDField(default=None, null=True, blank=True, unique=True)  
+    reset_token_expira = models.DateTimeField(default=None, null=True, blank=True)  
 
     USERNAME_FIELD = 'email'  # Campo usado para login
     REQUIRED_FIELDS = ['nome']  # Campos obrigatórios além do email
@@ -40,4 +41,6 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
 
     def reset_password(self, new_password):
         self.set_password(new_password)
+        self.reset_token = None
+        self.reset_token_expira = None
         self.save()

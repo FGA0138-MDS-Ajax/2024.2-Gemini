@@ -7,6 +7,7 @@ from rest_framework_simplejwt.tokens import RefreshToken  # JWT Tokens
 from .models import Usuario
 from .serializers import UsuarioSerializer, AdminUsuarioSerializer
 from django.contrib.auth.password_validation import validate_password
+from django.utils import timezone
 from django.contrib.auth import update_session_auth_hash
 from django.core.mail import send_mail
 from django.conf import settings
@@ -34,6 +35,8 @@ class LoginView(APIView):
         user = authenticate(request, email=email, password=password)
 
         if user:
+            user.last_login = timezone.now()
+            user.save(update_fields=['last_login'])
             refresh = RefreshToken.for_user(user)  # Gera o token JWT
             return Response({
                 "message": "Login bem-sucedido",
@@ -101,7 +104,7 @@ class ForgotPasswordView(APIView):
         if not usuario:
             return Response({"erro": "Usuário não encontrado."}, status=status.HTTP_404_NOT_FOUND)
 
-        # Gera token de recuperação
+        # Gera token de recuperação com expiração
         token = gerar_token(usuario)
 
         # Envia email com o token
@@ -139,6 +142,7 @@ class ResetPasswordView(APIView):
         # Atualiza a senha do usuário e remove o token
         usuario.set_password(new_password)
         usuario.reset_token = None  # Remove o token usado
+        usuario.reset_token_expira = None  # Reseta expiração
         usuario.save()
 
         return Response({"mensagem": "Senha redefinida com sucesso!"}, status=status.HTTP_200_OK)
