@@ -26,7 +26,7 @@
 * Pedro Rocha
 * Thiago Melo Tonin
 
-* ### Participantes Ausentes
+### Participantes Ausentes
 
     * Gabriel Basto Bertolazi______________ (Monitor)
     * Ítalo de Sousa Bezerra_______________(cliente representante)
@@ -59,18 +59,18 @@
 * Felipe 
 * Miguel 
  
- ### • Banco de Dados::
+### • Banco de Dados::
 
  * Matheus 
  * Esdras
 
- ### • Para apresentação a turma Quarta-Feira em .PPT:.
+### • Para apresentação a turma Quarta-Feira em .PPT:.
 
  * Matheus 
  * Eduardo
  * Pedro Rocha 
 
- ## Propostas
+## Propostas
 
 >> O banco de dados está em andamento conforme Matheus. Foi falado sobre a apresentação de visão do produto. Foi conversado sobre a próxima entrega que seria o documento de arquitetura 18/12/24. 1º sprint foi entrega ao cliente site primeiras telas cadastro usuário, login, admin. 
 > Login para quinta-feira próxima 12/12/2024.  O carrinho de compras aparecer quando o cliente logar e em produtos.
