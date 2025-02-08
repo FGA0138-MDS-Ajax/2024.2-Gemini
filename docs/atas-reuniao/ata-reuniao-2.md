@@ -1,8 +1,8 @@
+# 2º ATA DE REUNIÃO
+
 | Versão | Data | Descrição da Alteração | Nome(s) Integrante(s) |
 | :----: | :--: | :--------------------: | :-------------------: |
 | 1.0 | 11/11/2024 | Reunião com Cliente | Uires Calos de Oliveira |
-
-# 2º ATA DE REUNIÃO
 
 ## DATA:    Segunda-feira, 11/11/2024
 ## DATA:    HORÁRIO:    21h:00  

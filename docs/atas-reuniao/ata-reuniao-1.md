@@ -1,9 +1,8 @@
+# 1º ATA DE REUNIÃO
+
 | Versão | Data | Descrição da Alteração | Nome(s) Integrante(s) |
 | :----: | :--: | :--------------------: | :-------------------: |
 | 1.0 | 01/11/2024 | Conversa com monitor para entender | Uiires Carlos de Oliveira |
-
-
-# 1º ATA DE REUNIÃO
 
 ## DATA:	Sexta-feira, 01/11/2024
 ## DATA:	HORÁRIO:	16h:00 
