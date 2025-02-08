@@ -9,7 +9,6 @@
 ## DATA:	HORÁRIO:	16h:00 
 ## LOCAL:	Sala de Conferência Teams
 
-
 # Nome da Equipe: Gemini
 # Nome do Cliente: FGR
 
