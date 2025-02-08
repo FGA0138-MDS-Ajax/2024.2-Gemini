@@ -4,7 +4,7 @@
 | :----: | :--: | :--------------------: | :-------------------: |
 | 1.0 | 16/12/2024 | Reunião equipe  | Uires Carlos de Oliveira |
 
-## DATA:    Terça-feira, 03/12/2024
+## DATA:    Terça-feira, 16/12/2024
 ## DATA:    HORÁRIO:    21h:30  
 ## LOCAL:   Sala de Conferência Teams
 
