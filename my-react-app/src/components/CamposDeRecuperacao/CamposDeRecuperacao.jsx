@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';  // Importe useNavigate
+import { Link, useNavigate } from 'react-router-dom';  
 import styles from './CamposDeRecuperacao.module.css';
+import { requestPasswordReset, resetPassword } from '../../api'; // 🔹 Importa as funções da API
 
 function CamposDeRecuperacao() {
     const [step, setStep] = useState(1); // 1 - Solicitar e-mail, 2 - Redefinir senha
@@ -9,50 +10,39 @@ function CamposDeRecuperacao() {
     const [novaSenha, setNovaSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const navigate = useNavigate();  // Hook para navegação programática
+    const navigate = useNavigate();
 
-    // Função para enviar o e-mail
+    // 🔹 Enviar e-mail para recuperar senha
     const handleRequestToken = async (e) => {
         e.preventDefault();
-        try {
-            const response = await fetch('/api/enviar-token', { // Seu endpoint para enviar o token
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email })
-            });
-            if (response.ok) {
-                setStep(2); // Passa para a etapa de redefinir senha
-            } else {
-                const error = await response.json();
-                setErrorMessage(error.message);
-            }
-        } catch (err) {
-            setErrorMessage('Erro ao enviar o token. Tente novamente.');
+        setErrorMessage('');
+
+        const result = await requestPasswordReset(email);
+
+        if (result.success) {
+            setStep(2); // Avança para a tela de redefinição de senha
+        } else {
+            setErrorMessage(result.message);
         }
     };
 
-    // Função para redefinir a senha
+    // 🔹 Redefinir senha
     const handleResetPassword = async (e) => {
         e.preventDefault();
+        setErrorMessage('');
+
         if (novaSenha !== confirmarSenha) {
             setErrorMessage('As senhas não coincidem.');
             return;
         }
-        try {
-            const response = await fetch('/api/redefinir-senha', { // Seu endpoint para redefinir a senha
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, token, novaSenha })
-            });
-            if (response.ok) {
-                alert('Senha alterada com sucesso!');
-                navigate('/login');  // Redireciona para a página de login após redefinir a senha
-            } else {
-                const error = await response.json();
-                setErrorMessage(error.message);
-            }
-        } catch (err) {
-            setErrorMessage('Erro ao redefinir a senha. Tente novamente.');
+
+        const result = await resetPassword(email, token, novaSenha);
+
+        if (result.success) {
+            alert('Senha alterada com sucesso!');
+            navigate('/login'); // Redireciona para login após redefinir senha
+        } else {
+            setErrorMessage(result.message);
         }
     };
 

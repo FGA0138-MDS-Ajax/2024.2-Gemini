@@ -9,6 +9,7 @@ from .serializers import UsuarioSerializer, AdminUsuarioSerializer
 from django.contrib.auth.password_validation import validate_password
 from django.utils import timezone
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.hashers import make_password  
 from django.core.mail import send_mail
 from django.conf import settings
 from .services import gerar_token, validar_token
@@ -135,19 +136,26 @@ class ResetPasswordView(APIView):
         if not usuario:
             return Response({"erro": "Token inválido ou expirado."}, status=status.HTTP_400_BAD_REQUEST)
 
+        # Verifica se `new_password` não é None
+        if not new_password:
+            return Response({"erro": "A nova senha não pode estar vazia."}, status=status.HTTP_400_BAD_REQUEST)
+
         # Valida a nova senha
         try:
             validate_password(new_password)
         except Exception as e:
-            return Response({"erro": e.messages}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"erro": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
-        # Atualiza a senha do usuário e remove o token
-        usuario.set_password(new_password)
-        usuario.reset_token = None  # Remove o token usado
-        usuario.reset_token_expira = None  # Reseta expiração
-        usuario.save()
+        # Atualiza a senha do usuário
+        try:
+            usuario.password = make_password(new_password)
+            usuario.reset_token = None  # Remove o token usado
+            usuario.reset_token_expira = None  # Reseta expiração
+            usuario.save()
 
-        return Response({"mensagem": "Senha redefinida com sucesso!"}, status=status.HTTP_200_OK)
+            return Response({"mensagem": "Senha redefinida com sucesso!"}, status=status.HTTP_200_OK)
+        except Exception:
+            return Response({"erro": "Erro ao salvar nova senha."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(["POST"])

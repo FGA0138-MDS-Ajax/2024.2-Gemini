@@ -56,7 +56,12 @@ function CamposDeLogin() {
 
             {error && <p className={styles.Erro}>{error}</p>} {/* 🔴 Exibe mensagem de erro */}
 
-            <button className={styles.BotaoEsqueciSenha}>Esqueci a senha</button>
+            <button
+                className={styles.BotaoEsqueciSenha}
+                onClick={() => window.location.href = "/RecuperarSenha"}>
+                Esqueci a senha
+            </button>
+
 
             <div className={styles.NaoTemConta}>
                 <p className={styles.TextoNaoTemConta}>Não tem conta?</p>
@@ -64,6 +69,12 @@ function CamposDeLogin() {
                     <button className={styles.BotaoRegistrar}>Registrar</button>
                 </Link>
             </div>
+            <button
+    className={styles.BotaoEntrarComContaGoogle}
+    onClick={() => window.location.href = "http://localhost:8000/accounts/google/login/"}>
+        <img src='/assets/Logos/LogoGoogleRedonda.svg' className={styles.LogoConta} />
+        <p className={styles.TextoEntrarCom}>Entrar com Google</p>
+    </button>
         </div>
     );
 }

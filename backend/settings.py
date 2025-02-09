@@ -112,6 +112,13 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 
+LOGIN_REDIRECT_URL = "http://localhost:5173/home"
+ACCOUNT_SIGNUP_REDIRECT_URL = "http://localhost:5173/home" #verificar
+ACCOUNT_LOGIN_REDIRECT_URL = "http://localhost:5173/home" #verificar
+ACCOUNT_LOGOUT_REDIRECT_URL = "http://localhost:5173/" #verificar
+
+
+
 # Define o modelo de usuário personalizado
 AUTH_USER_MODEL = "users.Usuario"  # Substitua "users" pelo nome correto do seu app
 

@@ -73,3 +73,47 @@ export const logoutUser = async () => {
         window.location.replace("/home");
     }
 };
+
+// 🔹 Enviar o token de recuperação para o e-mail
+export const requestPasswordReset = async (email) => {
+    try {
+        const response = await fetch(`${API_URL}/api/users/forgot-password/`, { // 🔹 Rota corrigida
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error || "Erro ao enviar código de recuperação.");
+        }
+
+        return { success: true, message: "Código enviado para o e-mail." };
+    } catch (error) {
+        return { success: false, message: error.message };
+    }
+};
+
+// 🔹 Redefinir a senha com o token
+export const resetPassword = async (email, token, novaSenha) => {
+    if (!novaSenha) {
+        return { success: false, message: "A senha não pode estar vazia." };
+    }
+
+    try {
+        const response = await fetch("http://localhost:8000/api/users/reset-password/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, token, new_password: novaSenha }) // 🔹 Garante que `new_password` está sendo enviado corretamente
+        });
+
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error || "Erro ao redefinir a senha.");
+        }
+
+        return { success: true, message: "Senha alterada com sucesso!" };
+    } catch (error) {
+        return { success: false, message: error.message };
+    }
+};
