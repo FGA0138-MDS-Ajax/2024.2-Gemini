@@ -1,0 +1,30 @@
+.CampoDeLogout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Logo {
+    width: 235px;
+    height: 81px;
+    margin-bottom: 30px;
+}
+
+.BotaoLogout {
+    width: 227px;
+    height: 43px;
+    border-radius: 4px;
+    background: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.BotaoLogout:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
