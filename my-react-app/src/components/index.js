@@ -20,3 +20,4 @@ export {default as ParagrafoPadrao} from './ParagrafoPadrao/ParagrafoPadrao.jsx'
 export {default as ParagrafoPadraoEsquerda} from './ParagrafoPadraoEsquerda/ParagrafoPadraoEsquerda.jsx';
 export {default as ResumoPagamento} from './ResumoPagamento/ResumoPagamento.jsx';
 export {default as Titulo} from './Titulo/Titulo.jsx';
+export {default as CamposDeRecuperacao} from './CamposDeRecuperacao/CamposDeRecuperacao.jsx';

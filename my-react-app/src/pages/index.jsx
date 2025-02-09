@@ -9,3 +9,4 @@ export {default as Patrocinadores} from './Patrocinadores/Patrocinadores.jsx';
 export {default as PosVenda} from './PosVenda/PosVenda.jsx'
 export {default as Produtos} from './Produtos/Produtos.jsx';
 export {default as Usuario} from './Usuario/Usuario.jsx' 
+export {default as RecuperarSenha} from './RecuperarSenha/RecuperarSenha.jsx';
