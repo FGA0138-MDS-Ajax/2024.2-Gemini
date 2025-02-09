@@ -38,7 +38,7 @@
 >
 >> A equipe também discutiu sobre a integração do back-end e a necessidade de finalizar a lógica de recuperação de senha. Eles também falaram sobre a importância de testar o sistema antes de entregá-lo. Pontos Principais: Implementação do login com o Google, Integração do back-end, Lógica de recuperação de senha,  Testes do sistema.
  
-> 	Ações:  Esdras De Sousa Nogueira vai continuar trabalhando no login com o Google com a ajuda de Felipe De Aquino Campelo. A equipe vai trabalhar na integração do back-end e na finalização da lógica de recuperação de senha. Eles vão realizar testes do sistema antes de entregá-lo. 
+> Ações:  Esdras De Sousa Nogueira vai continuar trabalhando no login com o Google com a ajuda de Felipe De Aquino Campelo. A equipe vai trabalhar na integração do back-end e na finalização da lógica de recuperação de senha. Eles vão realizar testes do sistema antes de entregá-lo. 
 >>
 >
 Próxima Reunião: Não foi agendada uma próxima reunião, mas a equipe vai se manter em contato para discutir o andamento do projeto.
