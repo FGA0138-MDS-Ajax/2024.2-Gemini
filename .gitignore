@@ -7,13 +7,13 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Dependências do Node.js
-node_modules/
+node_modules
 dist/
 dist-ssr/
 *.local/
 
 # Ambientes Virtuais do Python
-venv/
+venv
 __pycache__/
 db.sqlite3
 
