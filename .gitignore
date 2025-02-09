@@ -1,13 +1,33 @@
+# Logs e Arquivos Temporários
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependências do Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local/
+
+# Ambientes Virtuais do Python
 venv/
 __pycache__/
 db.sqlite3
-.DS_Store
+
+# Arquivos de Configuração de IDEs
 .vscode/
 .idea/
-*.log
-.env
-# Ignorar dependências do Node.js
-node_modules/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Ignorar o diretório do frontend (caso seja reconstruído)
-my-react-app/
+# Configuração do Ambiente
+.env
+
+
