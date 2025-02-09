@@ -1,31 +1,51 @@
 .PaginaHistoria {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garantir que o conteúdo ocupe toda a altura da tela */
-  }
-  
-  .SecaoNossaHistoria {
-    background-image: url('/assets/Imagens/ImagemProjeto.png');
-    width: 100%; /* Garante que a imagem ocupe toda a largura */
-    height: 437px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    flex-grow: 1; /* Faz com que a seção ocupe o espaço restante */
-  }
-  
-  .TextoSecao {
-    padding: 20px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-  }
-  
-  .Footer {
-    margin-top: auto; /* Empurra o rodapé para o fundo da página */
-    padding-top: 100px; /* Aumenta muito o espaço entre o conteúdo e o rodapé */
-    padding-bottom: 40px; /* Adiciona um pouco de espaçamento no final */
-    background-color: #333; /* Cor de fundo do rodapé, ajuste conforme necessário */
-    color: #fff; /* Cor do texto no rodapé */
-    text-align: center; /* Alinha o texto do rodapé */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.SecaoNossaHistoria {
+  background-image: url('/assets/Imagens/ImagemProjeto.png');
+  width: 100%; 
+  height: 437px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  flex-grow: 1; 
+}
+
+.TextoSecao {
+  padding: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.Footer {
+  margin-top: auto; 
+  padding-top: 100px; 
+  padding-bottom: 40px; 
+  background-color: #333; 
+  color: #fff; 
+  text-align: center; 
+}
+
+/* ----------- ESTILOS PARA OS MEMBROS ----------- */
+.MembrosContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os nomes ocupem múltiplas linhas, mas ainda na horizontal */
+  justify-content: flex-start;
+  gap: 10px; /* Espaço entre os nomes */
+  padding: 10px;
+}
+
+.MembroItem {
+  white-space: nowrap; /* Evita quebra de linha no nome e curso */
+  font-size: 15px; /* Tamanho da fonte ajustado para 12px */
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.MembroItem span {
+  margin-left: 5px; /* Espaço entre o nome e o curso */
+}
