@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # 🔹 Mantém apenas uma rota para o admin
     path('api/users/', include('users.urls')),  # 🔹 Rotas de usuários
     path('accounts/', include('allauth.urls')),  # 🔹 Autenticação com Allauth
-    path('api/', include('loja.urls')),  # 🔹 Rotas da API principal (carrinhos, pedidos, etc.)
+    path('api/loja/', include('loja.urls')),  # 🔹 Rotas da API principal (carrinhos, pedidos, etc.)
+    path('api/produto/', include('products.urls')),  # 🔹 Rotas de produtos
 ]
 
 

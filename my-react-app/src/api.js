@@ -117,3 +117,18 @@ export const resetPassword = async (email, token, novaSenha) => {
         return { success: false, message: error.message };
     }
 };
+
+
+// 🔹 Função para buscar produtos do backend
+export const fetchProdutos = async () => {
+    try {
+        const response = await fetch(`${API_URL}/api/produto/produtos`);
+        if (!response.ok) {
+            throw new Error("Erro ao buscar produtos");
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Erro ao buscar produtos:", error);
+        return [];
+    }
+};
