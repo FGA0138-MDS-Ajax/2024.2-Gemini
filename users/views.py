@@ -12,6 +12,8 @@ from django.contrib.auth import update_session_auth_hash
 from django.core.mail import send_mail
 from django.conf import settings
 from .services import gerar_token, validar_token
+from rest_framework.decorators import api_view, permission_classes
+
 
 
 
@@ -146,3 +148,20 @@ class ResetPasswordView(APIView):
         usuario.save()
 
         return Response({"mensagem": "Senha redefinida com sucesso!"}, status=status.HTTP_200_OK)
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def logout_view(request):
+    try:
+        refresh_token = request.data.get("refresh_token")  # Token de atualização
+        if not refresh_token:
+            return Response({"error": "Token de refresh é obrigatório."}, status=400)
+
+        token = RefreshToken(refresh_token)
+        token.blacklist()  # Adiciona o token à lista de bloqueio
+
+        return Response({"message": "Logout realizado com sucesso."}, status=200)
+    except Exception as e:
+        return Response({"error": str(e)}, status=500)
+

@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     'rest_framework',
+
+    'corsheaders',
 ]
 
 REST_FRAMEWORK = {
@@ -121,6 +123,13 @@ ACCOUNT_USER_MODEL_USERNAME_FIELD = None  # Evita erro com `username`
 
 
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # URL do frontend em modo de desenvolvimento
+]
+CORS_ALLOW_ALL_ORIGINS = False
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -130,6 +139,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "allauth.account.middleware.AccountMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'

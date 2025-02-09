@@ -1,12 +1,17 @@
-import styles from './CampoDetexto.module.css';
+import PropTypes from 'prop-types';
+import styles from "./CampoDeTexto.module.css";
 
-function CampoDeTexto({label}){
+const CampoDeTexto = ({ label }) => {
+  return (
+    <div className={styles.CampoDeTexto}>
+      <label>{label}</label>
+      <input type="text" />
+    </div>
+  );
+};
 
-    return(
+CampoDeTexto.propTypes = {
+  label: PropTypes.string.isRequired,
+};
 
-            <input type="text" className={styles.CampoDeTexto} value={label}/>
-    );
-
-}
-
-export default CampoDeTexto
+export default CampoDeTexto;

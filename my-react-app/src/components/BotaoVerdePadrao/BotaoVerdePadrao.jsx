@@ -1,12 +1,15 @@
-import styles from './BotaoVerdePadrao.module.css'
+import PropTypes from 'prop-types';
 
-function BotaoVerdePadrao({label}) {
+const BotaoVerdePadrao = ({ label }) => {
+  return (
+    <button className="botao-verde-padrao">
+      {label}
+    </button>
+  );
+};
 
-  return(
+BotaoVerdePadrao.propTypes = {
+  label: PropTypes.string.isRequired,
+};
 
-    <button className={styles.BotaoVerdePadrao}>{label}</button>
-    
-  )
-}
-
-export default BotaoVerdePadrao
+export default BotaoVerdePadrao;

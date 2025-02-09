@@ -1,12 +1,15 @@
-import styles from './BotaoDeTamanho.module.css'
+import PropTypes from 'prop-types';
 
-function BotaoDeTamanho({label}) {
+const BotaoDetamanho = ({ label }) => {
+  return (
+    <button className="botao-de-tamanho">
+      {label}
+    </button>
+  );
+};
 
-  return(
+BotaoDetamanho.propTypes = {
+  label: PropTypes.string.isRequired,
+};
 
-    <button className={styles.BotaoDeTamanho}>{label}</button>
-    
-  )
-}
-
-export default BotaoDeTamanho
+export default BotaoDetamanho;

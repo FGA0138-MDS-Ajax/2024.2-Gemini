@@ -61,3 +61,13 @@ header{
     filter: brightness(0) saturate(100%) invert(43%) sepia(85%) saturate(5600%) hue-rotate(75deg);
 }
 
+.BotaoLogout {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.BotaoLogout img {
+    width: 24px;
+    height: 24px;
+}
