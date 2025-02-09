@@ -28,3 +28,34 @@
   color: #fff; 
   text-align: center; 
 }
+
+/* ----------- ESTILOS PARA OS MEMBROS ----------- */
+.MembrosContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os nomes ocupem múltiplas linhas, mas ainda na horizontal */
+  justify-content: flex-start;
+  gap: 10px; /* Espaço entre os nomes */
+  padding: 10px;
+}
+
+.MembroItem {
+  white-space: nowrap; /* Evita quebra de linha no nome e curso */
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.MembroItem span {
+  margin-left: 5px; /* Espaço entre o nome e o curso */
+}
+
+.MembroItem::after {
+  content: "|"; /* Barra separadora */
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.5); /* Cor mais suave para a barra */
+}
+
+.MembroItem:last-child::after {
+  content: ""; /* Remove a barra do último item */
+}
