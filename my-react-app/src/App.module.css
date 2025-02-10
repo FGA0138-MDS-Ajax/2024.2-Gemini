@@ -37,3 +37,11 @@
     width: 636px;
     height: 359px;
 }
+
+.CamisetasEmDestaque {
+    display: flex;
+    justify-content: center; /* 🔹 Centraliza os produtos */
+    gap: 40px; /* 🔹 Reduz o espaço entre eles */
+    flex-wrap: wrap; /* 🔹 Garante que se ajustem conforme a tela */
+    padding: 20px;
+}

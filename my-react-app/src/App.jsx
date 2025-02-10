@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { fetchProdutos } from "./api.js"; // 🔹 Importa a função da API
+import { fetchProdutos, fetchBanners } from "./api.js"; // 🔹 Importa as funções da API
 import "./App.css";
 
 import { Header, CardCamiseta, Footer, Carrossel, Titulo, ParagrafoPadraoEsquerda, BotaoWhatsapp } from "./components/index.js";
@@ -9,22 +9,18 @@ import styles from "./App.module.css";
 
 function App() {
     const [produtos, setProdutos] = useState([]);
+    const [banners, setBanners] = useState([]);
 
     useEffect(() => {
-        const carregarProdutos = async () => {
+        const carregarDados = async () => {
             const produtosCarregados = await fetchProdutos();
+            const bannersCarregados = await fetchBanners();
             setProdutos(produtosCarregados);
+            setBanners(bannersCarregados);
         };
 
-        carregarProdutos();
+        carregarDados();
     }, []);
-
-    const LinksDasImagens = [
-        { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
-        { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" },
-        { src: "/assets/Banners/Banner1.png", link: "", alt: "Descricao" },
-        { src: "/assets/Banners/Banner2.png", link: "", alt: "Descricao" }
-    ];
 
     return (
         <Router>
@@ -36,30 +32,32 @@ function App() {
                         <section>
                             <Header />
 
-                            <Carrossel LinksDasImagens={LinksDasImagens} />
+                            {/* 🔹 Carrossel agora puxa os banners da API */}
+                            <Carrossel 
+                                LinksDasImagens={banners.length > 0 ? banners.map((banner) => ({
+                                    src: banner.foto, // 🔹 Supondo que a API retorna um campo 'imagem',
+                                    alt: banner.descricao || "Banner"
+                                })) : []}
+                            />
 
                             <div className={styles.CamisetasEmDestaque}>
-                                {produtos.length > 0 ? (
-                                    produtos.map((produto) => (
-                                        <CardCamiseta
-                                            key={produto.id}
-                                            linkPaginaCamiseta={`/produto/${produto.id}`}
-                                            imgFrente={produto.imagem} // 🔹 Ajustado para a chave correta
-                                            imgTras={produto.imagem} // 🔹 Caso tenha outra imagem, ajustar a API
-                                            nome={produto.nome}
-                                            preco={`R$ ${parseFloat(produto.preco).toFixed(2)}`} // 🔹 Convertido para número
-                                            prestacoes={`2x de R$ ${(parseFloat(produto.preco) / 2).toFixed(2)}`} // 🔹 Prestação corrigida
-                                        />
-                                    ))
-                                ) : (
-                                    <p>Carregando produtos...</p>
-                                )}
+                                {produtos.slice(0, 4).map((produto) => (
+                                    <CardCamiseta
+                                        key={produto.id}
+                                        linkPaginaCamiseta={`/produto/${produto.id}`}
+                                        imgFrente={produto.imagem}
+                                        imgTras={produto.imagem}
+                                        nome={produto.nome}
+                                        preco={`R$ ${parseFloat(produto.preco).toFixed(2)}`}
+                                        prestacoes={`2x de R$ ${(parseFloat(produto.preco) / 2).toFixed(2)}`}
+                                    />
+                                ))}
                             </div>
 
                             <section className={styles.SecaoProjeto}>
                                 <Titulo texto="Projeto" tamanho="86px" gradiente={false} />
                                 <p className={styles.ParagrafoProjeto}>
-                                A FGR(Fórmula Gama Racing) é uma equipe de competição de Fórmula SAE elétrico da Universidade de Brasília(UnB), campus FGA. Os discentes são responsáveis por todo o projeto e a construção do veículo. A equipe é dividida em áreas técnicas: Dinâmica Veicular, Estruturas, Eletrônica, Powertrain e Drivertrain. E também tem os departamentos: Marketing, Financeiro e Gestão de Pessoas.
+                                    A FGR(Fórmula Gama Racing) é uma equipe de competição de Fórmula SAE elétrico da Universidade de Brasília(UnB), campus FGA...
                                 </p>
                             </section>
 
@@ -67,7 +65,7 @@ function App() {
                                 <div className={styles.TextosCompeticao}>
                                     <Titulo texto="Competição" tamanho="86px" gradiente={false} />
                                     <ParagrafoPadraoEsquerda
-                                        texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática os conhecimentos adquiridos em sala de aula, por meio do desenvolvimento de um projeto completo: um veículo do tipo Fórmula. Por um período de três dias, ocorrem testes estáticos e dinâmicos"
+                                        texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática..."
                                     />
                                 </div>
                                 <img src="/assets/Imagens/imagemCompeticao.png" className={styles.ImagemCompeticao} />
