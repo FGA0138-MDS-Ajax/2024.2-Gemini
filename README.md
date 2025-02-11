@@ -57,31 +57,6 @@ No terminal:
 ``` 
 --->
 
-
-<!-- Adiciona a lista de bibliotecas para copiar -->
-### 2. Instalação das bibliotecas do Python
-bibliotecas do Python:
-```
--------
-```
-```
--------
-```
-```
----------
-```
-
-
-<!-- Adiciona a funçao de copiar o link do repositorio -->
-### 3. Clonar o Repositório e Selecionar a Branch
-Vamos começar clonando um repositório do GitHub em um diretório local através do terminal e selecionando o repositório, conforme indicado a seguir:
-```
-git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
-cd '2024.2-Gemini'
-
-O código principal está na branch integration, é preciso selecioná-la:
-git checkout integration
-```
 ## **Passo 1: Clonar o Repositório**
 
 Abra o terminal e execute:
@@ -201,36 +176,6 @@ Agora seu projeto está rodando! Se encontrar problemas, siga os passos novament
 Se precisar de ajuda, crie uma **issue** no repositório ou entre em contato com a equipe.
 
 
-  	
-  
-<div align="center">
-  <h2> Configurações do projeto </h2>
-</div>
-
-  <h3>Configurações do Back-end</h3>
-</div>
-<ul>
-    <li>Certifique-se de ter o Python 3.12 instalado.</li>
-    <li>Estabeleça um ambiente virtual dentro do diretório do projeto:
-        <ul>
-            <li><strong>Linux/MacOS:</strong> <code>virtualenv -p python3 venv</code></li>
-            <li><strong>Windows:</strong> <code>python -m virtualenv venv</code></li>
-        </ul>
-    </li>
-    <li>Ative o ambiente virtual:
-        <ul>
-            <li><strong>Linux/MacOS:</strong> <code>source venv/bin/activate</code></li>
-            <li><strong>Windows:</strong> <code>venv/Scripts/activate</code></li>
-        </ul>
-    </li>
-    <li>Instale o Django: <code>pip install django</code></li>
-</ul>
-<!--- 
-• É necessário ter o Node.js e o NPM instalados para usar o React. 
----> 
-
-
-
 <div align="center">
   <h2> Colaboradores </h2>
 </div>   
@@ -310,4 +255,4 @@ Se precisar de ajuda, crie uma **issue** no repositório ou entre em contato com
 </div> 
  
 
-### A documentação do projeto pode ser encontrada clicando [AQUI](https://fga0138-mds-ajax.github.io/2024.2-Gemini/).
+### A DOCUMENTAÇÃO DO PROJETO PODE SER ENCONTRADA CLICANDO [AQUI](https://fga0138-mds-ajax.github.io/2024.2-Gemini/).
