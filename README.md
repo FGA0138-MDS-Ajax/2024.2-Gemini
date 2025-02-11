@@ -112,7 +112,7 @@ Isso inicializa o banco de dados PostgreSQL e outros serviços necessários.
 
 ---
 
-## **Passo 5 Abrir o Docker Desktop
+## **Passo 5: Abrir o Docker Desktop**
 
 O backend estará rodando em **http://localhost:8000/admin/**.
 
