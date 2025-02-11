@@ -33,17 +33,23 @@ Este projeto oferece as seguintes funcionalidades:
   <h2> Como executar o projeto </h2>
 </div> 
 
+
+
 ### 1. Pré-requisitos
-Para garantir uma colaboração de sucesso, estabelecemos os seguintes critérios para o projeto abir e executar:
-- [Python](https://www.python.org/downloads/)
-
-  
-
+Para garantir uma colaboração de sucesso, estabelecemos os seguintes critérios para o projeto abrir e executar:
+- Git - Para clonar o repositório
+- Node.js (LTS recomendado) - Para rodar o React e instalar pacotes NPM
+- Python 3.x - Para rodar o backend Django
+- Docker - Para rodar o ambiente do banco de dados e backend
+- Visual Studio Code (Opcional) - Para editar o código
 <!--- 
 ```
-npm install -g create-react-app
+No terminal:
+
+
 ``` 
 --->
+
 
 <!-- Adiciona a lista de bibliotecas para copiar -->
 ### 2. Instalação das bibliotecas do Python
@@ -61,9 +67,13 @@ bibliotecas do Python:
 
 <!-- Adiciona a funçao de copiar o link do repositorio -->
 ### 3. Clonar o Repositório
-Vamos começar clonando um repositório do GitHub em um diretório local através do terminal, conforme indicado a seguir:
+Vamos começar clonando um repositório do GitHub em um diretório local através do terminal e selecionando o repositório, conforme indicado a seguir:
 ```
 git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
+cd '2024.2-Gemini'
+
+O código principal está na branch integration, é preciso selecioná-la
+git checkout integration
 ```
   	
   
