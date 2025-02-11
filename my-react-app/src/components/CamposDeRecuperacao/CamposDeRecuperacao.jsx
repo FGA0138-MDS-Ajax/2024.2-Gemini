@@ -12,6 +12,12 @@ function CamposDeRecuperacao() {
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
+    // 🔹 Função para validar se o token tem um formato válido de UUID
+    const isValidUUID = (token) => {
+        const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+        return uuidRegex.test(token);
+    };
+
     // 🔹 Enviar e-mail para recuperar senha
     const handleRequestToken = async (e) => {
         e.preventDefault();
@@ -31,6 +37,11 @@ function CamposDeRecuperacao() {
         e.preventDefault();
         setErrorMessage('');
 
+        if (!isValidUUID(token)) {
+            setErrorMessage('Código inválido. Verifique e tente novamente.');
+            return;
+        }
+
         if (novaSenha !== confirmarSenha) {
             setErrorMessage('As senhas não coincidem.');
             return;
@@ -42,7 +53,7 @@ function CamposDeRecuperacao() {
             alert('Senha alterada com sucesso!');
             navigate('/login'); // Redireciona para login após redefinir senha
         } else {
-            setErrorMessage(result.message);
+            setErrorMessage(result.message || 'Erro desconhecido ao redefinir senha.');
         }
     };
 
@@ -69,37 +80,41 @@ function CamposDeRecuperacao() {
                     </form>
                 </div>
             ) : (
-                <form className={styles.FormRecuperacao} onSubmit={handleResetPassword}>
-                    <input
-                        className={styles.CampoDeTexto}
-                        type="text"
-                        name="token"
-                        placeholder="Digite o código recebido"
-                        required
-                        value={token}
-                        onChange={(e) => setToken(e.target.value)}
-                    />
-                    <input
-                        className={styles.CampoDeTexto}
-                        type="password"
-                        name="novaSenha"
-                        placeholder="Digite sua nova senha"
-                        required
-                        value={novaSenha}
-                        onChange={(e) => setNovaSenha(e.target.value)}
-                    />
-                    <input
-                        className={styles.CampoDeTexto}
-                        type="password"
-                        name="confirmarSenha"
-                        placeholder="Confirme sua nova senha"
-                        required
-                        value={confirmarSenha}
-                        onChange={(e) => setConfirmarSenha(e.target.value)}
-                    />
-                    <button className={styles.BotaoVerdePadrao} type="submit">Redefinir Senha</button>
-                    {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-                </form>
+                <div>
+                    <h2>Redefinir sua senha</h2>
+                    <p>Insira o código recebido e a nova senha.</p>
+                    <form className={styles.FormRecuperacao} onSubmit={handleResetPassword}>
+                        <input
+                            className={styles.CampoDeTexto}
+                            type="text"
+                            name="token"
+                            placeholder="Digite o código recebido"
+                            required
+                            value={token}
+                            onChange={(e) => setToken(e.target.value)}
+                        />
+                        <input
+                            className={styles.CampoDeTexto}
+                            type="password"
+                            name="novaSenha"
+                            placeholder="Digite sua nova senha"
+                            required
+                            value={novaSenha}
+                            onChange={(e) => setNovaSenha(e.target.value)}
+                        />
+                        <input
+                            className={styles.CampoDeTexto}
+                            type="password"
+                            name="confirmarSenha"
+                            placeholder="Confirme sua nova senha"
+                            required
+                            value={confirmarSenha}
+                            onChange={(e) => setConfirmarSenha(e.target.value)}
+                        />
+                        <button className={styles.BotaoVerdePadrao} type="submit">Redefinir Senha</button>
+                        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                    </form>
+                </div>
             )}
 
             <div className={styles.LembreteLogin}>
