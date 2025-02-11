@@ -171,7 +171,7 @@ npm test
 
 ## **Conclusão**
 
-Agora seu projeto está rodando! Se encontrar problemas, siga os passos novamente ou consulte a documentação do projeto.
+Agora o projeto está rodando! Se encontrar problemas, siga os passos novamente ou consulte a documentação do projeto.
 
 Se precisar de ajuda, crie uma **issue** no repositório ou entre em contato com a equipe.
 
