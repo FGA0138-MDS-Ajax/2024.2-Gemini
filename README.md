@@ -46,7 +46,7 @@ Este projeto oferece as seguintes funcionalidades:
 Para garantir uma colaboração de sucesso, estabelecemos os seguintes critérios para o projeto abrir e executar:
 - Git - Para clonar o repositório
 - Node.js (LTS recomendado) - Para rodar o React e instalar pacotes NPM
-- Python 3.x - Para rodar o backend Django
+- Python 3.12.9 - Para rodar o backend Django
 - Docker - Para rodar o ambiente do banco de dados e backend
 - Visual Studio Code (Opcional) - Para editar o código
 <!--- 
@@ -82,6 +82,125 @@ cd '2024.2-Gemini'
 O código principal está na branch integration, é preciso selecioná-la:
 git checkout integration
 ```
+## **Passo 1: Clonar o Repositório**
+
+Abra o terminal e execute:
+
+```bash
+git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
+cd 2024-2.Gemini
+```
+
+---
+
+## **Passo 2: Mudar para a Branch Correta**
+
+O código principal está na branch **integration**, então troque para ela:
+
+```bash
+git checkout integration
+```
+
+---
+
+## **Passo 3: Instalar Dependências**
+
+### **Backend (Django)**
+
+Instale as dependências do backend:
+
+```bash
+cd 2024.2-Gemini
+npm install
+```
+
+### **Frontend (React)**
+
+O app React está dentro da pasta `my-react-app`, então instale as dependências:
+
+```bash
+cd my-react-app
+npm install
+```
+
+---
+
+## **Passo 4: Rodar o Banco de Dados com Docker**
+
+Para rodar o PostgreSQL e o backend no Docker, volte para a raiz do projeto e execute:
+
+```bash
+docker-compose up --build
+```
+
+Isso inicializa o banco de dados PostgreSQL e outros serviços necessários.
+
+---
+
+## **Passo 5 Abrir o Docker Desktop
+
+O backend estará rodando em **http://localhost:8000/admin/**.
+
+---
+
+## **Passo 6: Rodar o Frontend React**
+
+Para rodar o site, vá para a pasta `my-react-app` e inicie o servidor React:
+
+```bash
+cd my-react-app
+npm run dev
+```
+
+O site estará acessível em **http://localhost:5173/home**
+
+---
+
+## **Passo 7: Configuração do `.env` (Se Necessário)**
+
+Se o projeto exigir variáveis de ambiente, copie o arquivo de exemplo e configure:
+
+```bash
+cp .env.example .env  # Linux/Mac
+copy .env.example .env  # Windows
+```
+
+Edite o `.env` conforme necessário.
+
+---
+
+## **Outros Comandos Údeis**
+
+### **Parar o Docker**
+```bash
+docker-compose down
+```
+
+### **Reiniciar o Ambiente**
+```bash
+docker-compose down -v  # Remove containers e volumes
+docker-compose up --build
+```
+
+### **Rodar Testes no Django**
+```bash
+python manage.py test
+```
+
+### **Rodar Testes no React**
+```bash
+npm test
+```
+
+---
+
+## **Conclusão**
+
+Agora seu projeto está rodando! Se encontrar problemas, siga os passos novamente ou consulte a documentação do projeto.
+
+Se precisar de ajuda, crie uma **issue** no repositório ou entre em contato com a equipe.
+
+
   	
   
 <div align="center">
