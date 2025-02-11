@@ -24,9 +24,16 @@
 
 Este projeto oferece as seguintes funcionalidades:
 
-• Introdução da equipe de competição para os visitantes do site, apresentando sua história, conquistas e integrantes;
+- Introdução da equipe de competição para os visitantes do site, apresentando sua história, conquistas e integrantes;
 
-• Destaque dos diferentes patrocinadores da FGR
+- Destaque dos diferentes patrocinadores da FGR;
+
+- Registro e login de contas;
+
+- Plataforma de Ecommerce para venda dos produtos da equipe;
+
+- Página de Administrador para edição do site e gerenciamento de usuários e vendas;
+
 
 <!-- Título centralizado -->
 <div align="center">
@@ -66,13 +73,13 @@ bibliotecas do Python:
 
 
 <!-- Adiciona a funçao de copiar o link do repositorio -->
-### 3. Clonar o Repositório
+### 3. Clonar o Repositório e Selecionar a Branch
 Vamos começar clonando um repositório do GitHub em um diretório local através do terminal e selecionando o repositório, conforme indicado a seguir:
 ```
 git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
 cd '2024.2-Gemini'
 
-O código principal está na branch integration, é preciso selecioná-la
+O código principal está na branch integration, é preciso selecioná-la:
 git checkout integration
 ```
   	
@@ -81,11 +88,6 @@ git checkout integration
   <h2> Configurações do projeto </h2>
 </div>
 
-• Certifique-se de ter o Python instalado. O codigo foi desenvolvido em Python.
-  
-• -
-
-• -  
   <h3>Configurações do Back-end</h3>
 </div>
 <ul>
