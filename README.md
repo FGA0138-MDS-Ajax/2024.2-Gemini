@@ -131,7 +131,7 @@ O site estará acessível em **http://localhost:5173/home**
 
 ---
 
-## **Passo 7: Configuração do `.env` (Se Necessário)**
+## **Passo 7: Configuração do `.env`**
 
 Se o projeto exigir variáveis de ambiente, copie o arquivo de exemplo e configure:
 
