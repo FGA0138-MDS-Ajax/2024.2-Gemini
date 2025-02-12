@@ -57,6 +57,29 @@ No terminal:
 ``` 
 --->
 
+
+
+## **📁 Estrutura do Projeto**
+```
+.
+├── backend/                 # Configurações do Django
+├── loja/                    # Aplicação principal
+├── payments/                # Módulo de pagamentos
+├── products/                # Módulo de produtos
+├── users/                   # Módulo de usuários
+├── .env                     # Variáveis de ambiente
+├── .env.example             # Exemplo do arquivo de configuração
+├── docker-compose.yml       # Configuração do Docker Compose
+├── dockerfile               # Construção Imagem Docker 
+├── requirements.txt         # Dependências gerais do projeto
+├── my-react-app/            # O app React
+├── manage.py                # Gerenciador do Django
+└── README.md                # Este arquivo 📌
+```
+
+---
+
+
 ## **Passo 1: Clonar o Repositório**
 
 Abra o terminal e execute:
@@ -66,7 +89,8 @@ git clone https://github.com/FGA0138-MDS-Ajax/2024.2-Gemini.git
 cd 2024-2.Gemini
 ```
 
----
+
+
 
 ## **Passo 2: Mudar para a Branch Correta**
 
@@ -78,15 +102,26 @@ git checkout integration
 
 ---
 
-## **Passo 3: Instalar Dependências**
+
+
+
+
+## **📌 Passo 3. Criar e Configurar o `.env`**
+```bash
+cp .env.example .env
+```
+Edite o `.env` conforme necessário (banco de dados, chaves, etc.).
+
+---
+
+## **Passo 4: Instalar Dependências**
 
 ### **Backend (Django)**
 
 Instale as dependências do backend:
 
 ```bash
-cd 2024.2-Gemini
-npm install
+docker compose up -d
 ```
 
 ### **Frontend (React)**
@@ -100,25 +135,50 @@ npm install
 
 ---
 
-## **Passo 4: Rodar o Banco de Dados com Docker**
+## **Passo 5: Acessar o Banco de Dados com Docker**
 
-Para rodar o PostgreSQL e o backend no Docker, volte para a raiz do projeto e execute:
+Com a aplicação rodando.
 
-```bash
-docker-compose up --build
-```
+### 🔍 **Acessando o banco de dados dentro do container**
+Caso queira acessar o banco diretamente dentro do container, siga os passos abaixo:
 
-Isso inicializa o banco de dados PostgreSQL e outros serviços necessários.
+1️⃣ **Entre no container do PostgreSQL**:
+   ```bash
+   docker exec -it postgres_database bash
+   ```
+
+2️⃣ **Acesse o PostgreSQL** usando o usuário definido no `docker-compose.yml`:
+   ```bash
+   psql -U <seu_usuario> -d <seu_banco_de_dados>
+   ```
+   Exemplo:
+   ```bash
+   psql -U postgres -d meu_banco
+   ```
+
+3️⃣ **Visualize as tabelas**:
+   ```sql
+   \dt
+   ```
+
+4️⃣ **Saia do PostgreSQL e do container**:
+   - Para sair do PostgreSQL, digite:
+     ```bash
+     \q
+     ```
+   - Para sair do container, use:
+     ```bash
+     exit
 
 ---
 
-## **Passo 5: Abrir o Docker Desktop**
+## **Passo 6: URL de acesso ao painel administrativo**
 
 O backend estará rodando em **http://localhost:8000/admin/**.
 
 ---
 
-## **Passo 6: Rodar o Frontend React**
+## **Passo 7: Rodar o Frontend React**
 
 Para rodar o site, vá para a pasta `my-react-app` e inicie o servidor React:
 
@@ -131,18 +191,62 @@ O site estará acessível em **http://localhost:5173/home**
 
 ---
 
-## **Passo 7: Configuração do `.env`**
+## **🧪 Rodando os Testes**
+Os testes são escritos utilizando **pytest** e cobrem os modelos, serializadores, views e URLs da aplicação.
 
-Se o projeto exigir variáveis de ambiente, copie o arquivo de exemplo e configure:
+Para rodar os testes, é necessário que os serviços estejam em execução via **Docker Compose**.
 
+### **📌 2. Subir os serviços do Docker**
+Antes de rodar os testes, inicie os containers do projeto:
 ```bash
-cp .env.example .env  # Linux/Mac
-copy .env.example .env  # Windows
+docker-compose up -d
 ```
 
-Edite o `.env` conforme necessário.
+Isso iniciará os serviços, incluindo o container `django_backend`, que será utilizado para rodar os testes.
+
+### **📌 3. Acessar o container `django_backend`**
+Agora, entre no container onde o Django está rodando:
+```bash
+docker exec -it django_backend bash
+```
 
 ---
+
+### **📌 4. Executar os testes com cobertura de código**
+Agora, ainda dentro do container `django_backend`, execute:
+```bash
+pytest --cov=loja --cov-report=term-missing --disable-warnings
+```
+
+Se quiser um **relatório HTML** da cobertura de testes, use:
+```bash
+pytest --cov=loja --cov-report=html
+```
+
+Depois, para acessar o relatório gerado:
+```bash
+xdg-open htmlcov/index.html  # Linux
+open htmlcov/index.html      # macOS
+start htmlcov/index.html     # Windows (CMD)
+```
+
+---
+
+### **📌 5. Sair do container**
+Após rodar os testes, basta sair do container:
+```bash
+exit
+```
+
+Se quiser parar os serviços do Docker após os testes, execute:
+```bash
+docker-compose down
+```
+
+
+
+---
+
 
 ## **Outros Comandos Údeis**
 
@@ -157,10 +261,9 @@ docker-compose down -v  # Remove containers e volumes
 docker-compose up --build
 ```
 
-### **Rodar Testes no Django**
-```bash
-python manage.py test
-```
+
+
+
 
 ### **Rodar Testes no React**
 ```bash
