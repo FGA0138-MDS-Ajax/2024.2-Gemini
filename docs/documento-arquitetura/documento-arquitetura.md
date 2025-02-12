@@ -154,6 +154,8 @@ O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as inter
 ![Esquema de casos do Sistema](./assets/caso.png)
 
 **<p style="text-align: center;">Autora: GEMINI (2024)</p>**
+
+
 ---
 
 
