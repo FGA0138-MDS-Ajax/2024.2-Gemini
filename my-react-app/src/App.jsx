@@ -56,17 +56,13 @@ function App() {
 
                             <section className={styles.SecaoProjeto}>
                                 <Titulo texto="Projeto" tamanho="86px" gradiente={false} />
-                                <p className={styles.ParagrafoProjeto}>
-                                    A FGR(Fórmula Gama Racing) é uma equipe de competição de Fórmula SAE elétrico da Universidade de Brasília(UnB), campus FGA...
-                                </p>
+                                <p className={styles.ParagrafoProjeto}>A FGR(Fórmula Gama Racing) é uma equipe de competição de Fórmula SAE elétrico da Universidade de Brasília(UnB), campus FGA. Os discentes são responsáveis por todo o projeto e a construção do veículo. A equipe é dividida em áreas técnicas: Dinâmica Veicular, Estruturas, Eletrônica, Powertrain e Drivertrain. E também tem os departamentos: Marketing, Financeiro e Gestão de Pessoas.</p>
                             </section>
 
                             <section className={styles.SecaoCompeticao}>
                                 <div className={styles.TextosCompeticao}>
                                     <Titulo texto="Competição" tamanho="86px" gradiente={false} />
-                                    <ParagrafoPadraoEsquerda
-                                        texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática..."
-                                    />
+                                    <ParagrafoPadraoEsquerda texto="A competição Formula SAE BRASIL tem como objetivo proporcionar aos estudantes de Engenharia a chance de colocar em prática os conhecimentos adquiridos em sala de aula, por meio do desenvolvimento de um projeto completo: um veículo do tipo Fórmula. Por um período de três dias, ocorrem testes estáticos e dinâmicos com os carros, com o objetivo de avaliar o desempenho de cada projeto na pista. Além disso, as equipes apresentam suas propostas técnicas, incluindo detalhes sobre o projeto, custos e também uma apresentação de marketing."/>
                                 </div>
                                 <img src="/assets/Imagens/imagemCompeticao.png" className={styles.ImagemCompeticao} />
                             </section>

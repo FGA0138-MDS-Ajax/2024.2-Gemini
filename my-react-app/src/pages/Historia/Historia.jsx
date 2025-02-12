@@ -42,6 +42,9 @@ function Historia() {
     { nome: "Thalis Cezar Ianzner", curso: "Engenharia Eletrônica" }
   ];
 
+  // Duplicamos a lista para criar um efeito de rolagem contínua
+  const membrosDuplicados = [...membros, ...membros];
+
   return (
     <div className={styles.PaginaHistoria}>
       <Header />
@@ -50,14 +53,23 @@ function Historia() {
         <div className={styles.TextoSecao}>
           <Titulo texto="Nossa História" tamanho="35px" gradiente={false} />
           <ParagrafoPadrao
-            texto={`A Fórmula Gama Racing (FGR) é pioneira na engenharia de competição sustentável no Centro-Oeste, sendo a única equipe de Fórmula SAE Elétrico da região. Fundada em 30 de outubro há 11 anos na Universidade de Brasília (UnB), seu propósito é liderar a inovação na eletromobilidade, promovendo o avanço de soluções sustentáveis no Distrito Federal.
+            texto={`A Fórmula Gama Racing (FGR) é pioneira na engenharia de competição sustentável no Centro-Oeste, sendo a única equipe de Fórmula SAE Elétrico da região. Fundada em 30 de outubro há 11 anos na Universidade de Brasília (UnB), seu propósito é liderar a inovação na eletromobilidade, promovendo o avanço de soluções sustentáveis no Distrito Federal.`
+            } />
 
-A equipe já concebeu e desenvolveu cinco protótipos elétricos, demonstrando evolução contínua. Atualmente, o projeto está focado no modelo E05, que traz melhorias significativas em eficiência energética, desempenho aerodinâmico e otimização de sistemas elétricos.
 
-Com aproximadamente 47 membros, a FGR estrutura-se em departamentos técnicos (Mecânica e Elétrica) e administrativos (Gestão de Pessoas, Marketing, Comercial e Financeiro/Logística). A gestão da equipe é composta por um Capitão, um Gerente de Projetos e uma Gerente de Departamentos, garantindo organização e eficiência no desenvolvimento dos projetos.
+            <ParagrafoPadrao
+            texto={
+            `A equipe já concebeu e desenvolveu cinco protótipos elétricos, demonstrando evolução contínua. Atualmente, o projeto está focado no modelo E05, que traz melhorias significativas em eficiência energética, desempenho aerodinâmico e otimização de sistemas elétricos. `} />
 
-A equipe já marcou presença em diversas competições de renome, como a Fórmula SAE Brasil e a Formula Student internacional. Em cada edição, a FGR busca aprimorar o nível de seus veículos, destacando-se pela criatividade e excelência técnica, além de consolidar a UnB como referência no cenário da engenharia automotiva sustentável.`}
-          />
+
+            <ParagrafoPadrao
+            texto={
+            `Com aproximadamente 47 membros, a FGR estrutura-se em departamentos técnicos (Mecânica e Elétrica) e administrativos (Gestão de Pessoas, Marketing, Comercial e Financeiro/Logística). A gestão da equipe é composta por um Capitão, um Gerente de Projetos e uma Gerente de Departamentos, garantindo organização e eficiência no desenvolvimento dos projetos. `} />
+
+            <ParagrafoPadrao
+            texto={
+            `A equipe já marcou presença em diversas competições de renome, como a Fórmula SAE Brasil e a Formula Student internacional. Em cada edição, a FGR busca aprimorar o nível de seus veículos, destacando-se pela criatividade e excelência técnica, além de consolidar a UnB como referência no cenário da engenharia automotiva sustentável.`} />
+
         </div>
       </div>
 
@@ -65,13 +77,13 @@ A equipe já marcou presença em diversas competições de renome, como a Fórmu
         <Titulo texto="Membros e seus Cursos" tamanho="28px" gradiente={false} />
 
         <div className={styles.MembrosTextoContainer}>
-          <ul className={styles.MembrosLista}>
-            {membros.map((membro, index) => (
-              <li key={`${membro.nome}-${index}`} className={styles.MembroItem}>
+          <div className={styles.MembrosLista}>
+            {membrosDuplicados.map((membro, index) => (
+              <span key={`${membro.nome}-${index}`} className={styles.MembroItem}>
                 {membro.nome} - {membro.curso}
-              </li>
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
 

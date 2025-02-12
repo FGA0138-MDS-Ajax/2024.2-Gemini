@@ -7,52 +7,46 @@
 .SecaoNossaHistoria {
   background-image: url('/assets/Imagens/ImagemProjeto.png');
   width: 100%; 
-  height: 437px;
+  height: 480px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   flex-grow: 1; 
 }
 
-.TextoSecao {
-  padding: 20px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5); 
-  text-align: justify; 
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-.TextoSecao p {
-  margin-bottom: 15px;
-  white-space: pre-line;
-}
-
-.Footer {
-  margin-top: auto; 
-  padding-top: 100px; 
-  padding-bottom: 40px; 
-  background-color: #333; 
-  color: #fff; 
-  text-align: center; 
-}
-
 .MembrosTextoContainer {
   width: 100%;
-  overflow-x: auto; 
-  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 50px;
 }
 
-.MembrosTexto {
+.MembrosLista {
   display: inline-block;
-  white-space: nowrap; 
-  font-size: 15px;
-  color: white;
-  line-height: 1.5;
-  text-align: left;
-  padding: 10px;
+  white-space: nowrap;
+  animation: scrollText 150s linear infinite;
 }
 
 .MembroItem {
-  display: inline;
-  white-space: nowrap;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
 }
+
+/* Animação para mover os nomes da direita para a esquerda */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.SecaoNossaHistoria{
+  margin-bottom: 100px;
+}
+

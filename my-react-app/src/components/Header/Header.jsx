@@ -29,7 +29,7 @@ function Header() {
                 </Link>
                 <div className={styles.ClicaveisDaHeader}>
                     <Link to="/historia">
-                        <h1 className={styles.TitulosDoMenu}> QUEM SOMOS / APRESENTAÇÃO </h1>
+                        <h1 className={styles.TitulosDoMenu}> QUEM SOMOS/APRESENTAÇÃO </h1>
                     </Link>
                     <Link to="/patrocinadores">
                         <h1 className={styles.TitulosDoMenu}> PATROCINADORES </h1>
