@@ -73,7 +73,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 
 
-## 📌 Testes do Módulo Loja
+###  Testes do Módulo Loja
 
 ### **1. Teste de Modelos (`models`)
 
@@ -84,7 +84,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
   - Se o cálculo do **totalPedido** retorna o valor correto.
   - Se os atributos como `status`, `usuario`, `carrinho` e `entrega` são salvos corretamente.
 
-📌 **Objetivo dos testes de modelo:**  
+ **Objetivo dos testes de modelo:**  
 ✅ Garantir que os modelos do Django funcionem corretamente.  
 ✅ Testar métodos específicos do modelo (`calcular_total()`, `save()` etc.).  
 
@@ -98,7 +98,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
   - Se a serialização de um `Pedido` para JSON funciona corretamente.
   - Se os dados serializados contêm os valores esperados, como `status` e `totalPedido`.
 
-📌 **Objetivo dos testes de serializer:**  
+ **Objetivo dos testes de serializer:**  
 ✅ Garantir que os dados do modelo sejam corretamente transformados em JSON.  
 ✅ Assegurar que a conversão entre JSON e objeto Python mantenha a integridade dos dados.  
 
@@ -113,7 +113,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
   - **`reverse("carrinho-list")`** → Gera a URL do endpoint de listagem de carrinhos.
   - **`resolve(reverse("carrinho-list"))`** → Verifica se a URL está associada à view correta (`CarrinhoViewSet`).
 
-📌 **Objetivo dos testes de URLs:**  
+ **Objetivo dos testes de URLs:**  
 ✅ Garantir que as rotas estejam associadas corretamente às views.  
 ✅ Evitar problemas de roteamento e endpoints quebrados.  
 
@@ -129,13 +129,13 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
   - Define um mock para a resposta da API (`Response`).
   - Verifica se a resposta contém os valores esperados (`status: "Pago"`, `totalPedido: "100.0"`).
 
-📌 **Objetivo dos testes de views:**  
+ **Objetivo dos testes de views:**  
 ✅ Garantir que as requisições HTTP retornem os dados esperados.  
 ✅ Testar a resposta da API sem depender do banco de dados (mock).  
 
 ---
 
-### **📌 Resumo Geral**
+### ** Resumo Geral**
 
 | Tipo de Teste  | O que é testado? | Exemplo no código |
 |---------------|-----------------|------------------|
@@ -146,7 +146,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 Esses testes ajudam a garantir que o sistema esteja funcionando corretamente, cobrindo diferentes camadas da aplicação.
 
-### 📌 Resumo
+###  Resumo
 
 | Tipo de Teste       | O que testa?                            | Exemplo no código       |
 |----------------------|----------------------------------------|-------------------------|
