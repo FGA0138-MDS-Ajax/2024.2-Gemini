@@ -149,7 +149,7 @@ O sistema também incorpora **dois níveis de usuários**, cada um com permissõ
 
 O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as interações mencionadas acima.
 
-**<p style="text-align: center;">Figura 1: Casos de Uso</p>**
+**<p style="text-align: center;">Figura 2: Casos de Uso</p>**
 
 ![Esquema de Camadas do Sistema](./assets/caso.png)
 
