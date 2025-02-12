@@ -243,10 +243,25 @@ Se quiser parar os serviços do Docker após os testes, execute:
 docker-compose down
 ```
 
-
-
 ---
 
+##  8. Criar superusuário
+Acessar o container backend:
+```bash
+docker exec -it postgresql_database
+```
+
+Criar o superusuário:
+```bash
+python manage.py createsuperuser
+```
+
+
+
+
+
+
+--- 
 
 ## **Outros Comandos Údeis**
 
