@@ -23,7 +23,7 @@
 
 * ## Loja virtual.
 
-## ---
+## 
 
 ## **4\. Arquitetura**
 
@@ -35,13 +35,13 @@
 
 * ## Front-end através do framework React.
 
-## ---
+## 
 
 ## **5\. Resultados Esperados**
 
 ## Uma aplicação completa com sistema de vendas e painel administrativo funcional, com página de apresentação da equipe e acesso às redes sociais.
 
-## ---
+## 
 
 ## **Elicitação de Requisitos**
 
@@ -61,7 +61,7 @@
 
   * ## Imagens e história da equipe.
 
-## ---
+## 
 
 ### **2\. Funcionalidades de Divulgação**
 
@@ -75,7 +75,7 @@
 
   ## 
 
-## ---
+## 
 
 ### **3\. Sistema de Autenticação e Níveis de Acesso**
 
@@ -99,7 +99,7 @@
 
   * ## Pix e boleto
 
-## ---
+## 
 
 ### **5\. Arquitetura e Integração**
 
@@ -107,7 +107,7 @@
 
   * ## Login através de conta Google.
 
-##  ---
+##  
 
 ### Tabela de requisitos funcionais
 
