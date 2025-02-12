@@ -31,7 +31,7 @@ O objetivo deste documento é descrever o plano de testes a ser executado para o
 ## 4. Escopo
 
 ### **4.1 O que será testado**
-#### 🔹 **Funcionalidade principal do sistema**
+####  **Funcionalidade principal do sistema**
 - **Testes Unitários:**
   - Testar os métodos dos Models.
   - Testar as Views.
