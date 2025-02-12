@@ -100,7 +100,7 @@ Os **Templates** desempenham o papel da **Visão** no padrão MVC clássico, for
 * Suportam **tags** e **filtros** para manipulação de dados antes da renderização.  
 * Separaram a camada de apresentação da lógica de negócios.
 
-**<p style="text-align: center;">Figura 1: Esquema de Camadas do Sistema</p>**
+**<p style="text-align: center;">Figura 2: Esquema de Camadas do Sistema</p>**
 
 ![Esquema de Camadas do Sistema](./assets/2.3.png)
 
@@ -149,7 +149,7 @@ O sistema também incorpora **dois níveis de usuários**, cada um com permissõ
 
 O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as interações mencionadas acima.
 
-**<p style="text-align: center;">Figura 2: Casos de Uso</p>**
+**<p style="text-align: center;">Figura 3: Casos de Uso</p>**
 
 ![Esquema de casos do Sistema](./assets/caso.png)
 
@@ -187,7 +187,7 @@ Esses módulos se comunicam por meio da interface:
 
 A seguir o diagrama de estados da aplicação e sua explicação:
 
-**<p style="text-align: center;">Figura 3: Diagrama de estados</p>**
+**<p style="text-align: center;">Figura 4: Diagrama de estados</p>**
 
 ![Diagrama de estados](./assets/2.6.png)
 
@@ -200,7 +200,14 @@ Foi demonstrado não autenticado depois autenticado, não apresentamos erro no s
 
 A seguir o diagrama de atividades e sua explicação:
 
-![][image3]
+**<p style="text-align: center;">Figura 5: Diagrama de estados b</p>**
+
+![Diagrama de estados b](./assets/2.6b.png)
+
+**<p style="text-align: center;">Autora: GEMINI (2024)</p>**
+
+
+---
 
 O usuário a partir do acesso poderá ser negado e possíveis erros podem acontecer, mas pode recuperar a senha.
 
