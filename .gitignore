@@ -1,21 +1,33 @@
-# Ignorar arquivos compilados do Python
-*.pyc
-*.pyo
-*.pyd
+# Logs e Arquivos Temporários
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Ignorar diretórios __pycache__
+# Dependências do Node.js
+node_modules
+dist/
+dist-ssr/
+*.local/
+
+# Ambientes Virtuais do Python
+venv
 __pycache__/
+db.sqlite3
 
-# Ignorar ambientes virtuais do Python
-venv/
-env/
-
-# Ignorar arquivos de ambiente
-.env
-*.env
-
-# Ignorar arquivos de migração do Django (caso esteja usando Django)
-migrations/
-
-# Ignorar configurações e caches do VS Code
+# Arquivos de Configuração de IDEs
 .vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Configuração do Ambiente
+.env
+
+

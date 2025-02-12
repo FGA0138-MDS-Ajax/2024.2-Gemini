@@ -1,0 +1,17 @@
+.Titulo{
+    color: #FFF;
+    text-align: center;
+    font-size: var(--titulo-tamanho, 86px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.TituloComGradiente {
+    font-size: var(--titulo-tamanho, 86px);
+    font-weight: bold;
+    background: linear-gradient(180deg, #5dd373, #FFFFFF); /* Gradiente */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }

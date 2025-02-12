@@ -1,0 +1,18 @@
+.Label{
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.CampoDeTexto{
+    border: 4px solid rgba(4, 221, 45, 0.65);
+    width: 483px;
+    height: 53px;
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    margin-bottom: 15px;
+
+}

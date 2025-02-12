@@ -1,0 +1,28 @@
+.Patrocinadores {
+    text-align: center;
+}
+
+.Divisoria {
+    border-bottom: 3px solid rgba(4, 221, 45, 0.65);
+    margin: 20px auto;
+    width: 50%;
+}
+
+.GaleriaPatrocinadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.ImagemPatrocinador {
+    width: 150px; /* Ajuste conforme necessário */
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ImagemPatrocinador:hover {
+    transform: scale(1.1);
+}

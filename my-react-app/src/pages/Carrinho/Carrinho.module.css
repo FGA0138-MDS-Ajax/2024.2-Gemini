@@ -1,0 +1,38 @@
+.Carrinho{
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.Nomes{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    width: 900px;
+    height: 36px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background: rgba(250, 249, 249, 0.23);
+}
+
+.Valores{
+    width: 300px;
+    height: 36px;
+    display: flex;
+    color: #FFF;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    gap: 20px;
+}
+

@@ -1,0 +1,20 @@
+.ResumoPagamento{
+    width: 190px;
+    text-align: left;
+}
+
+.TituloPagamento{
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.InfoPagamento{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

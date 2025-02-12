@@ -1,0 +1,46 @@
+.MenuCamiseta{
+    display: flex;
+    justify-content: space-around;
+    width: 1280px;
+    height: 366px;
+    margin-bottom: 150px;
+}
+
+.ImgCamiseta{
+    width: 363px;
+    height: 366px;
+    flex-shrink: 0;
+}
+
+.TextoTamanho{
+    color: #FFF;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+}
+
+.TextoTamanho{
+    text-align: center;
+    font-size: 24px;
+    margin: 15px 0 15px 0;
+}
+
+.BotaoGuiaDeTamanho{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1.2px solid #FFF;
+    border: 1.2px solid #FFF;
+    margin: 0 10px 0 10px;
+    background-color: transparent;
+}
+
+.BotoesDeVenda{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

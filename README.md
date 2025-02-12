@@ -60,6 +60,13 @@ No terminal:
 
 
 ## **📁 Estrutura do Projeto**
+## **🛒 Loja - Backend**
+
+### **📌 Configuração do Ambiente**
+
+Este projeto utiliza **Django** e **Django REST Framework** para gerenciar a API do sistema de loja.
+
+### **📁 Estrutura do Projeto**
 ```
 .
 ├── backend/                 # Configurações do Django
@@ -73,6 +80,8 @@ No terminal:
 ├── dockerfile               # Construção Imagem Docker 
 ├── requirements.txt         # Dependências gerais do projeto
 ├── my-react-app/            # O app React
+├── requirements.txt         # Dependências gerais do projeto
+├── requirements.testing.txt # Dependências para rodar os testes
 ├── manage.py                # Gerenciador do Django
 └── README.md                # Este arquivo 📌
 ```
@@ -107,6 +116,8 @@ git checkout integration
 
 
 ## **📌 Passo 3. Criar e Configurar o `.env`**
+## **⚙️ Configuração**
+### **📌 1. Criar e Configurar o `.env`**
 ```bash
 cp .env.example .env
 ```

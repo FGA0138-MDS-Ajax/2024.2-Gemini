@@ -1,0 +1,47 @@
+.CamisetasEmDestaque{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    width: 1200px;
+}
+
+.SecaoProjeto{
+    background-image: url('/assets/Imagens/ImagemProjeto.png');
+    height: 437px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.ParagrafoProjeto{
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 421px;
+    height: 192px;
+    flex-shrink: 0;
+    top: 51px;
+    right: 103px;
+}
+
+.SecaoCompeticao{
+    display: flex;
+    margin: 100px 0;
+    justify-content: space-around;
+}
+
+.ImagemCompeticao{
+    width: 636px;
+    height: 359px;
+}
+
+.CamisetasEmDestaque {
+    display: flex;
+    justify-content: center; /* 🔹 Centraliza os produtos */
+    gap: 40px; /* 🔹 Reduz o espaço entre eles */
+    flex-wrap: wrap; /* 🔹 Garante que se ajustem conforme a tela */
+    padding: 20px;
+}
