@@ -64,7 +64,7 @@ O sistema será desenvolvido utilizando a arquitetura do Django, que segue o pad
 ---
 
 
-### <a> 2.2 Hustifique sua Escolha </a>
+### <a> 2.2 Justifique sua Escolha </a>
 
 O padrão MTC foi escolhido porque oferece uma estrutura leve e eficiente, adequada à simplicidade do sistema. Ele prioriza a rapidez no desenvolvimento e facilita a organização do código, ao mesmo tempo em que mantém uma separação clara entre as responsabilidades. Essa abordagem reduz a necessidade de configurações complexas e permite que o foco esteja na entrega funcional do produto, garantindo um sistema escalável para futuras melhorias. Além disso, o MTC aproveita nativamente os recursos do Django, otimizando o uso de suas ferramentas e tornando o processo mais produtivo e intuitivo.
 
