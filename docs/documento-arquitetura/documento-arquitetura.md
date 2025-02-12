@@ -151,7 +151,7 @@ O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as inter
 
 **<p style="text-align: center;">Figura 2: Casos de Uso</p>**
 
-![Esquema de Camadas do Sistema](./assets/caso.png)
+![Esquema de casos do Sistema](./assets/caso.png)
 
 **<p style="text-align: center;">Autora: GEMINI (2024)</p>**
 ---
