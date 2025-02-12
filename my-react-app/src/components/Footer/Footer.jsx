@@ -14,10 +14,10 @@ function Footer(){
                     <a href="https://www.instagram.com/fgr.unb?igsh=NXoyd2YxY3IzOTIw"><img src='/assets/Logos/LogoInstagram.svg' className={styles.IconeRedeSocial}/></a>
                 </li>
                 <li>
-                    <a href="https://api.whatsapp.com/send?phone=556190009318&fbclid=PAY2xjawGx0OxleHRuA2FlbQIxMAABppyoQ5wiaxiDnJqMPRw6NSWIucsog87ulFpofg6xPZoMtzSPrLsnxy-oNw_aem_iuJhfRBbrhfGfqdAqU1H3w"><img src='/assets/Logos/LogoWhatsapp.svg' className={styles.IconeRedeSocial}/></a>
+                    <a href="https://api.whatsapp.com/send?phone=5561990009318&fbclid=PAY2xjawGx0OxleHRuA2FlbQIxMAABppyoQ5wiaxiDnJqMPRw6NSWIucsog87ulFpofg6xPZoMtzSPrLsnxy-oNw_aem_iuJhfRBbrhfGfqdAqU1H3w"><img src='/assets/Logos/LogoWhatsapp.svg' className={styles.IconeRedeSocial}/></a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/fgracing/"><img src='/assets/Logos/LogoLinkedin.svg' className={styles.IconeRedeSocial}/></a>
+                    <a href="https://www.linkedin.com/company/fgr-unb/"><img src='/assets/Logos/LogoLinkedin.svg' className={styles.IconeRedeSocial}/></a>
                 </li>
             </ul>
             <img className={styles.LogoUnb} src='/assets/Logos/LogoUnB.svg'/>
