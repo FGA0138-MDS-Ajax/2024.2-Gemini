@@ -75,7 +75,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ###  Testes do Módulo Loja
 
-### **1. Teste de Modelos (`models`)
+### 1. Teste de Modelos (`models`)
 
 ###  **Arquivo: `PedidoModelTest`**
 - O **modelo `Pedido`** representa um pedido no sistema, contendo um usuário, um carrinho e uma entrega.
@@ -90,7 +90,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ---
 
-### **2. Teste de Serializers (`serializers`)
+### 2. Teste de Serializers (`serializers`)
 
 ###  **Arquivo: `PedidoSerializerTest`**
 - O **serializer `PedidoSerializer`** é usado para converter objetos `Pedido` em JSON e vice-versa.
@@ -104,7 +104,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ---
 
-### **3. Teste de URLs (`urls`)
+### 3. Teste de URLs (`urls`)
 
 ### 🔹 **Arquivo: `APIRoutesTest`**
 - O Django usa **`reverse()`** para gerar URLs baseadas nos nomes de rota definidos no `urls.py`.
@@ -119,7 +119,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ---
 
-### **4. Teste de Views (`views`)
+### 4. Teste de Views (`views`)
 
 ###  **Arquivo: `PedidoViewTest`**
 - Esse teste foca em **testar a API** usando `APIClient` (do Django Rest Framework).
