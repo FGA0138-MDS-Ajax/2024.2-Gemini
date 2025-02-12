@@ -100,6 +100,11 @@ Os **Templates** desempenham o papel da **Visão** no padrão MVC clássico, for
 * Suportam **tags** e **filtros** para manipulação de dados antes da renderização.  
 * Separaram a camada de apresentação da lógica de negócios.
 
+**<p style="text-align: center;">Figura 1: Esquema de Camadas do Sistema</p>**
+
+![Esquema de Camadas do Sistema](./assets/2.3.png)
+
+**<p style="text-align: center;">Autora: GEMINI (2024)</p>**
 
 
 ---
