@@ -263,7 +263,7 @@ python manage.py createsuperuser
 
 --- 
 
-## **Outros Comandos Údeis**
+## **Outros Comandos Úteis**
 
 ### **Parar o Docker**
 ```bash
