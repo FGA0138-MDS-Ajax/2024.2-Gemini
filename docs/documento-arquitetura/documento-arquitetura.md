@@ -130,7 +130,24 @@ Esses objetivos e restrições arquiteturais devem ser avaliados com atenção e
 
 ### <a> 2.5 Visão de Casos de Uso (escopo do produto) </a>
 
+A arquitetura escolhida para  o sistema segue o padrão **Model-View-Control (MVC)**, utilizando os framework **Django** para o backend, que foi escolhido pela facilidade que se comunica com o **React** (frontend)  e pela forma que consegue atender com perfeição as necessidades do projeto, trazendo para o cliente um sistema de administração funcional e de fácil manuseio, segurança nos acessos da aplicação e fácil comunicação com as APIs.
 
+A linguagem escolhida para o frontend foi o **React**, que se integra e se comunica com facilidade ao framework **Django**, e pela capacidade de criar o escopo do site de acordo com os pedidos do cliente. O banco de dados adotado foi o **PostgreSQL**, escolhido exclusivamente por ser o melhor sistema para se comunicar com o backend.
+
+Em relação ao escopo do sistema, ele pode ser segmentado em módulos responsáveis por diferentes funcionalidades, incluindo:
+
+* **Página de apresentação da equipe e patrocinadores**  
+* **Acesso direto as redes sociais da equipe.**  
+* **Página de vendas dos produtos da equipe**  
+* **Página de administração:** controle total sobre e manutenção sobre toda a aplicação
+
+O sistema também incorpora **dois níveis de usuários**, cada um com permissões específicas, conforme descrito a seguir:
+
+* **Administrador:** controle total sobre todas funcionalidades do site e acesso a relatórios de venda.  
+* **Usuário**: Acesso às páginas de apresentação da equipe, patrocinadores e página de produtos.
+
+
+O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as interações mencionadas acima.
 ---
 
 
@@ -224,6 +241,14 @@ Para o banco de dados, optamos pelo PostgreSQL como banco de dados relacional, d
 
 ### <a> 2.9 Restrições Adicionais </a>
 
+**Autenticação Obrigatória**  
+O sistema será acessível diretamente pela internet, porém exigirá que os usuários se cadastrem e loguem para terem acesso às páginas de produtos e compras, assim como será necessário logar em perfil de administrador para ter acesso ao painel de controle. Usuários não cadastrados terão acesso limitado, apenas podendo navegar pelo site sem poder efetuar compras.
+
+**Limitação de acesso**  
+Funcionalidades especiais, como página de administração, estoque, serão unicamente acessadas pelos perfis de administrador, enquanto usuários terão acesso apenas às páginas de navegação e compra do site . A divisão de acessos conforme os perfis melhora a segurança do sistema, restringindo recursos críticos a usuários com as permissões adequadas e organizando melhor os fluxos de trabalho.
+
+**Portabilidade**  
+A aplicação será compatível com todos navegadores, como **Chrome, Firefox, Safari e Edge**. Assegurar compatibilidade com múltiplas plataformas possibilita que os usuários acessem o sistema de forma prática, independentemente do dispositivo utilizado.
 
 ---
 
