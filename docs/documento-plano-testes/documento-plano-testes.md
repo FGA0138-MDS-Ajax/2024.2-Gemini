@@ -77,7 +77,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ### **1. Teste de Modelos (`models`)
 
-### 🔹 **Arquivo: `PedidoModelTest`**
+###  **Arquivo: `PedidoModelTest`**
 - O **modelo `Pedido`** representa um pedido no sistema, contendo um usuário, um carrinho e uma entrega.
 - O teste **`test_criar_pedido`** verifica:
   - Se um pedido pode ser criado corretamente.
@@ -92,7 +92,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ### **2. Teste de Serializers (`serializers`)
 
-### 🔹 **Arquivo: `PedidoSerializerTest`**
+###  **Arquivo: `PedidoSerializerTest`**
 - O **serializer `PedidoSerializer`** é usado para converter objetos `Pedido` em JSON e vice-versa.
 - O teste **`test_serializar_pedido`** verifica:
   - Se a serialização de um `Pedido` para JSON funciona corretamente.
@@ -121,7 +121,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ### **4. Teste de Views (`views`)
 
-### 🔹 **Arquivo: `PedidoViewTest`**
+###  **Arquivo: `PedidoViewTest`**
 - Esse teste foca em **testar a API** usando `APIClient` (do Django Rest Framework).
 - Como é um teste de **view mockada**, ele usa **`@patch`** para evitar chamadas reais ao banco de dados.
 - O método **`test_listar_pedidos`**:
@@ -135,7 +135,7 @@ Os testes serão organizados em uma pasta `tests`, dividida em subpastas para ca
 
 ---
 
-### ** Resumo Geral**
+### **Resumo Geral**
 
 | Tipo de Teste  | O que é testado? | Exemplo no código |
 |---------------|-----------------|------------------|
