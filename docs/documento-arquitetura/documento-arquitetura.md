@@ -187,7 +187,15 @@ Esses módulos se comunicam por meio da interface:
 
 A seguir o diagrama de estados da aplicação e sua explicação:
 
-*![][image2]*  
+**<p style="text-align: center;">Figura 3: Diagrama de estados</p>**
+
+![Diagrama de estados](./assets/2.6.png)
+
+**<p style="text-align: center;">Autora: GEMINI (2024)</p>**
+
+
+---
+
 Foi demonstrado não autenticado depois autenticado, não apresentamos erro no sistema, usuário efetua transações no sítio. 
 
 A seguir o diagrama de atividades e sua explicação:
