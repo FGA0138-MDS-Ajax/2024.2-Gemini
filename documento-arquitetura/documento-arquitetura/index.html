@@ -1,0 +1,1718 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fga0138-mds-ajax.github.io/2024.2-Gemini/documento-arquitetura/documento-arquitetura/">
+      
+      
+        <link rel="prev" href="../../documento-requisitos/documento-requisitos/">
+      
+      
+        <link rel="next" href="../../documento-plano-testes/documento-plano-testes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Documento de Arquitetura - 2024.2-Gemini</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documento-de-arquitetura" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="2024.2-Gemini" class="md-header__button md-logo" aria-label="2024.2-Gemini" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            2024.2-Gemini
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documento de Arquitetura
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purble" data-md-color-accent="#abcbe6"  aria-label="Mudar para a preferência do sistema"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para a preferência do sistema" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fga0138-mds-ajax/2024.2-Gemini" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48m80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 64-28.7 64-64v-6.7c-28.3-12.3-48-40.5-48-73.3 0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3v6.7c0 70.7-57.3 128-128 128h-96c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3 0 44.2-35.8 80-80 80S0 476.2 0 432c0-32.8 19.7-61 48-73.3V153.3C19.7 141 0 112.8 0 80 0 35.8 35.8 0 80 0s80 35.8 80 80m232 0a24 24 0 1 0-48 0 24 24 0 1 0 48 0M80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fga0138-mds-ajax/2024.2-Gemini
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../documento-visao/documento-visao/" class="md-tabs__link">
+        
+  
+    
+  
+  Documento de Visão
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../documento-requisitos/documento-requisitos/" class="md-tabs__link">
+        
+  
+    
+  
+  Documento de Requisitos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Documento de Arquitetura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../documento-plano-testes/documento-plano-testes/" class="md-tabs__link">
+        
+  
+    
+  
+  Documento de Plano de Testes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../atas-reuniao/ata-reuniao-1/" class="md-tabs__link">
+          
+  
+  Atas de Reunião
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="2024.2-Gemini" class="md-nav__button md-logo" aria-label="2024.2-Gemini" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 22a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-6v7L9.5 7.5 7 9V2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z"/></svg>
+
+    </a>
+    2024.2-Gemini
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fga0138-mds-ajax/2024.2-Gemini" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48m80-24c0 32.8-19.7 61-48 73.3v87.8c18.8-10.9 40.7-17.1 64-17.1h96c35.3 0 64-28.7 64-64v-6.7c-28.3-12.3-48-40.5-48-73.3 0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3v6.7c0 70.7-57.3 128-128 128h-96c-35.3 0-64 28.7-64 64v6.7c28.3 12.3 48 40.5 48 73.3 0 44.2-35.8 80-80 80S0 476.2 0 432c0-32.8 19.7-61 48-73.3V153.3C19.7 141 0 112.8 0 80 0 35.8 35.8 0 80 0s80 35.8 80 80m232 0a24 24 0 1 0-48 0 24 24 0 1 0 48 0M80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fga0138-mds-ajax/2024.2-Gemini
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documento-visao/documento-visao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Visão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documento-requisitos/documento-requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documento de Arquitetura
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Arquitetura
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Revisão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Propósito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Escopo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-representacao-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Representação Arquitetural
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Representação Arquitetural">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Definições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-justifique-sua-escolha" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Justifique sua Escolha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-detalhamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Detalhamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-metas-e-restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Metas e Restrições Arquiteturais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-visao-de-casos-de-uso-escopo-do-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Visão de Casos de Uso (escopo do produto)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-visao-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Visão Lógica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-visao-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Visão de Implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-visao-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Visão de Implantação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-restricoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 Restrições Adicionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documento-plano-testes/documento-plano-testes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documento de Plano de Testes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Atas de Reunião
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Atas de Reunião
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 6
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 7
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 8
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 9
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 10
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 11
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 12
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 13
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 14
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 15
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 16
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 17
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 18
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-19/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 19
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../atas-reuniao/ata-reuniao-20/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ata 20
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Revisão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introdução">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-proposito" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Propósito
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Escopo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-representacao-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Representação Arquitetural
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Representação Arquitetural">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Definições
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-justifique-sua-escolha" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Justifique sua Escolha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-detalhamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Detalhamento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-metas-e-restricoes-arquiteturais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Metas e Restrições Arquiteturais
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-visao-de-casos-de-uso-escopo-do-produto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Visão de Casos de Uso (escopo do produto)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-visao-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Visão Lógica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-visao-de-implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Visão de Implementação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-visao-de-implantacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Visão de Implantação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-restricoes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 Restrições Adicionais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="documento-de-arquitetura"><a> Documento de Arquitetura </a></h1>
+<hr />
+<h2 id="historico-de-revisao"><a> Histórico de Revisão </a></h2>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>16/12/2024</strong></td>
+<td>0.1</td>
+<td>Início do Documento de Arquitetura</td>
+<td>Eduardo de Almeida Ferreira Esdras de Sousa Nogueira Felipe de Aquino Campelo João Vitor Sales Ibiapina Luiz Guilherme Morais da Costa Faria Matheus Menezes Rodrigues Miguel Pires Gomes Pedro Rocha Thiago Melo Tonin Uires Carlos de Oliveira</td>
+</tr>
+<tr>
+<td><strong>17/12/2024</strong></td>
+<td>0.2</td>
+<td>Revisão final do Documento de Arquitetura</td>
+<td>Eduardo de Almeida Ferreira Esdras de Sousa Nogueira Felipe de Aquino Campelo João Vitor Sales Ibiapina Luiz Guilherme Morais da Costa Faria Matheus Menezes Rodrigues Miguel Pires Gomes Pedro Rocha Thiago Melo Tonin Uires Carlos de Oliveira</td>
+</tr>
+<tr>
+<td><strong>18/12/2024</strong></td>
+<td>0.3</td>
+<td>Revisão final do Documento de Arquitetura</td>
+<td>Eduardo de Almeida Ferreira Esdras de Sousa Nogueira Felipe de Aquino Campelo João Vitor Sales Ibiapina Luiz Guilherme Morais da Costa Faria Matheus Menezes Rodrigues Miguel Pires Gomes Pedro Rocha Thiago Melo Tonin Uires Carlos de Oliveira</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Autores:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Matrícula</th>
+<th style="text-align: center;">Nome</th>
+<th style="text-align: center;">Descrição do papel assumido na equipe</th>
+<th style="text-align: center;">% de contribuição ao trabalho (*)1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">221008632</td>
+<td style="text-align: center;">Eduardo de Almeida Ferreira</td>
+<td style="text-align: center;">Product Owner/Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">222006230</td>
+<td style="text-align: center;">Esdras de Sousa Nogueira</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">231011328</td>
+<td style="text-align: center;">Felipe de Aquino Campelo</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">222006857</td>
+<td style="text-align: center;">João Vitor Sales Ibiapina</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">231011696</td>
+<td style="text-align: center;">Luiz Guilherme Morais da Costa Faria</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">221008712</td>
+<td style="text-align: center;">Matheus Menezes Rodrigues</td>
+<td style="text-align: center;">Scrum Master/Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">222007030</td>
+<td style="text-align: center;">Miguel Pires Gomes</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">222034270</td>
+<td style="text-align: center;">Pedro Rocha</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">221022453</td>
+<td style="text-align: center;">Thiago Melo Tonin</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">202043307</td>
+<td style="text-align: center;">Uires Carlos de Oliveira</td>
+<td style="text-align: center;">Dev</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">TOTAL</td>
+<td style="text-align: center;">-------------------------------</td>
+<td style="text-align: center;">---------------------------</td>
+<td style="text-align: center;">100</td>
+</tr>
+</tbody>
+</table>
+<p>1 (*) – para cada integrante da equipe, considere sua participação tanto no Documento de Arquitetura, quando nos demais documentos já entregues pela equipe (Visão do produto e do projeto; Declaração de escopo) e atribua um, percentual. A soma dos percentuais de todos os integrantes deve fechar em 100%)</p>
+<hr />
+<h2 id="1-introducao"><a> 1. Introdução </a></h2>
+<h3 id="11-proposito"><a> 1.1 Propósito </a></h3>
+<p>Este documento descreve a arquitetura do sistema sendo desenvolvido pelo grupo Gemini, na disciplina de MDS - Métodos de Desenvolvimento de Software (2024.2), E-Commerce FGR, a fim de fornecer uma visão abrangente do sistema para desenvolvedores, testadores e demais interessados.</p>
+<hr />
+<h3 id="12-escopo"><a> 1.2 Escopo </a></h3>
+<p>O projeto de E-commerce para a  equipe de competição da Universidade de Brasília, FGR (Formula Racing Gama)  propõe a criação de um sistema de vendas e divulgação de marca para a equipe, que visa solucionar problemas em ambas áreas. Após as reuniões de alinhamento com os clientes, nossa equipe visa trazer um sistema funcional e profissional que satisfaça todas as exigências feitas pelo cliente. Mais sobre o projeto no “Documento de visão - Gemini”.</p>
+<hr />
+<h2 id="2-representacao-arquitetural"><a> 2. Representação Arquitetural  </a></h2>
+<h3 id="21-definicoes"><a> 2.1 Definições </a></h3>
+<p>O sistema será desenvolvido utilizando a arquitetura do Django, que segue o padrão Model Template Control (MTC). Essa arquitetura é semelhante ao padrão MVC (Model View Controller), mas com uma distinção importante: o foco está na interação direta entre as Templates e as Views, facilitando a geração de páginas dinâmicas e a separação de responsabilidades.</p>
+<p><strong>Camada de Lógica de Negócios (Model):</strong> Os Models representam os dados fundamentais do e-commerce, como produtos, categorias, usuários e pedidos. Representam a lógica de negócios, realizando operações de leitura e escrita no banco de dados, garantindo a integridade dos dados e validando as regras de negócio.</p>
+<p><strong>Camada de Apresentação (Template):</strong> É responsável por exibir os dados fornecidos pela camada de lógica de negócios ao usuário final. Não contém lógica de negócios, apenas formata os dados de forma interativa.</p>
+<p><strong>Camada de acesso a dados (Controller):</strong> É responsável por agir como intermediário entre o Model e o Template. Elas recebem as requisições dos usuários, como a adição de itens ao carrinho ou a realização de um pagamento, e interagem com os Models para manipular dados conforme necessário. determinam quais dados serão recuperados ou atualizados nos Models e selecionam os Templates apropriados para exibir as informações ao usuário.<br />
+<img alt="" src="data:image/png;base64,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" /></p>
+<hr />
+<h3 id="22-justifique-sua-escolha"><a> 2.2 Justifique sua Escolha </a></h3>
+<p>O padrão MTC foi escolhido porque oferece uma estrutura leve e eficiente, adequada à simplicidade do sistema. Ele prioriza a rapidez no desenvolvimento e facilita a organização do código, ao mesmo tempo em que mantém uma separação clara entre as responsabilidades. Essa abordagem reduz a necessidade de configurações complexas e permite que o foco esteja na entrega funcional do produto, garantindo um sistema escalável para futuras melhorias. Além disso, o MTC aproveita nativamente os recursos do Django, otimizando o uso de suas ferramentas e tornando o processo mais produtivo e intuitivo.</p>
+<p>O Django fornece uma maneira flexível e poderosa para lidar com a separação e com a lógica da programação em backend, pois através de arquivos que estruturam a parte estrutural e visual de páginas web. Além disso, ele também fornece suporte ao desenvolvimento rápido e um design limpo.</p>
+<hr />
+<h3 id="23-detalhamento"><a> 2.3 Detalhamento </a></h3>
+<p>O projeto utiliza o padrão arquitetural <strong>Model-View-Controller (MVC)</strong>, amplamente adotado no desenvolvimento de aplicações web devido à sua capacidade de organizar de maneira clara e modular os componentes de um sistema. No contexto do framework Django, o padrão MVC é implementado com algumas adaptações específicas ao framework, sendo comumente referenciado como <strong>Model-Template-View (MTV)</strong>. Essa abordagem garante uma separação de responsabilidades que facilita o desenvolvimento, manutenção e escalabilidade do sistema.  <br><br>
+O <strong>Modelo</strong> é responsável por representar os dados e a lógica de negócios do sistema. Ele inclui classes que definem as entidades do domínio, seus atributos e seus relacionamentos, sendo diretamente mapeadas para tabelas no banco de dados relacional (utilizando o ORM integrado do Django).  <br><br>
+<strong>Principais Funções do Modelo:</strong></p>
+<ul>
+<li>Definir as entidades do domínio do projeto, como Produtos, Pedidos, Usuários, entre outros.  </li>
+<li>Especificar atributos e tipos de dados associados às entidades.  </li>
+<li>Implementar relações entre entidades, como um-para-muitos (Ex: um cliente pode ter vários pedidos) e muitos-para-muitos (Ex: um produto pode pertencer a várias categorias).  </li>
+<li>Fornecer métodos e validações relacionados à lógica de negócios.</li>
+</ul>
+<p>A <strong>Visão</strong> em Django desempenha o papel do <strong>Controlador</strong> tradicional do MVC, agindo como intermediária entre o <strong>Modelo</strong> e os <strong>Templates</strong>.<br />
+<strong>Principais Funções da Visão:</strong></p>
+<ul>
+<li>Receber e processar requisições HTTP.  </li>
+<li>Manipular os dados recebidos e chamar os Modelos para interagir com o banco de dados.  </li>
+<li>Preparar os dados e enviá-los aos Templates para renderização.  </li>
+<li>Retornar respostas HTTP, como páginas HTML ou dados em formato JSON (para APIs).</li>
+</ul>
+<p>Os <strong>Templates</strong> desempenham o papel da <strong>Visão</strong> no padrão MVC clássico, fornecendo ao usuário final uma interface amigável e responsiva.<br />
+<strong>Principais Características dos Templates:</strong></p>
+<ul>
+<li>Utilizam a <strong>linguagem de template do Django</strong> para inserir dados dinâmicos.  </li>
+<li>Suportam <strong>tags</strong> e <strong>filtros</strong> para manipulação de dados antes da renderização.  </li>
+<li>Separaram a camada de apresentação da lógica de negócios.</li>
+</ul>
+<p><strong><p style="text-align: center;">Figura 2: Esquema de Camadas do Sistema</p></strong></p>
+<p><img alt="Esquema de Camadas do Sistema" src="../assets/2.3.png" /></p>
+<p><strong><p style="text-align: center;">Autora: GEMINI (2024)</p></strong></p>
+<hr />
+<h3 id="24-metas-e-restricoes-arquiteturais"><a> 2.4 Metas e Restrições Arquiteturais </a></h3>
+<p>Para definir as metas de arquitetura do software, são consideráveis os seguintes aspectos:</p>
+<ul>
+<li><strong>Escalabilidade</strong>: O sistema precisa ser capaz de crescer para suportar um número cada vez maior de usuários e dados ao longo do tempo. É essencial que a infraestrutura consiga lidar com essa expansão sem comprometer o desempenho..  </li>
+<li><strong>Desempenho</strong>: O software deve oferecer respostas rápidas e manter um desempenho eficiente, garantindo uma experiência satisfatória para os usuários.  </li>
+<li><strong>Manutenibilidade:</strong> A estrutura do software deve ser projetada para facilitar sua manutenção e evolução ao longo do tempo, possibilitando a adição de novas funcionalidades, correções de erros e melhorias contínuas de maneira ágil e eficiente.  </li>
+<li><strong>Segurança:</strong> É fundamental proteger o sistema contra acessos não autorizados, assegurando a integridade e a confidencialidade das informações.</li>
+</ul>
+<p>Ao definir as restrições arquiteturais para o software de divulgação e gerenciamento, é importante considerar os seguintes aspectos:</p>
+<ul>
+<li><strong>Compatibilidade:</strong> O sistema precisa ser funcional em todas as máquinas.</li>
+</ul>
+<p>Esses objetivos e restrições arquiteturais devem ser avaliados com atenção e incorporados ao desenvolvimento do sistema, de forma a atender plenamente às necessidades da equipe de competição e garantir um funcionamento seguro e eficiente.</p>
+<hr />
+<h3 id="25-visao-de-casos-de-uso-escopo-do-produto"><a> 2.5 Visão de Casos de Uso (escopo do produto) </a></h3>
+<p>A arquitetura escolhida para  o sistema segue o padrão <strong>Model-View-Control (MVC)</strong>, utilizando os framework <strong>Django</strong> para o backend, que foi escolhido pela facilidade que se comunica com o <strong>React</strong> (frontend)  e pela forma que consegue atender com perfeição as necessidades do projeto, trazendo para o cliente um sistema de administração funcional e de fácil manuseio, segurança nos acessos da aplicação e fácil comunicação com as APIs.</p>
+<p>A linguagem escolhida para o frontend foi o <strong>React</strong>, que se integra e se comunica com facilidade ao framework <strong>Django</strong>, e pela capacidade de criar o escopo do site de acordo com os pedidos do cliente. O banco de dados adotado foi o <strong>PostgreSQL</strong>, escolhido exclusivamente por ser o melhor sistema para se comunicar com o backend.</p>
+<p>Em relação ao escopo do sistema, ele pode ser segmentado em módulos responsáveis por diferentes funcionalidades, incluindo:</p>
+<ul>
+<li><strong>Página de apresentação da equipe e patrocinadores</strong>  </li>
+<li><strong>Acesso direto as redes sociais da equipe.</strong>  </li>
+<li><strong>Página de vendas dos produtos da equipe</strong>  </li>
+<li><strong>Página de administração:</strong> controle total sobre e manutenção sobre toda a aplicação</li>
+</ul>
+<p>O sistema também incorpora <strong>dois níveis de usuários</strong>, cada um com permissões específicas, conforme descrito a seguir:</p>
+<ul>
+<li><strong>Administrador:</strong> controle total sobre todas funcionalidades do site e acesso a relatórios de venda.  </li>
+<li><strong>Usuário</strong>: Acesso às páginas de apresentação da equipe, patrocinadores e página de produtos.</li>
+</ul>
+<p>O diagrama a seguir ilustra os diferentes casos de uso da aplicação e as interações mencionadas acima.</p>
+<p><strong><p style="text-align: center;">Figura 3: Casos de Uso</p></strong></p>
+<p><img alt="Esquema de casos do Sistema" src="../assets/caso.png" /></p>
+<p><strong><p style="text-align: center;">Autora: GEMINI (2024)</p></strong></p>
+<hr />
+<h3 id="26-visao-logica"><a> 2.6 Visão Lógica </a></h3>
+<p>A visão lógica é a apresentação da estrutura do projeto, como está o seu desenvolvimento e integração com cada parte do sistema/web. Cada parte do sistema/web interagindo e ligado aos outro componentes assim tornado o sistema com eficiência e agilidade, nas suas conexões, quando o usuário pede uma informação, essa deve ser de forma rápida retorno e confiabilidade.</p>
+<ul>
+<li>Módulo autenticação  </li>
+<li>Módulo cadastro de usuário  </li>
+<li>Módulo Gerencial  </li>
+<li>
+<p>Módulo Configurações</p>
+<p>1-Módulo de autenticação/cadastro de usuário e de administrador, nesse módulo o cliente/usuário irá gerar um cadastro para poder efetuar compras no sítio/web, nesse caso usando nome pessoal, e-mail pessoal, dentro das regras de lei do sigilo de dados pessoais. Em que será possível novos usuários efetuarem o cadastro e podem efetuar a recuperação de senha em e-mail, efetuando também compras no site. </p>
+<p>2- Módulo Gerencial/relatório/configurações, em que o administrador da FGR poderá nosse módulo ter relatórios, acessar o sistema com login e terá acesso aos relatórios verificação de valores pagos pelo usuário, bem como a manutenção, podendo alterar, incluir, excluir, dados e produtos, sendo que o sítio terá acesso somente para o administrador uma forma de módulo de configuração, pois os dados ficarão de forma editável, ou seja, o Adm., poderá efetuar ajustes, excluir fotos de produtos, incluir valores, excluir produtos, editar o painel do Adm. O usuário não poderá editar nenhum dado nem inserir foto em perfil.</p>
+<p>A razão lógica de cada módulo passa pela seguinte situação, sendo que a autenticação tem segurança para FGR e para os usuários, pois o cadastro requer dados e são guardados em banco com segurança criptografia. </p>
+<p>A razão para o gerenciamento/relatório/configurações desde a gestão de dados, com informações para tomada de decisão de qual produto colocar no sitio, e ainda poder gerenciar o sítio tornando mais atrativo quando o Adm. achar que deve devido o mercado exigir.</p>
+</li>
+</ul>
+<p>Esses módulos se comunicam por meio da interface:</p>
+<ul>
+<li>Autenticação &gt; cadastro \= dado validado \= usuários comprando no sítio;    </li>
+<li>Cadastro &gt; configurações &gt; gerenciamento de dados/ conteúdo \= Administrador emitindo relatórios;</li>
+</ul>
+<p>A seguir o diagrama de estados da aplicação e sua explicação:</p>
+<p><strong><p style="text-align: center;">Figura 4: Diagrama de estados</p></strong></p>
+<p><img alt="Diagrama de estados" src="../assets/2.6.png" /></p>
+<p><strong><p style="text-align: center;">Autora: GEMINI (2024)</p></strong></p>
+<hr />
+<p>Foi demonstrado não autenticado depois autenticado, não apresentamos erro no sistema, usuário efetua transações no sítio. </p>
+<p>A seguir o diagrama de atividades e sua explicação:</p>
+<p><strong><p style="text-align: center;">Figura 5: Diagrama de estados b</p></strong></p>
+<p><img alt="Diagrama de estados b" src="../assets/2.6b.png" /></p>
+<p><strong><p style="text-align: center;">Autora: GEMINI (2024)</p></strong></p>
+<hr />
+<p>O usuário a partir do acesso poderá ser negado e possíveis erros podem acontecer, mas pode recuperar a senha.</p>
+<p>A seguir o diagrama de de classe que representa como os dados são persistidos pela aplicação e sua explicação:</p>
+<div class="highlight"><pre><span></span><code>classe<span class="w"> </span>Usuario<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>id:<span class="w"> </span>int
+<span class="w">    </span>nome:<span class="w"> </span>string
+<span class="w">    </span>email:<span class="w"> </span>string
+
+<span class="w">    </span>autenticar<span class="o">()</span>
+<span class="o">}</span>
+
+classe<span class="w"> </span>Produto<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>id:<span class="w"> </span>int
+<span class="w">    </span>nome:<span class="w"> </span>string
+<span class="w">    </span>preco:<span class="w"> </span>float
+
+<span class="w">    </span>adicionarCarrinho<span class="o">()</span>
+<span class="o">}</span>
+
+classe<span class="w"> </span>Pedido<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>id:<span class="w"> </span>int
+<span class="w">    </span>data:<span class="w"> </span>date
+<span class="w">    </span>total:<span class="w"> </span>float
+
+<span class="w">    </span>finalizar<span class="o">()</span>
+<span class="o">}</span>
+</code></pre></div>
+<hr />
+<h3 id="27-visao-de-implementacao"><a> 2.7 Visão de Implementação </a></h3>
+<p><strong><p style="text-align: center;">Figura 6: Diagrama de Pacotes</p></strong></p>
+<p><img alt="Diagrama de Pacotes" src="../assets/Pacotes.png" /></p>
+<p><strong><p style="text-align: center;">Autora: GEMINI (2025)</p></strong></p>
+<hr />
+<h3 id="28-visao-de-implantacao"><a> 2.8 Visão de Implantação </a></h3>
+<p>O software será implantado como uma aplicação web, seguindo o padrão de aplicação modernas. Para o desenvolvimento, utilizaremos JavaScript, React, Vite para a stack Front-End, essa escolha visa criar uma interface de usuário dinâmica, responsiva e de alta performance, atendendo às demandas de um e-commerce. </p>
+<p>No Back-End, será utilizado Python com o framework Django, devido á sua robustez, segurança e ferramentas nativas que aceleram o desenvolvimento de aplicações web, já que o framework oferece um suporte integrado a autenticação, gerenciamento de usuários e conexão com banco de dados, simplificando a arquitetura do projeto. </p>
+<p>Para o banco de dados, optamos pelo PostgreSQL como banco de dados relacional, devido à sua confiabilidade, suporte a consultas complexas e alto desempenho, que serão úteis para a gestão de dados do e-commerce. Além disso, sua integração com Django é simples e eficiente, reduzindo a complexidade do desenvolvimento. Será utilizado PowerBI para a criação de relatórios sobre as vendas, que será alimentado pelas informações armazenadas no banco de dados PostgreSQL. O Power BI é uma ferramenta que facilita a visualização e análise de dados, oferecendo insights sobre o desempenho de vendas, comportamento dos clientes e outros indicadores chaves para auxiliar nas tomadas de decisões melhores e estratégicas.</p>
+<hr />
+<h3 id="29-restricoes-adicionais"><a> 2.9 Restrições Adicionais </a></h3>
+<p><strong>Autenticação Obrigatória</strong><br />
+O sistema será acessível diretamente pela internet, porém exigirá que os usuários se cadastrem e loguem para terem acesso às páginas de produtos e compras, assim como será necessário logar em perfil de administrador para ter acesso ao painel de controle. Usuários não cadastrados terão acesso limitado, apenas podendo navegar pelo site sem poder efetuar compras.</p>
+<p><strong>Limitação de acesso</strong><br />
+Funcionalidades especiais, como página de administração, estoque, serão unicamente acessadas pelos perfis de administrador, enquanto usuários terão acesso apenas às páginas de navegação e compra do site . A divisão de acessos conforme os perfis melhora a segurança do sistema, restringindo recursos críticos a usuários com as permissões adequadas e organizando melhor os fluxos de trabalho.</p>
+<p><strong>Portabilidade</strong><br />
+A aplicação será compatível com todos navegadores, como <strong>Chrome, Firefox, Safari e Edge</strong>. Assegurar compatibilidade com múltiplas plataformas possibilita que os usuários acessem o sistema de forma prática, independentemente do dispositivo utilizado.</p>
+<hr />
+<h2 id="3-referencias-bibliograficas"><a> 3. Referências Bibliográficas </a></h2>
+<p><em>Arquitet</em>ura MVC: entendendo o modelo-visão-controlador. DIO.me, 2024. Disponível em: <a href="https://www.dio.me/articles/arquitetura-mvc-entendendo-o-modelo-visao-controlador">https://www.dio.me/articles/arquitetura-mvc-entendendo-o-modelo-visao-controlador</a>. Acesso em: 18 dez. 2024.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../../documento-requisitos/documento-requisitos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Documento de Requisitos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Documento de Requisitos
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../documento-plano-testes/documento-plano-testes/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Documento de Plano de Testes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Documento de Plano de Testes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
