@@ -34,6 +34,7 @@ services:
       postgres_db:
         condition: service_healthy
     environment:
+      DJANGO_SETTINGS_MODULE: backend.settings
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
