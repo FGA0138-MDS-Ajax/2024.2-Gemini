@@ -14,6 +14,8 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .services import gerar_token, validar_token
 from rest_framework.decorators import api_view, permission_classes
+import uuid
+from django.core.exceptions import ValidationError
 
 
 
@@ -131,6 +133,12 @@ class ResetPasswordView(APIView):
         token = request.data.get("token")
         new_password = request.data.get("new_password")
 
+        # 🔹 Verifica se o token tem um formato válido de UUID antes de processar
+        try:
+            uuid.UUID(token)  # Se não for um UUID válido, lançará um erro
+        except ValueError:
+            return Response({"erro": "Código inválido."}, status=status.HTTP_400_BAD_REQUEST)
+
         usuario = validar_token(email, token)
 
         if not usuario:
@@ -143,7 +151,7 @@ class ResetPasswordView(APIView):
         # Valida a nova senha
         try:
             validate_password(new_password)
-        except Exception as e:
+        except ValidationError as e:
             return Response({"erro": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
         # Atualiza a senha do usuário

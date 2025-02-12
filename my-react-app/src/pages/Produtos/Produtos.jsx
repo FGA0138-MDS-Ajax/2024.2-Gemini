@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { fetchProdutos } from "../../api.js"; // 🔹 Importa a função da API
 import {
   Header,
   FooterDeVendas,
@@ -8,6 +10,24 @@ import {
 import styles from "./Produtos.module.css";
 
 function PaginaProdutos() {
+  const [produtos, setProdutos] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const carregarProdutos = async () => {
+      try {
+        const produtosCarregados = await fetchProdutos(); // 🔹 Busca os produtos da API
+        setProdutos(produtosCarregados);
+      } catch (error) {
+        console.error("Erro ao carregar produtos:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    carregarProdutos();
+  }, []);
+
   return (
     <section className={styles.Produtos}>
       <Header />
@@ -15,148 +35,32 @@ function PaginaProdutos() {
       <div className={styles.Titulos}>
         <Titulo texto="Produtos" tamanho="64px" gradiente={false} />
         <h1 className={styles.TituloFiltrar}>
-          {" "}
           <img src="/assets/Icons/Filter.svg" alt="" />
           Filtrar
         </h1>
       </div>
 
       <div className={styles.ProdutosGrid}>
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta1"
-          imgFrente="/assets/Camisetas/CamisetaMCLaren.png"
-          imgTras="/assets/Camisetas/CamisetaRedbull.png"
-          nome="RIVALS COLLECTIONS 2024 | MCLAREN"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
-        <CardCamiseta
-          linkPaginaCamiseta="/Camiseta2"
-          imgFrente="/assets/Camisetas/CamisetaRedbull.png"
-          imgTras="/assets/Camisetas/CamisetaMCLaren.png"
-          nome="RIVALS COLLECTIONS 2024 | REDBULL"
-          preco="R$ 59,99"
-          prestacoes="2x de r$ 29,99"
-        />
+        {loading ? (
+          <p>Carregando produtos...</p>
+        ) : produtos.length > 0 ? (
+          produtos.map((produto) => (
+            <CardCamiseta
+              key={produto.id}
+              linkPaginaCamiseta={`/produto/${produto.id}`}
+              imgFrente={produto.imagem}
+              imgTras={produto.imagem}
+              nome={produto.nome}
+              preco={`R$ ${parseFloat(produto.preco).toFixed(2)}`}
+              prestacoes={`2x de R$ ${(parseFloat(produto.preco) / 2).toFixed(2)}`}
+            />
+          ))
+        ) : (
+          <p>Nenhum produto encontrado.</p>
+        )}
       </div>
 
       <BotaoWhatsapp />
-
       <FooterDeVendas />
     </section>
   );

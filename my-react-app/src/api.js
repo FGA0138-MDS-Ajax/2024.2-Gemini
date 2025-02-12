@@ -132,3 +132,18 @@ export const fetchProdutos = async () => {
         return [];
     }
 };
+
+
+// 🔹 Função para buscar banners do backend
+export const fetchBanners = async () => {
+    try {
+        const response = await fetch(`${API_URL}/api/produto/banners`);
+        if (!response.ok) {
+            throw new Error("Erro ao buscar banners");
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Erro ao buscar banners:", error);
+        return []; // Retorna um array vazio em caso de erro
+    }
+};
