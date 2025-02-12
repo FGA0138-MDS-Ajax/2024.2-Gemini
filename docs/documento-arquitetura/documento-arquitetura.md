@@ -246,6 +246,11 @@ classe Pedido {
 
 ### <a> 2.7 Visão de Implementação </a>
 
+**<p style="text-align: center;">Figura 6: Diagrama de Pacotes</p>**
+
+![Diagrama de Pacotes](./assets/Pacotes.png)
+
+**<p style="text-align: center;">Autora: GEMINI (2025)</p>**
 
 ---
 
@@ -257,15 +262,6 @@ O software será implantado como uma aplicação web, seguindo o padrão de apli
 No Back-End, será utilizado Python com o framework Django, devido á sua robustez, segurança e ferramentas nativas que aceleram o desenvolvimento de aplicações web, já que o framework oferece um suporte integrado a autenticação, gerenciamento de usuários e conexão com banco de dados, simplificando a arquitetura do projeto. 
 
 Para o banco de dados, optamos pelo PostgreSQL como banco de dados relacional, devido à sua confiabilidade, suporte a consultas complexas e alto desempenho, que serão úteis para a gestão de dados do e-commerce. Além disso, sua integração com Django é simples e eficiente, reduzindo a complexidade do desenvolvimento. Será utilizado PowerBI para a criação de relatórios sobre as vendas, que será alimentado pelas informações armazenadas no banco de dados PostgreSQL. O Power BI é uma ferramenta que facilita a visualização e análise de dados, oferecendo insights sobre o desempenho de vendas, comportamento dos clientes e outros indicadores chaves para auxiliar nas tomadas de decisões melhores e estratégicas.
-
-**<p style="text-align: center;">Figura 6: Diagrama de Pacotes</p>**
-
-![Diagrama de Pacotes](./assets/pacotes.png)
-
-**<p style="text-align: center;">Autora: GEMINI (2025)</p>**
-
-
----
 
 ---
 
