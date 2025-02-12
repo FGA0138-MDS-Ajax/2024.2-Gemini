@@ -49,19 +49,29 @@ function Historia() {
       <div className={styles.SecaoNossaHistoria}>
         <div className={styles.TextoSecao}>
           <Titulo texto="Nossa História" tamanho="35px" gradiente={false} />
-          <ParagrafoPadrao texto="A Fórmula Gama Racing (FGR) é a primeira e única equipe de Fórmula SAE Elétrico do Centro-Oeste, fundada em 30 de outubro há 11 anos na Universidade de Brasília (UnB). Sua missão é impulsionar a eletromobilidade sustentável no Distrito Federal. A equipe já desenvolveu cinco protótipos elétricos, e atualmente trabalha no modelo E05, que incorpora avanços significativos em mobilidade elétrica e aerodinâmica." />
-          <ParagrafoPadrao texto="A FGR conta com aproximadamente 47 membros divididos entre trainees e efetivos. A equipe possui departamentos técnicos (Mecânica e Elétrica) e administrativos (Gestão de Pessoas, Marketing, Comercial, Financeiro/Logística), sendo liderada por um Capitão, um Gerente de Projetos e uma Gerente de Departamentos." />
-          <ParagrafoPadrao texto="A equipe já participou de diversas competições nacionais e internacionais, como a Fórmula SAE Brasil e a competição Formula Student, destacando-se pela inovação e performance de seus protótipos. A FGR busca, a cada edição, elevar o nível de seus veículos e consolidar a presença da universidade no cenário da engenharia automotiva sustentável." />
-          
-          <Titulo texto="Membros e seus Cursos" tamanho="20px" gradiente={false} />
-          
-          <div className={styles.MembrosContainer}>
+          <ParagrafoPadrao
+            texto={`A Fórmula Gama Racing (FGR) é pioneira na engenharia de competição sustentável no Centro-Oeste, sendo a única equipe de Fórmula SAE Elétrico da região. Fundada em 30 de outubro há 11 anos na Universidade de Brasília (UnB), seu propósito é liderar a inovação na eletromobilidade, promovendo o avanço de soluções sustentáveis no Distrito Federal.
+
+A equipe já concebeu e desenvolveu cinco protótipos elétricos, demonstrando evolução contínua. Atualmente, o projeto está focado no modelo E05, que traz melhorias significativas em eficiência energética, desempenho aerodinâmico e otimização de sistemas elétricos.
+
+Com aproximadamente 47 membros, a FGR estrutura-se em departamentos técnicos (Mecânica e Elétrica) e administrativos (Gestão de Pessoas, Marketing, Comercial e Financeiro/Logística). A gestão da equipe é composta por um Capitão, um Gerente de Projetos e uma Gerente de Departamentos, garantindo organização e eficiência no desenvolvimento dos projetos.
+
+A equipe já marcou presença em diversas competições de renome, como a Fórmula SAE Brasil e a Formula Student internacional. Em cada edição, a FGR busca aprimorar o nível de seus veículos, destacando-se pela criatividade e excelência técnica, além de consolidar a UnB como referência no cenário da engenharia automotiva sustentável.`}
+          />
+        </div>
+      </div>
+
+      <div className={styles.MembrosSecao}>
+        <Titulo texto="Membros e seus Cursos" tamanho="28px" gradiente={false} />
+
+        <div className={styles.MembrosTextoContainer}>
+          <ul className={styles.MembrosLista}>
             {membros.map((membro, index) => (
-              <div key={index} className={styles.MembroItem}>
-                <strong>{membro.nome}</strong> - {membro.curso}
-              </div>
+              <li key={`${membro.nome}-${index}`} className={styles.MembroItem}>
+                {membro.nome} - {membro.curso}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
 

@@ -18,6 +18,13 @@
   padding: 20px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5); 
+  text-align: justify; 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.TextoSecao p {
+  margin-bottom: 15px;
+  white-space: pre-line;
 }
 
 .Footer {
@@ -29,23 +36,23 @@
   text-align: center; 
 }
 
-/* ----------- ESTILOS PARA OS MEMBROS ----------- */
-.MembrosContainer {
-  display: flex;
-  flex-wrap: wrap; /* Permite que os nomes ocupem múltiplas linhas, mas ainda na horizontal */
-  justify-content: flex-start;
-  gap: 10px; /* Espaço entre os nomes */
+.MembrosTextoContainer {
+  width: 100%;
+  overflow-x: auto; 
+  padding: 10px;
+}
+
+.MembrosTexto {
+  display: inline-block;
+  white-space: nowrap; 
+  font-size: 15px;
+  color: white;
+  line-height: 1.5;
+  text-align: left;
   padding: 10px;
 }
 
 .MembroItem {
-  white-space: nowrap; /* Evita quebra de linha no nome e curso */
-  font-size: 15px; /* Tamanho da fonte ajustado para 12px */
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
-.MembroItem span {
-  margin-left: 5px; /* Espaço entre o nome e o curso */
+  display: inline;
+  white-space: nowrap;
 }
