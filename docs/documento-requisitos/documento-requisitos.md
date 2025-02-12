@@ -11,7 +11,7 @@
 
 ### **3.1 Objetivo Geral**
 
-## **Ao desenvolver o seu próprio marketplace a Fórmula Gama Racing consegue centralizar suas vendas de produtos em um lugar só, além de profissionalizar a equipe e ajudar na divulgação de suas redes sociais através do site.**
+## Ao desenvolver o seu próprio marketplace a Fórmula Gama Racing consegue centralizar suas vendas de produtos em um lugar só, além de profissionalizar a equipe e ajudar na divulgação de suas redes sociais através do site.**
 
 ### **3.2 Objetivos Específicos**
 
